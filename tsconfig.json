@@ -1,0 +1,46 @@
+/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
+/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc",
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "bundler",
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "ES2022",
+    "paths": {
+      "@store/*": ["./src/app/store/*"],
+      "@interceptors/*": ["./src/app/core/interceptors/*"],
+      "@layout/*": ["./src/app/core/layout/*"],
+      "@auth/*": ["./src/app/features/auth/*"],
+      "@enums/*": ["./src/app/shared/enums/*"],
+      "@enviroments/*": ["./src/environments/*"],
+      "@components/*": ["./src/app/shared/components/*"],
+      "@models/*": ["./src/app/shared/models/*"],
+      "@constants/*": ["./src/app/shared/constants/*"],
+      "@services/*": ["./src/app/core/services/*"],
+      "@utils/*": ["./src/app/shared/utils/*"],
+      "@interfaces/*": ["./src/app/shared/interfaces/*"],
+      "@validators/*": ["./src/app/shared/validators/*"],
+      "@pipes/*": ["./src/app/shared/pipes/*"],
+      "@directives/*": ["./src/app/shared/directives/*"],
+      "@guards/*": ["./src/app/core/guards/*"],
+      "@shared/*": ["./src/app/shared/*"]
+    }
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}
