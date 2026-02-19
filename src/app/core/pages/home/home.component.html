@@ -1,0 +1,23 @@
+<app-hero></app-hero>
+<!-- 3. Quick Access Panels -->
+<section class="grid md:grid-cols-2 gap-6 px-4 lg:px-10 py-6">
+  <app-card
+    [quickAccess]="true"
+    [title]="'Pokemón TCG'"
+    [description]="'Compra más de 1,000 cartas individuales y los últimos sets de SV.'"
+    [imageUrl]="'https://lh3.googleusercontent.com/aida-public/AB6AXuAdOWhsdGWByPmeWPBBLD-cR6NIONKYQa0-3wSg3k6HlNhXUAG-QghB6wv-jXzdGEvZqwD_MmGde_Y68WODaGre_xYVOY4ci9RiOtvoX97Iy7ZZoksHw0BHo8YEiNrDo4hn2Q_kuTVB8-QjYW_IqM6RgM8BRj85jvQbI0Dbu65pCkcDEaNVmiK9lnN_JD9NFst2iJR5I7aiKMFeNyGN3KeGhFjJJ1yF0AARmDEreUKI3RCnohneLpQe90jQIKb__Gmx1aCBlS7wCwQ'"
+    [link]="{ url: '/pokemon', text: 'Busca Pokémon' }"
+  ></app-card>
+  <app-card
+    [quickAccess]="true"
+    [title]="'Magic: The Gathering'"
+    [description]="'Commander, Modern y Legacy esenciales.'"
+    [imageUrl]="'https://lh3.googleusercontent.com/aida-public/AB6AXuAX_-rhQ0UmMrqmu7q-rJ59fDYycnWfu0S3Daxk68VPSr6wyCGZKxwFwmdwqtKOoMCuvg2-CCc_DNCruRsFEbgo6G5iJ8I12OtKBX18a_UvhmwM8xxXXa1702PtDMh5oXJh4YzHgALVyU4rHl6ZySL4iXw57aM0xVNfP1187KBEe4V_PanNUNBCE20duJCahP0OiO_S6Ltl6iO7chANmFIcmBegMzpxL3OmMH25J7BSewSSSo7gmRGWWfm7yxGrV60cnSA3Dw9DCU0'"
+    [link]="{ url: '/magic', text: 'Busca MTG' }"
+  ></app-card>
+</section>
+<app-restocks></app-restocks>
+<section class="grid lg:grid-cols-2 gap-10 px-4 lg:px-10 py-16">
+  <app-sealed></app-sealed>
+  <app-events></app-events>
+</section>

@@ -1,0 +1,43 @@
+import { Injectable } from '@angular/core';
+import { MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class IconService {
+  constructor(
+    private matIconRegistry: MatIconRegistry,
+    private sanitizer: DomSanitizer,
+  ) {}
+
+  register(): void {
+    const icons = [
+      'search',
+      'shopping_cart',
+      'account_circle',
+      'menu',
+      'close',
+      'star',
+      'layers',
+      'arrow-back',
+      'arrow-forward',
+      'arrow',
+      'open_in_new',
+      'event_available',
+      'share',
+      'videocam',
+      'chat_bubble',
+      'location_on',
+      'schedule',
+      'add_shopping_cart',
+    ];
+
+    icons.forEach((icon) => {
+      this.matIconRegistry.addSvgIcon(
+        icon,
+        this.sanitizer.bypassSecurityTrustResourceUrl(`assets/icons/${icon}.svg`),
+      );
+    });
+  }
+}

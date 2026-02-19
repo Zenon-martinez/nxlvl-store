@@ -1,0 +1,21 @@
+<section class="px-4 lg:px-10 py-10">
+  <div class="flex items-center justify-between mb-8">
+    <div class="flex items-center gap-4">
+      <h2 class="text-2xl font-black uppercase tracking-tight">Últimos añadidos</h2>
+      <span class="h-px w-24 bg-white/10"></span>
+      <span class="text-primary text-xs font-bold px-2 py-1 bg-primary/10 rounded"
+        >Recién Llegado</span
+      >
+    </div>
+    <a
+      class="text-sm font-semibold text-slate-400 hover:text-primary transition-colors"
+      href="#"
+      >Ver Todas las Cartas</a
+    >
+  </div>
+  <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
+    @for (product of products; track product.id) {
+      <app-product-card [product]="product"></app-product-card>
+    }
+  </div>
+</section>

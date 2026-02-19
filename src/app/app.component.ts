@@ -9,6 +9,7 @@ import {
 } from '@angular/router';
 import { AppLoaderService } from '@services/app-loader.service';
 import { MaintenanceService } from '@services/maintenance.service';
+import { IconService } from './core/icons/icon.service';
 
 @Component({
   selector: 'app-root',
@@ -17,13 +18,15 @@ import { MaintenanceService } from '@services/maintenance.service';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'angular-starter-template';
+  title = 'Next Level';
 
   maintenance = inject(MaintenanceService);
   private router = inject(Router);
   private loader = inject(AppLoaderService);
+  private iconService = inject(IconService);
 
   constructor() {
+    this.iconService.register();
     effect(() => {
       if (!this.maintenance.isMaintenance() && this.router.url === '/maintenance') {
         this.router.navigate(['/home']);

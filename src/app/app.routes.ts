@@ -5,20 +5,19 @@ import { maintenanceGuard } from '@guards/maintenance.guard';
 /* import { authGuard } from '@guards/auth.guard'; */
 
 export const routes: Routes = [
-  {
-    path: 'auth',
-    component: AuthLayoutComponent,
-    loadChildren: () => import('./features/auth/auth.routes').then((m) => m.AUTH_ROUTES),
-  },
   // App privada
   {
     path: '',
     component: MainLayoutComponent,
     canActivate: [maintenanceGuard],
     loadChildren: () =>
-      import('./features/dashboard/dashboard.routes').then((m) => m.DASHBOARD_ROUTES),
+      import('./core/pages/home/home.routes').then((m) => m.HOME_ROUTES),
   },
-
+  {
+    path: 'auth',
+    component: AuthLayoutComponent,
+    loadChildren: () => import('./features/auth/auth.routes').then((m) => m.AUTH_ROUTES),
+  },
   {
     path: 'maintenance',
     loadComponent: () =>

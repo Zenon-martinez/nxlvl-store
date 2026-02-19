@@ -1,0 +1,77 @@
+<!-- 1. Persistent Top Header -->
+<header
+  class="sticky top-0 z-50 w-full bg-background-dark/80 backdrop-blur-md border-b border-white/10 px-4 lg:px-10 py-3"
+>
+  <div class="max-w-[1440px] mx-auto flex items-center justify-between gap-4 lg:gap-8">
+    <!-- Logo -->
+    <div class="flex items-center gap-3 shrink-0">
+      <div
+        class="size-10 bg-primary rounded-lg flex items-center justify-center text-white"
+      >
+        <mat-icon class="text-2xl" svgIcon="layers"></mat-icon>
+      </div>
+      <h1 class="text-xl font-black tracking-tighter uppercase hidden sm:block">
+        Next&nbsp;<span class="text-primary">Level</span>
+      </h1>
+    </div>
+    <!-- Global Search Bar -->
+    <div class="flex-1 max-w-2xl relative">
+      <div class="relative group">
+        <mat-icon
+          class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors"
+          svgIcon="search"
+        ></mat-icon>
+        <input
+          #searchInput
+          (keydown.enter)="search(searchInput.value)"
+          class="w-full bg-white/5 border border-white/10 rounded-full py-2.5 pl-12 pr-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all placeholder:text-slate-500 text-sm"
+          placeholder="Busca por carta, set o expansión..."
+          type="text"
+        />
+      </div>
+    </div>
+    <!-- Right Controls -->
+    <div class="flex items-center gap-2 lg:gap-4 shrink-0">
+      <!-- Game Switcher -->
+      <div class="hidden md:flex bg-white/5 p-1 rounded-lg border border-white/10 h-10">
+        <button
+          (click)="switchGame('pokemon')"
+          [class.bg-primary]="activeGame() === 'pokemon'"
+          class="px-4 text-xs font-bold uppercase tracking-wider rounded text-white"
+        >
+          PKMN
+        </button>
+
+        <button
+          (click)="switchGame('mtg')"
+          [class.bg-primary]="activeGame() === 'mtg'"
+          class="px-4 text-xs font-bold uppercase tracking-wider"
+        >
+          MTG
+        </button>
+      </div>
+      <div class="flex items-center gap-1 sm:gap-2">
+        <button
+          (click)="goToCart()"
+          class="p-2 hover:bg-white/10 rounded-lg transition-colors relative"
+        >
+          <mat-icon svgIcon="shopping_cart"></mat-icon>
+
+          @if (cartCount() > 0) {
+            <span
+              class="absolute top-1 right-1 size-4 bg-primary text-[10px] font-bold rounded-full flex items-center justify-center text-white"
+            >
+              {{ cartCount() }}
+            </span>
+          }
+        </button>
+        <button class="p-2 hover:bg-white/10 rounded-lg transition-colors">
+          <mat-icon svgIcon="account_circle"></mat-icon>
+        </button>
+        <button class="md:hidden p-2 hover:bg-white/10 rounded-lg transition-colors">
+          <mat-icon svgIcon="menu"></mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

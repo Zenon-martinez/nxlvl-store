@@ -1,0 +1,27 @@
+@if (quickAccess) {
+  <div
+    class="relative h-64 rounded-xl overflow-hidden group cursor-pointer border border-white/5 shadow-2xl"
+  >
+    <div
+      class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+      [attr.data-alt]="title"
+      [ngStyle]="{
+        'background-image':
+          'linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)), url(' +
+          imageUrl +
+          ')',
+      }"
+    ></div>
+    <div class="absolute inset-0 p-8 flex flex-col justify-end">
+      <h3 class="text-3xl font-black uppercase italic tracking-tighter">{{ title }}</h3>
+      <p class="text-slate-300 text-sm mb-4">
+        {{ description }}
+      </p>
+      <div
+        class="flex items-center gap-2 text-primary font-bold text-sm uppercase group-hover:gap-4 transition-all"
+      >
+        {{ link.text }} <mat-icon svgIcon="arrow-forward"></mat-icon>
+      </div>
+    </div>
+  </div>
+}
