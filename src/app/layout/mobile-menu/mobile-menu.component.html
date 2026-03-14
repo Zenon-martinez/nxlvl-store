@@ -1,0 +1,64 @@
+<div
+  class="fixed inset-0 bg-black/70 backdrop-blur-sm z-40 transition-opacity duration-300"
+  [class.opacity-0]="!mobileMenu.isOpen()"
+  [class.pointer-events-none]="!mobileMenu.isOpen()"
+  (click)="mobileMenu.close()"
+  (keyup.escape)="mobileMenu.close()"
+  aria-label="Close mobile menu"
+  role="button"
+  tabindex="0"
+></div>
+
+<aside
+  class="fixed top-0 left-0 h-screen w-[82%] max-w-[340px] bg-background-dark border-r border-white/10 z-50 transform transition-transform duration-300 ease-out"
+  [class.-translate-x-full]="!mobileMenu.isOpen()"
+  [class.translate-x-0]="mobileMenu.isOpen()"
+>
+  <div class="flex flex-col h-full">
+    <!-- header del drawer -->
+    <div class="p-6 border-b border-white/10 flex items-center gap-3">
+      <div class="size-10 bg-primary rounded-lg flex items-center justify-center">
+        <mat-icon svgIcon="layers"></mat-icon>
+      </div>
+      <div>
+        <div class="font-bold text-lg">Next Level</div>
+        <div class="text-xs text-slate-400">Trading Card Games</div>
+      </div>
+    </div>
+
+    <!-- navegación -->
+    <nav class="flex-1 p-4 space-y-2">
+      <a
+        routerLink="/ranking"
+        (click)="mobileMenu.close()"
+        class="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5"
+      >
+        <mat-icon svgIcon="trophy"></mat-icon>
+        Ranking de Jugadores
+      </a>
+
+      <a
+        routerLink="/events"
+        (click)="mobileMenu.close()"
+        class="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5"
+      >
+        <mat-icon svgIcon="event_available"></mat-icon>
+        Eventos y Torneos
+      </a>
+
+      <a
+        routerLink="/store"
+        (click)="mobileMenu.close()"
+        class="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5"
+      >
+        <mat-icon svgIcon="shopping_cart"></mat-icon>
+        Tienda
+      </a>
+    </nav>
+
+    <!-- footer -->
+    <div class="p-4 border-t border-white/10">
+      <button class="w-full bg-primary py-3 rounded-lg font-bold">Iniciar sesión</button>
+    </div>
+  </div>
+</aside>

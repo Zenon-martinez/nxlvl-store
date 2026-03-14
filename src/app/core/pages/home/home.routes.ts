@@ -14,6 +14,16 @@ export const HOME_ROUTES: Routes = [
     loadChildren: () =>
       import('../../../features/catalog/catalog.routes').then((m) => m.CATALOG_ROUTES),
   },
+  {
+    path: 'ranking',
+    loadChildren: () =>
+      import('../../../features/ranking/ranking.routes').then((m) => m.RANKING_ROUTES),
+  },
+  {
+    path: 'events',
+    loadChildren: () =>
+      import('../../../features/events/events.routes').then((m) => m.EVENTS_ROUTES),
+  },
 
   /* // ===== DETALLE CARTA =====
   {

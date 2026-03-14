@@ -1,0 +1,188 @@
+<!-- BACKDROP -->
+<div
+  type="button"
+  class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
+  [class.opacity-0]="!rulesPanel.isOpen()"
+  [class.pointer-events-none]="!rulesPanel.isOpen()"
+  (click)="rulesPanel.close()"
+  (keydown.escape)="rulesPanel.close()"
+  aria-label="Close ranking rules panel"
+  role="button"
+  tabindex="0"
+></div>
+
+<!-- Rules Panel (Right Side Drawer) -->
+<section
+  class="fixed right-0 top-0 h-screen w-full md:w-[40%] glass-panel flex flex-col shadow-2xl overflow-y-auto z-50 transform transition-transform duration-300 ease-out"
+  [class.translate-x-full]="!rulesPanel.isOpen()"
+  [class.translate-x-0]="rulesPanel.isOpen()"
+>
+  <!-- Header -->
+  <div
+    class="sticky top-0 z-30 bg-background-dark/80 backdrop-blur-md p-6 border-b border-primary/20 flex items-start justify-between"
+  >
+    <div class="flex gap-4">
+      <div
+        class="size-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary neon-border"
+      >
+        <mat-icon svgIcon="trophy" class="text-3xl"></mat-icon>
+      </div>
+      <div>
+        <h1 class="text-2xl font-bold tracking-tight text-slate-100">
+          Reglas del Ranking
+        </h1>
+        <p class="text-slate-400 text-sm">Sistema competitivo oficial de Next Level</p>
+      </div>
+    </div>
+    <button
+      (click)="rulesPanel.close()"
+      class="size-10 rounded-full hover:bg-slate-800 flex items-center justify-center transition-colors"
+    >
+      <mat-icon svgIcon="close" class="text-3xl"></mat-icon>
+    </button>
+  </div>
+  <div class="p-6 space-y-8 pb-32">
+    <!-- Section 1: Ganar Puntos -->
+    <section>
+      <div class="flex items-center gap-2 mb-4">
+        <mat-icon svgIcon="add_circle" class="text-primary"></mat-icon>
+        <h2 class="text-lg font-semibold uppercase tracking-wider text-slate-300">
+          Cómo ganar puntos
+        </h2>
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <div
+          class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50 hover:border-primary/40 transition-colors"
+        >
+          <div class="text-primary mb-2">
+            <mat-icon svgIcon="workspace_premium" class="text-primary"></mat-icon>
+          </div>
+          <p class="text-xs text-slate-400 uppercase font-bold">Victoria</p>
+          <p class="text-xl font-bold text-slate-100">3 pts</p>
+        </div>
+        <div
+          class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50 hover:border-primary/40 transition-colors"
+        >
+          <div class="text-primary mb-2">
+            <mat-icon svgIcon="military_tech" class="text-primary"></mat-icon>
+          </div>
+          <p class="text-xs text-slate-400 uppercase font-bold">Victoria por partida</p>
+          <p class="text-xl font-bold text-slate-100">2 pts</p>
+        </div>
+        <div
+          class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50 hover:border-primary/40 transition-colors"
+        >
+          <div class="text-primary mb-2">
+            <mat-icon svgIcon="groups" class="text-primary"></mat-icon>
+          </div>
+          <p class="text-xs text-slate-400 uppercase font-bold">
+            Participación por partida
+          </p>
+          <p class="text-xl font-bold text-slate-100">1 pts</p>
+        </div>
+        <!-- <div
+          class="bg-primary/10 p-4 rounded-xl border border-primary/30 hover:border-primary transition-colors"
+        >
+          <div class="text-primary mb-2">
+            <mat-icon svgIcon="bolt" class="text-primary"></mat-icon>
+          </div>
+          <p class="text-xs text-slate-400 uppercase font-bold">Sancionados Bonus</p>
+          <p class="text-xl font-bold text-primary">+100 pts</p>
+        </div> -->
+      </div>
+    </section>
+    <!-- Section 2: Requisitos -->
+    <section>
+      <div class="flex items-center gap-2 mb-4">
+        <mat-icon svgIcon="fact_check" class="text-primary"></mat-icon>
+        <h2 class="text-lg font-semibold uppercase tracking-wider text-slate-300">
+          Requisitos
+        </h2>
+      </div>
+      <div class="space-y-3">
+        <div
+          class="flex items-center gap-3 p-3 bg-slate-800/30 rounded-lg border border-slate-700/50"
+        >
+          <input
+            checked=""
+            class="size-5 rounded border-slate-600 bg-transparent text-primary focus:ring-primary/20"
+            disabled=""
+            type="checkbox"
+          />
+          <span class="text-slate-200">Mínimo 1 torneo disputado</span>
+        </div>
+        <div
+          class="flex items-center gap-3 p-3 bg-slate-800/30 rounded-lg border border-slate-700/50"
+        >
+          <input
+            checked=""
+            class="size-5 rounded border-slate-600 bg-transparent text-primary focus:ring-primary/20"
+            disabled=""
+            type="checkbox"
+          />
+          <span class="text-slate-200">Registro completo en tienda física</span>
+        </div>
+        <div
+          class="flex items-center gap-3 p-3 bg-slate-800/30 rounded-lg border border-slate-700/50"
+        >
+          <input
+            checked=""
+            class="size-5 rounded border-slate-600 bg-transparent text-primary focus:ring-primary/20"
+            disabled=""
+            type="checkbox"
+          />
+          <span class="text-slate-200">Cuenta activa de jugador (Player ID)</span>
+        </div>
+      </div>
+    </section>
+    <!-- Section 3: Reinicio -->
+    <section
+      class="bg-gradient-to-r from-primary/20 to-transparent p-5 rounded-xl border-l-4 border-primary"
+    >
+      <div class="flex items-center gap-3">
+        <mat-icon svgIcon="calendar_month" class="text-primary"></mat-icon>
+        <div>
+          <h3 class="font-bold text-slate-100">Reinicio de Temporada</h3>
+          <p class="text-sm text-slate-400">
+            Los puntos se reinician cada mes para el ranking local.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Section 4: Penalizaciones -->
+    <section>
+      <div class="flex items-center gap-2">
+        <mat-icon svgIcon="warning" class="text-red-500"></mat-icon>
+        <h2 class="text-lg font-semibold uppercase tracking-wider text-red-500">
+          Penalizaciones
+        </h2>
+      </div>
+      <ul class="space-y-2">
+        <li class="flex items-center gap-3 text-slate-400 text-sm">
+          <span class="size-1.5 rounded-full bg-red-500"></span>
+          Abandono injustificado de torneo (-2 pts)
+        </li>
+        <li class="flex items-center gap-3 text-slate-400 text-sm">
+          <span class="size-1.5 rounded-full bg-red-500"></span>
+          Conducta antideportiva (Descalificación)
+        </li>
+        <li class="flex items-center gap-3 text-slate-400 text-sm">
+          <span class="size-1.5 rounded-full bg-red-500"></span>
+          Uso de cartas no legales o falsificadas
+        </li>
+      </ul>
+    </section>
+  </div>
+  <!-- Sticky Footer CTA -->
+  <div
+    class="shrink-0 w-full p-6 bg-gradient-to-t from-background-dark via-background-dark to-transparent"
+  >
+    <button
+      disabled="true"
+      class="w-full disabled:bg-gray-300 disabled:text-gray-400 bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all transform active:scale-[0.98] flex items-center justify-center gap-2"
+    >
+      <mat-icon svgIcon="event_available" class="text-white"></mat-icon>
+      Inscribirme al próximo torneo
+    </button>
+  </div>
+</section>

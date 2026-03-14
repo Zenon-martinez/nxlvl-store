@@ -1,0 +1,23 @@
+<!-- 5. Popular Cards Carousel -->
+<section class="py-16 bg-white/5 border-y border-white/5">
+  <div class="px-4 max-w-[1440px] mx-auto">
+    <div class="flex items-center justify-between mb-10">
+      <div class="flex items-center gap-4">
+        <h2 class="text-3xl font-black uppercase tracking-tight">Próximos Torneos</h2>
+        <span class="h-px w-24 bg-primary/50"></span>
+      </div>
+      <a
+        class="text-sm font-bold text-slate-400 hover:text-primary transition-colors flex items-center gap-2"
+        href="/events"
+      >
+        VER CALENDARIO COMPLETO
+        <mat-icon svgIcon="event" class="mtext-base"></mat-icon>
+      </a>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      @for (tournament of tournaments; track $index) {
+        <app-tournament-card [tournament]="tournament"></app-tournament-card>
+      }
+    </div>
+  </div>
+</section>

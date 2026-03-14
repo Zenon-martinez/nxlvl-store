@@ -1,0 +1,90 @@
+<!-- Main Calendar Grid -->
+<div
+  class="flex-1 bg-slate-100 dark:bg-slate-800/50 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800"
+>
+  <!-- Week Days Header -->
+  <div
+    class="calendar-grid border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/80"
+  >
+    <div
+      class="p-3 text-center text-xs font-bold uppercase tracking-widest text-slate-500"
+    >
+      Lun
+    </div>
+    <div
+      class="p-3 text-center text-xs font-bold uppercase tracking-widest text-slate-500"
+    >
+      Mar
+    </div>
+    <div
+      class="p-3 text-center text-xs font-bold uppercase tracking-widest text-slate-500"
+    >
+      Mié
+    </div>
+    <div
+      class="p-3 text-center text-xs font-bold uppercase tracking-widest text-slate-500"
+    >
+      Jue
+    </div>
+    <div
+      class="p-3 text-center text-xs font-bold uppercase tracking-widest text-slate-500"
+    >
+      Vie
+    </div>
+    <div
+      class="p-3 text-center text-xs font-bold uppercase tracking-widest text-slate-500"
+    >
+      Sáb
+    </div>
+    <div
+      class="p-3 text-center text-xs font-bold uppercase tracking-widest text-slate-500"
+    >
+      Dom
+    </div>
+  </div>
+  <!-- Calendar Cells -->
+  <div class="calendar-grid min-h-[600px]">
+    @for (day of calendarDays; track day.dayNumber) {
+      <div
+        role="tab"
+        tabindex="0"
+        (click)="viewEventsByDay(day)"
+        (keydown.enter)="viewEventsByDay(day)"
+        (keydown.space)="viewEventsByDay(day)"
+        [ngClass]="{
+          'cursor-pointer': eventsByDate[day.date] && eventsByDate[day.date].length,
+          'ring-1 ring-inset ring-primary relative': day.date === selectedDay,
+        }"
+        class="border-b border-r border-slate-200 dark:border-slate-800 p-2 hover:bg-slate-800/30 transition-colors"
+      >
+        <span
+          [ngClass]="{ 'text-primary': day.inCurrentMonth }"
+          class="text-sm font-bold mb-2 block text-primary"
+          >{{ day.dayNumber }}</span
+        >
+        @if (day.date === selectedDay) {
+          <span
+            class="absolute top-2 right-2 flex h-2 w-2 rounded-full bg-primary animate-pulse"
+          ></span>
+        }
+        @if (eventsByDate[day.date] && eventsByDate[day.date].length) {
+          <div class="space-y-1">
+            @for (event of eventsByDate[day.date]; track event.id) {
+              <div
+                [ngClass]="{
+                  'bg-blue-500/20 text-blue-400  border-blue-500/30':
+                    event.game === 'Pokémon TCG',
+                  'bg-emerald-500/20 text-emerald-400 border-emerald-500/30':
+                    event.game === 'Magic: The Gathering',
+                }"
+                class="px-2 py-1 text-[10px] font-bold border rounded"
+              >
+                {{ isMobile() ? event.shortTitle : event.title }}
+              </div>
+            }
+          </div>
+        }
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<!-- Tournament Card 1: Pokemon -->
+<div
+  class="group bg-background-dark border border-white/10 rounded-2xl overflow-hidden transition-all shadow-xl hover:border-[#ffcb05]"
+>
+  <div
+    class="h-32 bg-gradient-to-br from-[#2a75bb] to-[#1d4486] p-6 relative overflow-hidden"
+  >
+    <span
+      class="material-symbols-outlined absolute -right-4 -bottom-4 text-9xl text-white/10"
+      >catching_pokemon</span
+    >
+    <div class="relative z-10">
+      <span
+        class="px-3 py-1 bg-[#ffcb05] text-[#2a75bb] rounded text-[10px] font-extrabold uppercase tracking-widest"
+        >{{ tournament.type }}</span
+      >
+      <h3 class="text-xl font-bold mt-2 text-white">{{ tournament.name }}</h3>
+    </div>
+  </div>
+  <div class="p-6 space-y-4">
+    <div class="flex flex-col gap-2">
+      <div class="flex items-center gap-2 text-slate-400">
+        <mat-icon svgIcon="calendar_today" class="text-primary text-lg"></mat-icon>
+        <span class="text-sm font-medium"
+          >{{ tournament.date | date: 'fullDate' }} -
+          {{ tournament.date | date: 'shortTime' }}</span
+        >
+      </div>
+      <div class="flex items-center gap-2 text-slate-400">
+        <mat-icon svgIcon="payments" class="text-primary text-lg"></mat-icon>
+        <span class="text-sm font-medium">Inscripción: ${{ tournament.cost }}</span>
+      </div>
+      <div class="flex items-center gap-2 text-slate-400">
+        <mat-icon svgIcon="group" class="text-primary text-lg"></mat-icon>
+        <span class="text-sm font-medium"
+          >{{ tournament.availability }}/{{ tournament.availability }} Cupos
+          disponibles</span
+        >
+      </div>
+    </div>
+    <button
+      class="w-full py-3 bg-[#2a75bb] hover:bg-[#3b82c6] text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2"
+    >
+      Inscribirse <mat-icon svgIcon="login" class="text-sm"></mat-icon>
+    </button>
+  </div>
+</div>

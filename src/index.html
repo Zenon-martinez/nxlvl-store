@@ -8,6 +8,18 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
   </head>
   <body>
+    <script>
+      (function () {
+        const storedTheme = localStorage.getItem('theme');
+        document.documentElement.classList.add('dark');
+        if (
+          storedTheme === 'dark' ||
+          (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
     <app-root></app-root>
   </body>
 </html>

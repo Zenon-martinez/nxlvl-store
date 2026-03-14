@@ -1,0 +1,163 @@
+<!-- Leaderboard Table -->
+<div
+  class="bg-white dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden"
+>
+  <div class="overflow-x-auto">
+    <table class="w-full text-left">
+      <thead>
+        <tr
+          class="bg-slate-50 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-800"
+        >
+          <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            Posición
+          </th>
+          <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            Jugador
+          </th>
+          <th
+            class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider text-center"
+          >
+            Torneos
+          </th>
+          <th
+            class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider text-center"
+          >
+            WR%
+          </th>
+          <th
+            class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider text-right"
+          >
+            Puntos Totales
+          </th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+        <!-- Rank 4 -->
+        @for (player of players.slice(start, end); track player.id) {
+          <tr
+            class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors cursor-pointer"
+          >
+            <td class="px-6 py-4">
+              <div class="flex items-center gap-3">
+                <span class="text-lg font-black text-slate-400"
+                  >#{{ player.position }}</span
+                >
+                <!-- <span class="material-symbols-outlined text-emerald-500 text-sm"
+                >trending_up</span
+              > -->
+              </div>
+            </td>
+            <td class="px-6 py-4">
+              <div class="flex items-center gap-3">
+                <img
+                  [alt]="player.nickname"
+                  class="size-10 rounded-full border-2 border-slate-700"
+                  data-alt="Avatar of a competitive TCG player"
+                  [src]="player.avatarUrl"
+                  (error)="onAvatarError($event)"
+                />
+                <div>
+                  <p class="font-bold text-slate-900 dark:text-white">
+                    {{ player.nickname }}
+                  </p>
+                  <!-- <p class="text-xs text-slate-500">{{ player.draws }}</p> -->
+                </div>
+              </div>
+            </td>
+            <td class="px-6 py-4 text-center font-semibold">{{ player.tournaments }}</td>
+            <td class="px-6 py-4 text-center">
+              <span
+                class="bg-emerald-500/10 text-emerald-500 px-2 py-0.5 rounded text-xs font-bold"
+                >{{ player.winRate }}%</span
+              >
+            </td>
+            <td class="px-6 py-4 text-right">
+              <span class="text-lg font-black text-primary">{{ player.points }}</span>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+  <!-- Pagination-like control -->
+  <div
+    class="px-6 py-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between"
+  >
+    <p class="text-sm text-slate-500">
+      Mostrando <span class="font-bold">{{ length }}</span> de
+      <span class="font-bold">{{ players.length }}</span> jugadores
+    </p>
+    <div class="flex gap-2">
+      <button
+        (click)="previousPage()"
+        class="px-3 py-1 rounded border border-slate-200 dark:border-slate-700 text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800"
+      >
+        <mat-icon svgIcon="chevron_left" class="text-sm"></mat-icon>
+      </button>
+      <button
+        (click)="nextPage()"
+        class="px-3 py-1 rounded border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
+      >
+        <mat-icon svgIcon="chevron_right" class="text-sm"></mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
+<!-- Call to action / Community info -->
+<div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+  <div
+    class="bg-gradient-to-br from-primary to-blue-700 p-8 rounded-2xl text-white flex items-center justify-between overflow-hidden relative"
+  >
+    <div class="relative z-10">
+      <h3 class="text-2xl font-black mb-2 italic">¿QUIERES ESTAR AQUÍ?</h3>
+      <p class="text-blue-100 max-w-xs mb-6">
+        Inscríbete en el próximo torneo presencial y empieza a acumular puntos para la
+        temporada de Invierno.
+      </p>
+      <button
+        class="bg-white text-primary px-6 py-2 rounded-lg font-black text-sm uppercase tracking-wider hover:scale-105 transition-transform"
+      >
+        Inscribirme ahora
+      </button>
+    </div>
+    <div class="absolute -right-4 -bottom-4 opacity-20">
+      <mat-icon svgIcon="stadium" class="text-[180px]"></mat-icon>
+    </div>
+  </div>
+  <div
+    class="bg-slate-900 border border-slate-800 p-8 rounded-2xl flex flex-col justify-center"
+  >
+    <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+      <mat-icon svgIcon="star_shine" class="text-primary"></mat-icon>
+      Premios de Temporada
+    </h3>
+    <ul class="space-y-3">
+      <li class="flex items-center gap-3 text-slate-400">
+        <span class="size-2 rounded-full bg-yellow-500"></span>
+        <span
+          ><strong class="text-slate-100">Top 1:</strong> Elite Trainer Box - Destined
+          Rivals</span
+        >
+        <div class="w-full lg:w-48 aspect-square rounded-xl overflow-hidden shadow-2xl">
+          <img
+            class="w-full h-full object-cover"
+            alt="Poster oficial"
+            [src]="prizes.first"
+            (error)="onPrizeError($event)"
+          />
+        </div>
+      </li>
+      <!-- <li class="flex items-center gap-3 text-slate-400">
+        <span class="size-2 rounded-full bg-slate-400"></span>
+        <span><strong class="text-slate-100">Top 3:</strong> Playmat exclusivo</span>
+      </li>
+      <li class="flex items-center gap-3 text-slate-400">
+        <span class="size-2 rounded-full bg-amber-700"></span>
+        <span
+          ><strong class="text-slate-100">Top 10:</strong> 5 Boosters Packs de la última
+          expansión</span
+        >
+      </li> -->
+    </ul>
+  </div>
+</div>

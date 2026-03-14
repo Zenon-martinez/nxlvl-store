@@ -1,0 +1,130 @@
+<main class="flex-1 flex flex-col mx-auto w-full px-4 lg:px-10 py-8">
+  <!-- Title and View Controls -->
+  <div
+    class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8"
+  >
+    <div>
+      <h1 class="text-3xl font-black tracking-tight mb-2">Calendario de Eventos</h1>
+      <div class="flex items-center gap-4">
+        <button
+          (click)="previuosMonth()"
+          class="p-1 rounded hover:bg-slate-800 transition-colors"
+        >
+          <mat-icon svgIcon="chevron_left" class="material-symbols-outlined"></mat-icon>
+        </button>
+        <span class="text-xl font-semibold capitalize w-40 text-center">{{
+          currentMonth
+        }}</span>
+        <button
+          class="p-1 rounded hover:bg-slate-800 transition-colors"
+          (click)="nextMonth()"
+        >
+          <mat-icon svgIcon="chevron_right" class="material-symbols-outlined"></mat-icon>
+        </button>
+        <button
+          (click)="today()"
+          class="px-4 py-1 text-sm font-bold bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors ml-4"
+        >
+          Hoy
+        </button>
+      </div>
+    </div>
+    <div class="flex items-center bg-slate-100 dark:bg-slate-800 p-1 rounded-xl">
+      <button
+        class="px-6 py-2 rounded-lg bg-primary text-white text-sm font-bold shadow-lg"
+      >
+        Mes
+      </button>
+      <button
+        class="px-6 py-2 rounded-lg text-slate-500 hover:text-slate-100 text-sm font-medium"
+      >
+        Semana
+      </button>
+      <button
+        class="px-6 py-2 rounded-lg text-slate-500 hover:text-slate-100 text-sm font-medium"
+      >
+        Lista
+      </button>
+    </div>
+  </div>
+  <div class="flex flex-col lg:flex-row gap-8">
+    <!-- Sidebar Filters -->
+    <aside class="w-full lg:w-64 space-y-8 shrink-0">
+      <div>
+        <h3 class="text-sm font-bold uppercase tracking-wider text-slate-500 mb-4">
+          Juegos
+        </h3>
+        <div class="space-y-2">
+          <label
+            class="flex items-center gap-3 p-3 rounded-lg bg-slate-800/40 border border-slate-700/50 cursor-pointer hover:border-primary transition-all group"
+          >
+            <input
+              checked=""
+              class="rounded border-slate-600 bg-slate-700 text-primary focus:ring-primary"
+              type="checkbox"
+            />
+            <span class="text-sm font-medium">Pokémon TCG</span>
+            <span class="ml-auto w-2 h-2 rounded-full bg-blue-500"></span>
+          </label>
+          <label
+            class="flex items-center gap-3 p-3 rounded-lg bg-slate-800/40 border border-slate-700/50 cursor-pointer hover:border-primary transition-all"
+          >
+            <input
+              checked=""
+              class="rounded border-slate-600 bg-slate-700 text-primary focus:ring-primary"
+              type="checkbox"
+            />
+            <span class="text-sm font-medium">Magic: The Gathering</span>
+            <span class="ml-auto w-2 h-2 rounded-full bg-emerald-500"></span>
+          </label>
+        </div>
+      </div>
+      <!-- <div>
+        <h3 class="text-sm font-bold uppercase tracking-wider text-slate-500 mb-4">
+          Tipo de Evento
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          <button
+            class="px-3 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-xs font-semibold hover:border-primary"
+          >
+            Torneo
+          </button>
+          <button
+            class="px-3 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-xs font-semibold hover:border-primary"
+          >
+            Casual
+          </button>
+          <button
+            class="px-3 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-xs font-semibold hover:border-primary"
+          >
+            Liga
+          </button>
+          <button
+            class="px-3 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-xs font-semibold hover:border-primary"
+          >
+            Prerelease
+          </button>
+        </div>
+      </div> -->
+      <div class="p-4 rounded-xl bg-primary/10 border border-primary/20">
+        <div class="flex items-center gap-3 mb-2 text-primary">
+          <mat-icon svgIcon="info" class="material-symbols-outlined"></mat-icon>
+          <span class="font-bold">Pro-Tip</span>
+        </div>
+        <p class="text-xs leading-relaxed text-slate-400">
+          Asegúrate de registrarte antes de las 18:00 para los torneos semanales. ¡Los
+          espacios se agotan rápido!
+        </p>
+      </div>
+    </aside>
+    <app-month-view
+      class="w-full"
+      [visibleDate]="currentDate()"
+      [events]="events"
+      (daySelected)="onDaySelected($event)"
+    ></app-month-view>
+  </div>
+  @for (event of selectedEvents; track event) {
+    <app-event-card [event]="event"></app-event-card>
+  }
+</main>

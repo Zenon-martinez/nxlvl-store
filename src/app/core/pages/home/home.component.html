@@ -16,8 +16,21 @@
     [link]="{ url: '/magic', text: 'Busca MTG' }"
   ></app-card>
 </section>
+<app-trending></app-trending>
 <app-restocks></app-restocks>
 <section class="grid lg:grid-cols-2 gap-10 px-4 lg:px-10 py-16">
   <app-sealed></app-sealed>
   <app-events></app-events>
 </section>
+<div class="fixed bottom-8 right-8 z-[60]">
+  <button
+    (click)="goToRankingPage()"
+    class="flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full font-bold shadow-2xl shadow-primary/40 transition-all hover:scale-105 active:scale-95 group"
+  >
+    <mat-icon
+      svgIcon="trophy"
+      class="text-xl group-hover:rotate-12 transition-transform"
+    ></mat-icon>
+    <span class="text-sm uppercase tracking-wider">Next Level Leaderboard</span>
+  </button>
+</div>
