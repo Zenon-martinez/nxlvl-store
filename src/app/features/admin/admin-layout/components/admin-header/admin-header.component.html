@@ -1,0 +1,82 @@
+<div
+  class="fixed top-0 left-64 right-0 h-8 bg-slate-900 border-b border-white/5 z-50 flex items-center px-8 gap-6 overflow-x-auto whitespace-nowrap scrollbar-hide"
+>
+  <div class="flex items-center gap-2">
+    <span
+      class="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)]"
+    ></span>
+    <span class="text-[9px] font-black uppercase tracking-widest text-slate-400"
+      >Pokémon Sync: <span class="text-white">OK</span></span
+    >
+  </div>
+  <div class="flex items-center gap-2">
+    <span
+      class="w-2 h-2 rounded-full bg-yellow-500 shadow-[0_0_8px_rgba(234,179,8,0.6)] animate-pulse"
+    ></span>
+    <span class="text-[9px] font-black uppercase tracking-widest text-slate-400"
+      >Price Sync: <span class="text-white">Pending</span></span
+    >
+  </div>
+  <div class="flex items-center gap-2">
+    <span
+      class="w-2 h-2 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.6)]"
+    ></span>
+    <span class="text-[9px] font-black uppercase tracking-widest text-slate-400"
+      >Inventory Alerts: <span class="text-red-400">3 Issues</span></span
+    >
+  </div>
+  <div class="flex items-center gap-2">
+    <span
+      class="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)]"
+    ></span>
+    <span class="text-[9px] font-black uppercase tracking-widest text-slate-400"
+      >API Status: <span class="text-white">Operational</span></span
+    >
+  </div>
+</div>
+
+<!-- TopNavBar Shell -->
+<header
+  class="fixed top-8 left-64 right-0 h-16 bg-slate-950/80 backdrop-blur-md border-b border-white/10 flex items-center justify-between px-8 z-40 shadow-2xl shadow-blue-500/5"
+>
+  <div class="flex items-center gap-4">
+    <mat-icon svgIcon="search" class="text-blue-500"></mat-icon>
+    <input
+      class="bg-transparent border-none focus:ring-0 text-sm font-bold uppercase tracking-widest text-slate-400 w-64"
+      placeholder="Busca..."
+      type="text"
+    />
+  </div>
+  <div class="flex items-center gap-6">
+    <div class="flex items-center gap-4">
+      <button
+        class="relative text-slate-400 hover:text-blue-500 transition-transform scale-105 active:scale-95"
+      >
+        <mat-icon svgIcon="notifications"></mat-icon>
+        <span class="absolute -top-1 -right-1 w-2 h-2 bg-blue-500 rounded-full"></span>
+      </button>
+      <button
+        class="text-slate-400 hover:text-blue-500 transition-transform scale-105 active:scale-95"
+      >
+        <mat-icon svgIcon="settings"></mat-icon>
+      </button>
+      <button
+        class="text-slate-400 hover:text-blue-500 transition-transform scale-105 active:scale-95"
+      >
+        <mat-icon svgIcon="help"></mat-icon>
+      </button>
+    </div>
+    <div class="h-8 w-[1px] bg-white/10"></div>
+    <div class="flex items-center gap-3">
+      <div class="text-right">
+        <p class="text-[10px] font-black uppercase text-white">Perfil Administrador</p>
+        <p class="text-[9px] font-bold text-blue-500 uppercase">Master Collector</p>
+      </div>
+      <img
+        alt="Admin Profile"
+        class="w-10 h-10 rounded-full border border-blue-500/30 object-cover"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXNqMav_fJhTG3L72d6Db6FpjoOFyAk2mHM7tRiFZ4VaGBpO5Pz5lS1xr4RG_-qGdqjW7WN6MZXi-DXI9Dt0nzGobh2nDRMxKEm42hzUbFdhD1WCq5cmUq6DYADyz1HARjOPxRepgKG4vj2Iv-Q9y9ZTcm8FxwFoab_bS5cUr4V7Oe8bL335bOgfzavOibaFRKR1Fg321neiZOcak8dFB2ajdPBBM--zjC0TAUESH-oVvow9wphuWUfwVuVc4dq_FrdprM-9X4lOQ"
+      />
+    </div>
+  </div>
+</header>

@@ -1,0 +1,447 @@
+<!-- Main Content Canvas -->
+<main class="ml-64 mt-24 p-8 h-[calc(100vh-96px)] overflow-y-auto custom-scrollbar">
+  <!-- Dashboard Header -->
+  <div class="mb-10">
+    <h1 class="text-4xl font-black tracking-tight text-white mb-2 uppercase">
+      NEXT <span class="text-blue-500">LEVEL</span>
+    </h1>
+    <span class="text-slate-400 font-bold uppercase text-[10px] tracking-[0.2em]">
+      Centro de comando operacional
+    </span>
+  </div>
+  <!-- TCG-Specific KPIs -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">
+    <div
+      class="bg-white/5 border border-white/10 p-5 hover:border-primary/50 transition-all duration-300"
+    >
+      <h3 class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-1">
+        Ventas (24h)
+      </h3>
+      <div class="flex items-baseline gap-2">
+        <p class="text-xl font-black text-white">$14,290</p>
+        <span class="text-[9px] font-bold text-green-500 uppercase">+12.5%</span>
+      </div>
+    </div>
+    <div
+      class="bg-white/5 border border-white/10 p-5 hover:border-primary/50 transition-all duration-300"
+    >
+      <h3 class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-1">
+        Valor del Inventario
+      </h3>
+      <div class="flex items-baseline gap-2">
+        <p class="text-xl font-black text-white">$412.8K</p>
+        <span class="text-[9px] font-bold text-blue-400 uppercase">+2.1%</span>
+      </div>
+    </div>
+    <div
+      class="bg-white/5 border border-white/10 p-5 hover:border-primary/50 transition-all duration-300"
+    >
+      <h3 class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-1">
+        Catálogo Externo
+      </h3>
+      <p class="text-xl font-black text-white">258,492</p>
+    </div>
+    <div
+      class="bg-white/5 border border-white/10 p-5 hover:border-primary/50 transition-all duration-300"
+    >
+      <h3 class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-1">
+        Stock Físico
+      </h3>
+      <p class="text-xl font-black text-white">42,105</p>
+    </div>
+    <div
+      class="bg-white/5 border border-white/10 p-5 hover:border-primary/50 transition-all duration-300"
+    >
+      <h3 class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-1">
+        Margen Promedio
+      </h3>
+      <p class="text-xl font-black text-white">24.8%</p>
+    </div>
+    <div
+      class="bg-white/5 border border-white/10 p-5 hover:border-primary/50 transition-all duration-300"
+    >
+      <h3 class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-1">
+        Más Buscado
+      </h3>
+      <p class="text-sm font-black text-blue-500 uppercase truncate">Charizard ex</p>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <!-- Left Column: Unified Activity Log & Alerts -->
+    <div class="lg:col-span-2 space-y-8">
+      <!-- System Alerts Section -->
+      <section class="bg-red-500/10 border border-red-500/20 p-4">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="material-symbols-outlined text-red-500 text-sm" data-icon="report"
+            >report</span
+          >
+          <h2 class="text-[10px] font-black text-white uppercase tracking-widest">
+            Alertas del Sistema Activas
+          </h2>
+        </div>
+        <div class="space-y-3">
+          <div
+            class="flex items-center justify-between bg-white/5 p-3 border border-white/5"
+          >
+            <div class="flex items-center gap-3">
+              <span
+                class="text-[10px] font-black bg-red-500 text-white px-1.5 py-0.5 uppercase"
+                >Crítico</span
+              >
+              <p class="text-[11px] font-bold text-slate-200">
+                TCGPlayer API rate limit reached. Retrying in 45s.
+              </p>
+            </div>
+            <button class="text-[9px] font-black text-blue-500 uppercase hover:underline">
+              Reintentar Ahora
+            </button>
+          </div>
+          <div
+            class="flex items-center justify-between bg-white/5 p-3 border border-white/5"
+          >
+            <div class="flex items-center gap-3">
+              <span
+                class="text-[10px] font-black bg-yellow-500 text-slate-950 px-1.5 py-0.5 uppercase"
+                >Advertencia</span
+              >
+              <p class="text-[11px] font-bold text-slate-200">
+                Low stock on "Surging Sparks" Booster Boxes (2 left).
+              </p>
+            </div>
+            <button class="text-[9px] font-black text-blue-500 uppercase hover:underline">
+              Reabastecer
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Unified Activity Log -->
+      <section class="bg-white/5 border border-white/10 overflow-hidden">
+        <div
+          class="px-6 py-4 border-b border-white/10 flex justify-between items-center bg-white/2"
+        >
+          <h2 class="text-sm font-black text-white uppercase tracking-widest">
+            Registro de Actividades
+          </h2>
+          <div class="flex gap-4">
+            <button class="text-[10px] font-bold text-blue-500 uppercase hover:underline">
+              Exportar Registro
+            </button>
+            <button
+              class="text-[10px] font-bold text-slate-500 uppercase hover:text-white"
+            >
+              Filtrar
+            </button>
+          </div>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left">
+            <thead>
+              <tr
+                class="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] border-b border-white/5"
+              >
+                <th class="px-6 py-4">Tipo</th>
+                <th class="px-6 py-4">Acción</th>
+                <th class="px-6 py-4">Actor</th>
+                <th class="px-6 py-4 text-right">Marca de Tiempo</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5">
+              <tr class="hover:bg-white/2 transition-colors cursor-pointer group">
+                <td class="px-6 py-4">
+                  <mat-icon
+                    svgIcon="shopping_basket"
+                    class="text-blue-500 text-lg"
+                  ></mat-icon>
+                </td>
+                <td class="px-6 py-4">
+                  <p class="text-sm font-bold text-white uppercase">
+                    Pedido #ORD-9012 Enviado
+                  </p>
+                  <p class="text-[10px] text-slate-500">Alex Mercer • $142.50</p>
+                </td>
+                <td class="px-6 py-4 text-xs font-mono text-slate-400">System.Auto</td>
+                <td class="px-6 py-4 text-right text-[10px] font-black text-slate-500">
+                  2M ATRÁS
+                </td>
+              </tr>
+              <tr class="hover:bg-white/2 transition-colors cursor-pointer group">
+                <td class="px-6 py-4">
+                  <mat-icon svgIcon="sync" class="text-green-500 text-lg"></mat-icon>
+                </td>
+                <td class="px-6 py-4">
+                  <p class="text-sm font-bold text-white uppercase">
+                    Catalog Import Finished
+                  </p>
+                  <p class="text-[10px] text-slate-500">4,000 cards updated</p>
+                </td>
+                <td class="px-6 py-4 text-xs font-mono text-slate-400">Admin.User</td>
+                <td class="px-6 py-4 text-right text-[10px] font-black text-slate-500">
+                  12M AGO
+                </td>
+              </tr>
+              <tr class="hover:bg-white/2 transition-colors cursor-pointer group">
+                <td class="px-6 py-4">
+                  <mat-icon svgIcon="sell" class="text-yellow-500 text-lg"></mat-icon>
+                </td>
+                <td class="px-6 py-4">
+                  <p class="text-sm font-bold text-white uppercase">
+                    Bulk Price Adjustment
+                  </p>
+                  <p class="text-[10px] text-slate-500">12 items updated in "Modern"</p>
+                </td>
+                <td class="px-6 py-4 text-xs font-mono text-slate-400">System.Cron</td>
+                <td class="px-6 py-4 text-right text-[10px] font-black text-slate-500">
+                  45M AGO
+                </td>
+              </tr>
+              <tr class="hover:bg-white/2 transition-colors cursor-pointer group">
+                <td class="px-6 py-4">
+                  <mat-icon
+                    svgIcon="inventory"
+                    class="text-purple-500 text-lg"
+                  ></mat-icon>
+                </td>
+                <td class="px-6 py-4">
+                  <p class="text-sm font-bold text-white uppercase">
+                    Stock Level Correction
+                  </p>
+                  <p class="text-[10px] text-slate-500">Umbreon Gold Star (+1)</p>
+                </td>
+                <td class="px-6 py-4 text-xs font-mono text-slate-400">Master.Coll</td>
+                <td class="px-6 py-4 text-right text-[10px] font-black text-slate-500">
+                  1H AGO
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <!-- Enhanced Card Import Manager -->
+      <section class="bg-white/5 border border-white/10 p-6">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+          <div>
+            <h2 class="text-sm font-black text-white uppercase tracking-widest mb-1">
+              Card Import Manager
+            </h2>
+            <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">
+              Global TCG Database Synchronization
+            </p>
+          </div>
+          <button
+            class="bg-blue-500 hover:bg-blue-600 text-white text-[11px] font-black uppercase px-6 py-3 tracking-widest transition-colors flex items-center gap-2 shadow-lg shadow-blue-500/20"
+          >
+            <mat-icon svgIcon="sync" class="text-sm"></mat-icon>
+            Sincronizar catálogo Pokémon
+          </button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+          <div class="md:col-span-8 bg-slate-900 border border-white/5 p-5">
+            <div class="flex justify-between items-end mb-4">
+              <div>
+                <p
+                  class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1"
+                >
+                  Current Task: Pokémon TCG Live Sync
+                </p>
+                <p class="text-lg font-black text-white">
+                  2,450
+                  <span class="text-slate-500 text-sm font-bold"
+                    >/ 4,000 cards processed</span
+                  >
+                </p>
+              </div>
+              <div class="text-right">
+                <span
+                  class="bg-blue-500/10 text-blue-500 text-[10px] font-black px-2 py-0.5 uppercase border border-blue-500/20"
+                  >Active</span
+                >
+                <p class="text-[10px] font-black text-white mt-1">61%</p>
+              </div>
+            </div>
+            <div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden mb-6">
+              <div
+                class="h-full bg-blue-500 w-[61%] shadow-[0_0_10px_rgba(59,130,246,0.5)]"
+              ></div>
+            </div>
+            <div class="grid grid-cols-3 gap-4 border-t border-white/5 pt-4">
+              <div>
+                <p class="text-[9px] font-bold text-slate-500 uppercase">Elapsed</p>
+                <p class="text-xs font-bold text-white">00:14:22</p>
+              </div>
+              <div>
+                <p class="text-[9px] font-bold text-slate-500 uppercase">Estimated</p>
+                <p class="text-xs font-bold text-white">~00:08:45</p>
+              </div>
+              <div>
+                <p class="text-[9px] font-bold text-slate-500 uppercase">Speed</p>
+                <p class="text-xs font-bold text-white">12 cards/s</p>
+              </div>
+            </div>
+          </div>
+          <div class="md:col-span-4 space-y-4">
+            <div class="bg-white/5 p-4 border border-white/5">
+              <h3
+                class="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-3"
+              >
+                Sync History
+              </h3>
+              <div class="space-y-3">
+                <div class="flex justify-between items-center text-[10px]">
+                  <span class="text-slate-500">OCT 24, 08:30</span>
+                  <span class="text-green-500 font-black">SUCCESS (22m)</span>
+                </div>
+                <div class="flex justify-between items-center text-[10px]">
+                  <span class="text-slate-500">OCT 23, 14:15</span>
+                  <span class="text-red-500 font-black">FAILED (4m)</span>
+                </div>
+                <div class="flex justify-between items-center text-[10px]">
+                  <span class="text-slate-500">OCT 23, 08:30</span>
+                  <span class="text-green-500 font-black">SUCCESS (19m)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Right Column: Quick Actions & Collapsed Event Portal -->
+    <div class="space-y-8">
+      <!-- Quick Action Panel -->
+      <section
+        class="bg-blue-600 p-6 border border-blue-400/30 shadow-xl shadow-blue-500/10"
+      >
+        <h2
+          class="text-sm font-black text-white uppercase tracking-widest mb-6 flex items-center gap-2"
+        >
+          <mat-icon svgIcon="bolt"></mat-icon>
+          Acciones Rápidas
+        </h2>
+        <div class="grid grid-cols-1 gap-3">
+          <button
+            class="w-full flex items-center gap-4 bg-white/10 hover:bg-white/20 p-3 transition-all group"
+          >
+            <mat-icon svgIcon="sync" class="text-white"></mat-icon>
+            <span class="text-[10px] font-black text-white uppercase tracking-widest"
+              >Sincronizar Catálogo de Pokémon</span
+            >
+          </button>
+          <button
+            class="w-full flex items-center gap-4 bg-white/10 hover:bg-white/20 p-3 transition-all group"
+          >
+            <mat-icon svgIcon="sell" class="text-white"></mat-icon>
+            <span class="text-[10px] font-black text-white uppercase tracking-widest"
+              >Actualizar el precio del bulk</span
+            >
+          </button>
+          <button
+            class="w-full flex items-center gap-4 bg-white/10 hover:bg-white/20 p-3 transition-all group"
+          >
+            <mat-icon svgIcon="add_box" class="text-white"></mat-icon>
+            <span class="text-[10px] font-black text-white uppercase tracking-widest"
+              >Añadir Producto</span
+            >
+          </button>
+          <button
+            class="w-full flex items-center gap-4 bg-white/10 hover:bg-white/20 p-3 transition-all group"
+          >
+            <mat-icon svgIcon="edit_calendar" class="text-white"></mat-icon>
+            <span class="text-[10px] font-black text-white uppercase tracking-widest"
+              >Ajustar Inventario</span
+            >
+          </button>
+        </div>
+      </section>
+      <!-- Event Portal (Secondary/Smaller) -->
+      <section class="bg-white/5 border border-white/10 p-6">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-sm font-black text-white uppercase tracking-widest">
+            Upcoming Events
+          </h2>
+          <mat-icon svgIcon="expand_more" class="text-slate-500 text-sm"></mat-icon>
+        </div>
+        <div class="space-y-4">
+          <div class="border-l-2 border-blue-500 bg-white/5 p-3">
+            <p class="text-[8px] font-bold text-blue-400 uppercase tracking-widest mb-1">
+              FRI • OCT 24
+            </p>
+            <h4 class="text-[11px] font-black text-white uppercase">MH3 Prerelease</h4>
+            <p class="text-[9px] font-black text-slate-500 uppercase mt-2">26/32 SLOTS</p>
+          </div>
+          <div class="border-l-2 border-white/20 bg-white/2 p-3">
+            <p class="text-[8px] font-bold text-slate-500 uppercase tracking-widest mb-1">
+              SAT • OCT 25
+            </p>
+            <h4 class="text-[11px] font-black text-white uppercase">RCQ Qualifier</h4>
+            <p class="text-[9px] font-black text-slate-500 uppercase mt-2">47/64 SLOTS</p>
+          </div>
+        </div>
+        <button
+          class="w-full mt-6 py-2 bg-white/5 border border-white/10 text-[9px] font-black text-white uppercase tracking-widest hover:bg-white/10 transition-colors"
+        >
+          View Manager
+        </button>
+      </section>
+      <!-- Vault Commands (Legacy placeholder if needed) -->
+      <section class="bg-white/2 border border-white/5 p-6">
+        <h2 class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-4">
+          Report Hub
+        </h2>
+        <ul class="space-y-3">
+          <li>
+            <button
+              class="w-full flex items-center justify-between text-[9px] font-black text-slate-400 hover:text-white uppercase tracking-widest group"
+            >
+              <span>Inventory Manifest</span>
+              <mat-icon
+                svgIcon="chevron_right"
+                class="text-sm group-hover:translate-x-1 transition-transform"
+              ></mat-icon>
+            </button>
+          </li>
+          <li>
+            <button
+              class="w-full flex items-center justify-between text-[9px] font-black text-slate-400 hover:text-white uppercase tracking-widest group"
+            >
+              <span>Tax Compliance Report</span>
+              <mat-icon
+                svgIcon="chevron_right"
+                class="text-sm group-hover:translate-x-1 transition-transform"
+              ></mat-icon>
+            </button>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+  <!-- Footer Info -->
+  <footer
+    class="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4"
+  >
+    <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">
+      © 2024 NEXT LEVEL TCG • MIDNIGHT OBSIDIAN V2.5.0
+    </p>
+    <div class="flex gap-6">
+      <a
+        class="text-[10px] font-bold text-slate-500 uppercase tracking-widest hover:text-white transition-colors"
+        href="#"
+        >Privacy Protocol</a
+      >
+      <a
+        class="text-[10px] font-bold text-slate-500 uppercase tracking-widest hover:text-white transition-colors"
+        href="#"
+        >API Status</a
+      >
+      <a
+        class="text-[10px] font-bold text-slate-500 uppercase tracking-widest hover:text-white transition-colors"
+        href="#"
+        >Security Logs</a
+      >
+    </div>
+  </footer>
+</main>
+<!-- FAB Action -->
+<button
+  class="fixed bottom-8 right-8 w-14 h-14 bg-blue-500 rounded-full shadow-2xl shadow-blue-500/40 flex items-center justify-center text-white hover:scale-110 active:scale-90 transition-transform z-50"
+>
+  <mat-icon svgIcon="add" class="text-white"></mat-icon>
+</button>

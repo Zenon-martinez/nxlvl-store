@@ -1,0 +1,31 @@
+<!-- Main Content Canvas -->
+<main class="pl-64 pt-16 min-h-screen">
+  <div class="max-w-[1400px] mx-auto p-8 lg:p-12">
+    <!-- Header Section -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+      <div>
+        <h1
+          class="text-4xl md:text-5xl font-black tracking-tighter text-on-surface uppercase leading-none"
+        >
+          Importador de Cartas
+        </h1>
+      </div>
+      <button
+        class="group relative overflow-hidden bg-primary px-8 py-4 rounded-lg flex items-center gap-3 active:scale-95 transition-all"
+        (click)="startImport()"
+      >
+        <mat-icon svgIcon="sync" class="text-white"></mat-icon>
+        <span class="font-black text-sm uppercase tracking-widest text-white"
+          >Sincronizar catálogo Pokémon</span
+        >
+        <div
+          class="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300"
+        ></div>
+      </button>
+    </div>
+    <app-import-progress></app-import-progress>
+    <div class="mb-12"></div>
+    <!-- History Section -->
+    <app-import-history></app-import-history>
+  </div>
+</main>

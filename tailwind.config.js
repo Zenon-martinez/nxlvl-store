@@ -8,6 +8,9 @@ module.exports = {
         primary: '#137fec',
         'background-light': '#f6f7f8',
         'background-dark': '#101922',
+        error: '#ef4444',
+        'error-container': '#991b1b',
+        outline: '#334155',
       },
       fontFamily: {
         display: ['Inter', 'sans-serif'],
