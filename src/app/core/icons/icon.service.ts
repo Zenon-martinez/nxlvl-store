@@ -77,6 +77,12 @@ export class IconService {
       'receipt_long',
       'report',
       'refresh',
+      'verified',
+      'filter_list',
+      'edit',
+      'download',
+      'analytics',
+      'add',
     ];
 
     icons.forEach((icon) => {

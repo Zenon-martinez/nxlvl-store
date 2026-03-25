@@ -1,0 +1,432 @@
+<!-- MAIN CONTENT -->
+<main
+  class="ml-64 mt-16 p-8 h-[calc(100vh-4rem)] overflow-y-auto grid grid-cols-12 gap-8 scrollbar-hide"
+>
+  <!-- LEFT: Product List Area -->
+  <div class="col-span-12 xl:col-span-8 space-y-6">
+    <!-- List Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+      <div>
+        <h2 class="text-3xl font-black tracking-tighter text-white uppercase">
+          Product Catalog
+        </h2>
+        <p class="text-slate-400 text-sm font-medium">
+          Manage 12,402 active listings across 14 expansions.
+        </p>
+      </div>
+      <div class="flex gap-2">
+        <div class="relative">
+          <mat-icon
+            svgIcon="filter_list"
+            class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-sm"
+          ></mat-icon>
+          <input
+            class="bg-surface-container-high border-white/5 rounded-lg pl-10 pr-4 py-2 text-[10px] w-48 focus:ring-1 focus:ring-blue-500 transition-all text-white placeholder:text-slate-600 font-extrabold tracking-widest uppercase"
+            placeholder="FILTER BY SET OR ID..."
+            type="text"
+          />
+        </div>
+        <button
+          class="bg-white/5 border border-white/10 px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-white/10 transition-colors"
+        >
+          <mat-icon svgIcon="download" class="text-slate-400 text-sm"></mat-icon>
+          <span class="text-[10px] font-black tracking-widest text-white uppercase"
+            >Export CSV</span
+          >
+        </button>
+      </div>
+    </div>
+    <!-- Product Grid -->
+    <div class="grid grid-cols-1 gap-6">
+      <!-- Product Row 1 (Enhanced) -->
+      <div
+        class="group relative bg-white/5 border border-blue-500/30 rounded-xl p-5 flex flex-col md:flex-row items-start md:items-center gap-6 transition-all duration-300 hover:bg-white/[0.07] cursor-pointer focus-ring"
+        tabindex="0"
+      >
+        <div
+          class="absolute left-0 top-0 bottom-0 w-1 bg-blue-500 rounded-l-xl shadow-[0_0_15px_rgba(19,127,236,0.5)]"
+        ></div>
+        <!-- Image Section -->
+        <div
+          class="w-24 h-32 bg-surface-container-lowest rounded-lg overflow-hidden flex-shrink-0 border border-white/10 shadow-2xl relative group-hover:scale-105 transition-transform"
+        >
+          <img
+            class="w-full h-full object-cover"
+            data-alt="high-quality holographic trading card featuring a powerful fire dragon, shimmering textured surface with intricate detail, dark background"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSd5NWIOmrkRvZXZrr3nq43Hd3JGiAxTbj2fVQNgrbvnrWsdB6-pofs9pARw5EbhdDjkUGZrXjqE4T9OUNqxPJXk16rStan3YaAuIglPlT6O_fH1KNr8-7y1N_RGp0WE1yye2wRy3-V0rAuxi_vHR0nFbfGJDy2Z_8EDyijOiv4HFT_m0tGBiMu-UbaZzGEy7cfGk2lXsApggrwYUR13K96QJz3zPCRiH7N7CISOlIo8DSwLYZ3zbgapJZuWL1Uva-mlVFptSmjPc"
+          />
+        </div>
+        <!-- Content Section -->
+        <div class="flex-1 min-w-0 flex flex-col h-full justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-1">
+              <span class="text-[9px] font-bold tracking-widest text-slate-500 uppercase"
+                >SWSH12-199/165</span
+              >
+              <span
+                class="px-1.5 py-0.5 rounded bg-blue-500/10 text-blue-500 text-[9px] font-black tracking-widest border border-blue-500/20 uppercase"
+                >Scarlet &amp; Violet: 151</span
+              >
+            </div>
+            <h3
+              class="text-xl font-black tracking-tight text-white uppercase truncate mb-2 leading-tight"
+            >
+              Charizard ex - Special Illustration Rare
+            </h3>
+          </div>
+          <!-- Variants Preview Section -->
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-2 mt-2">
+            <div class="bg-black/20 rounded px-2 py-1.5 border border-white/5">
+              <p class="text-[8px] font-bold text-slate-500 uppercase leading-none mb-1">
+                NM Stock
+              </p>
+              <p class="text-[10px] font-black text-white">
+                12 units | <span class="text-blue-400">$129.00</span>
+              </p>
+            </div>
+            <div class="bg-black/20 rounded px-2 py-1.5 border border-white/5">
+              <p class="text-[8px] font-bold text-slate-500 uppercase leading-none mb-1">
+                LP Stock
+              </p>
+              <p class="text-[10px] font-black text-white">
+                4 units | <span class="text-blue-400">$115.00</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Financials & Status -->
+        <div
+          class="flex flex-col items-end justify-between self-stretch gap-4 border-l border-white/10 pl-6"
+        >
+          <div class="flex flex-col items-end gap-1">
+            <div
+              class="flex items-center gap-2 bg-green-500/10 text-green-500 text-[9px] font-black px-2 py-1 rounded uppercase tracking-widest border border-green-500/20 shadow-[0_0_10px_rgba(34,197,94,0.1)]"
+            >
+              <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+              Healthy Stock
+            </div>
+            <div class="text-[9px] font-bold text-slate-500 uppercase mt-1">
+              Global: 16 units
+            </div>
+          </div>
+          <div class="text-right group/price relative">
+            <p
+              class="text-[9px] font-bold text-slate-500 uppercase tracking-tighter mb-0.5"
+            >
+              Market Average
+            </p>
+            <div class="flex items-center gap-1.5">
+              <p class="text-2xl font-black text-white">$124.50</p>
+              <mat-icon
+                svgIcon="edit"
+                class="text-sm text-slate-600 group-hover/price:text-blue-500 transition-colors cursor-pointer"
+              ></mat-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product Row 2 -->
+      <div
+        class="group relative bg-surface-container border border-white/5 rounded-xl p-5 flex flex-col md:flex-row items-start md:items-center gap-6 transition-all duration-300 hover:border-white/20 hover:bg-white/[0.03] cursor-pointer focus-ring"
+        tabindex="0"
+      >
+        <div
+          class="w-24 h-32 bg-surface-container-lowest rounded-lg overflow-hidden flex-shrink-0 border border-white/10 relative"
+        >
+          <img
+            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all"
+            data-alt="sealed holographic booster box of premium trading cards"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8F_O4cfLS3bbfE5SxmPfZeCSyg2TzYHo90KuXrEwrMh-_fKtQRuUMzAsTT2DVN1hwst7MnWEMVt-NdytotCuskGLHB4L8xaRlLv66Jm_stZYoV3WuXpo2ToOGnaZtyDe-uWZqYkOi-dAcCIskTzA5-x6BnFpchCXo9wPHh4QWxz1LRIuDUa3UZhjrHHYFzcvWgoY4L_fT45-029Mh5jlG69Z1lad29vpswMGQajmU8xSIVC3aMOto_haAtkxiXHZJ7hmN-6UYhIY"
+          />
+        </div>
+        <div class="flex-1 min-w-0 flex flex-col h-full justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-1">
+              <span class="text-[9px] font-bold tracking-widest text-slate-600 uppercase"
+                >SV-SET-001</span
+              >
+              <span
+                class="px-1.5 py-0.5 rounded bg-white/5 text-slate-400 text-[9px] font-black tracking-widest border border-white/10 uppercase"
+                >Paradox Rift</span
+              >
+            </div>
+            <h3
+              class="text-xl font-black tracking-tight text-white uppercase truncate mb-2 leading-tight"
+            >
+              Paradox Rift - Booster Box
+            </h3>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-2 mt-2">
+            <div class="bg-black/20 rounded px-2 py-1.5 border border-white/5">
+              <p class="text-[8px] font-bold text-slate-500 uppercase leading-none mb-1">
+                Sealed Stock
+              </p>
+              <p class="text-[10px] font-black text-white">
+                3 units | <span class="text-blue-400">$108.00</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col items-end justify-between self-stretch gap-4 border-l border-white/10 pl-6"
+        >
+          <div class="flex flex-col items-end gap-1">
+            <div
+              class="flex items-center gap-2 bg-yellow-500/10 text-yellow-500 text-[9px] font-black px-2 py-1 rounded uppercase tracking-widest border border-yellow-500/20 shadow-[0_0_10px_rgba(234,179,8,0.1)]"
+            >
+              <span class="w-1.5 h-1.5 rounded-full bg-yellow-500"></span>
+              Low Stock
+            </div>
+            <div class="text-[9px] font-bold text-slate-500 uppercase mt-1">
+              Global: 3 units
+            </div>
+          </div>
+          <div class="text-right group/price relative">
+            <p
+              class="text-[9px] font-bold text-slate-500 uppercase tracking-tighter mb-0.5"
+            >
+              Market Average
+            </p>
+            <div class="flex items-center gap-1.5">
+              <p class="text-2xl font-black text-white">$108.00</p>
+              <mat-icon
+                svgIcon="edit"
+                class="text-sm text-slate-600 group-hover/price:text-blue-500 transition-colors cursor-pointer"
+              ></mat-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product Row 3 -->
+      <div
+        class="group relative bg-surface-container border border-white/5 rounded-xl p-5 flex flex-col md:flex-row items-start md:items-center gap-6 transition-all duration-300 hover:border-white/20 hover:bg-white/[0.03] cursor-pointer focus-ring"
+        tabindex="0"
+      >
+        <div
+          class="w-24 h-32 bg-surface-container-lowest rounded-lg overflow-hidden flex-shrink-0 border border-white/10 relative"
+        >
+          <img
+            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all"
+            data-alt="dark sleek trading card sleeves"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDnSSTD38BKiRgxcHbX7x5dgdQmxX-j8cK0TFU4CJv5mZchVxdyXiMRwI_ngINpRJ8dXhRZyx6UOyMgFRPn8c5Gb41s8CFKABHJ0csCXfuFOlpoM3g4kQxomURLXPAVJlGCh8PPirZZy7lGDg6-MdLK6xG4CQ-QG1WQFUm7x12qIUzQXh6d39as9WZPTMRra7dIReu3STfRyQUz5K4TrF_0o-OyVZ8-_NadOBXPB7Ilup1ccW0Cj-OZIQ5oOLyPb_Zki4yZqrAhBA"
+          />
+        </div>
+        <div class="flex-1 min-w-0 flex flex-col h-full justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-1">
+              <span class="text-[9px] font-bold tracking-widest text-slate-600 uppercase"
+                >ACC-DS-MAT-BLK</span
+              >
+              <span
+                class="px-1.5 py-0.5 rounded bg-white/5 text-slate-400 text-[9px] font-black tracking-widest border border-white/10 uppercase"
+                >Dragon Shield</span
+              >
+            </div>
+            <h3
+              class="text-xl font-black tracking-tight text-white uppercase truncate mb-2 leading-tight"
+            >
+              Dragon Shield Matte - Obsidian Black
+            </h3>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-2 mt-2">
+            <div class="bg-black/20 rounded px-2 py-1.5 border border-white/5">
+              <p class="text-[8px] font-bold text-slate-500 uppercase leading-none mb-1">
+                Stock
+              </p>
+              <p class="text-[10px] font-black text-white">
+                0 units | <span class="text-blue-400">$11.99</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col items-end justify-between self-stretch gap-4 border-l border-white/10 pl-6"
+        >
+          <div class="flex flex-col items-end gap-1">
+            <div
+              class="flex items-center gap-2 bg-red-500/10 text-red-500 text-[9px] font-black px-2 py-1 rounded uppercase tracking-widest border border-red-500/20 shadow-[0_0_10px_rgba(239,68,68,0.1)]"
+            >
+              <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
+              Out of Stock
+            </div>
+            <div class="text-[9px] font-bold text-slate-500 uppercase mt-1">
+              Global: 0 units
+            </div>
+          </div>
+          <div class="text-right group/price relative">
+            <p
+              class="text-[9px] font-bold text-slate-500 uppercase tracking-tighter mb-0.5"
+            >
+              MSRP
+            </p>
+            <div class="flex items-center gap-1.5">
+              <p class="text-2xl font-black text-white">$11.99</p>
+              <mat-icon
+                svgIcon="edit"
+                class="text-sm text-slate-600 group-hover/price:text-blue-500 transition-colors cursor-pointer"
+              ></mat-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- RIGHT: Business Admin Sidebar -->
+  <div class="col-span-12 xl:col-span-4 space-y-6">
+    <div
+      class="bg-surface-container-high border border-white/10 rounded-xl p-6 shadow-2xl sticky top-0"
+    >
+      <div class="flex items-center justify-between mb-6">
+        <div class="flex items-center gap-2">
+          <mat-icon svgIcon="analytics" class="text-blue-500 text-sm"></mat-icon>
+          <h4 class="text-[10px] font-black tracking-[0.2em] text-blue-500 uppercase">
+            Selection Analytics
+          </h4>
+        </div>
+        <button class="text-slate-500 hover:text-white transition-colors">
+          <mat-icon
+            svgIcon="close"
+            class="text-slate-500 hover:text-white transition-colors text-lg"
+          ></mat-icon>
+        </button>
+      </div>
+      <!-- Business Stats Row -->
+      <div class="grid grid-cols-2 gap-4 mb-6">
+        <div class="bg-surface-container-low border border-white/5 p-3 rounded-lg">
+          <p class="text-[8px] font-black text-slate-500 uppercase mb-1">Profit Margin</p>
+          <div class="flex items-end gap-1">
+            <span class="text-lg font-black text-green-500 leading-none">42.8%</span>
+            <span class="text-[9px] text-slate-600 font-bold mb-0.5">AVG</span>
+          </div>
+        </div>
+        <div class="bg-surface-container-low border border-white/5 p-3 rounded-lg">
+          <p class="text-[8px] font-black text-slate-500 uppercase mb-1">30D Movement</p>
+          <div class="flex items-end gap-1">
+            <span class="text-lg font-black text-white leading-none">124</span>
+            <span class="text-[9px] text-slate-600 font-bold mb-0.5">UNITS</span>
+          </div>
+        </div>
+      </div>
+      <!-- Price History Sparkline -->
+      <div class="mb-6">
+        <div class="flex justify-between items-center mb-2">
+          <p class="text-[8px] font-black text-slate-500 uppercase">90D Price History</p>
+          <span class="text-[8px] font-bold text-green-500">+8.4%</span>
+        </div>
+        <div
+          class="h-12 w-full bg-slate-900/50 rounded border border-white/5 relative overflow-hidden sparkline-mask"
+        >
+          <svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 100 20">
+            <path
+              d="M0 15 L10 12 L20 14 L30 8 L40 10 L50 4 L60 6 L70 2 L80 5 L90 3 L100 5"
+              fill="none"
+              stroke="#3b82f6"
+              stroke-width="1.5"
+            ></path>
+          </svg>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-blue-500/10 to-transparent"
+          ></div>
+        </div>
+      </div>
+      <!-- Recent Activity -->
+      <div class="mb-6 p-3 bg-blue-500/5 border border-blue-500/10 rounded-lg">
+        <div
+          class="flex justify-between items-center text-[8px] font-black text-slate-500 uppercase mb-2"
+        >
+          <span>Last Sale</span>
+          <span class="text-blue-400">Oct 24, 2023</span>
+        </div>
+        <div class="flex justify-between items-center">
+          <span class="text-[10px] font-bold text-white">1x NM English Holo</span>
+          <span class="text-[10px] font-black text-white">$129.00</span>
+        </div>
+      </div>
+      <div class="mb-6">
+        <p class="text-[10px] font-black tracking-widest text-slate-500 uppercase mb-3">
+          Inventory Adjustments
+        </p>
+        <div class="space-y-2">
+          <!-- Compact Inventory Row -->
+          <div
+            class="bg-surface-container-low border border-white/5 p-2 rounded-lg flex items-center justify-between"
+          >
+            <div class="flex-1">
+              <div class="flex items-center gap-2">
+                <span class="text-[10px] font-black text-white">NM | EN</span>
+                <span class="text-[9px] font-bold text-slate-500 uppercase">12 IN</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-xs font-black text-blue-400">$129.00</span>
+              <div class="flex gap-1">
+                <button
+                  class="w-6 h-6 flex items-center justify-center bg-white/5 rounded hover:bg-white/10 text-slate-400"
+                >
+                  <mat-icon svgIcon="edit" class="text-sm"></mat-icon>
+                </button>
+                <button
+                  class="w-6 h-6 flex items-center justify-center bg-white/5 rounded hover:bg-white/10 text-slate-400"
+                >
+                  <mat-icon svgIcon="add" class="text-sm"></mat-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Compact Inventory Row 2 -->
+          <div
+            class="bg-surface-container-low border border-white/5 p-2 rounded-lg flex items-center justify-between opacity-60"
+          >
+            <div class="flex-1">
+              <div class="flex items-center gap-2">
+                <span class="text-[10px] font-black text-white">LP | EN</span>
+                <span class="text-[9px] font-bold text-slate-500 uppercase">4 IN</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-xs font-black text-blue-400">$115.00</span>
+              <div class="flex gap-1">
+                <button
+                  class="w-6 h-6 flex items-center justify-center bg-white/5 rounded hover:bg-white/10 text-slate-400"
+                >
+                  <mat-icon svgIcon="edit" class="text-sm"></mat-icon>
+                </button>
+                <button
+                  class="w-6 h-6 flex items-center justify-center bg-white/5 rounded hover:bg-white/10 text-slate-400"
+                >
+                  <mat-icon svgIcon="add" class="text-sm"></mat-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="space-y-4">
+        <div class="flex items-center justify-between py-3 border-t border-white/5">
+          <div>
+            <p
+              class="text-[10px] font-black text-white uppercase tracking-tight leading-none"
+            >
+              Homepage Featured
+            </p>
+            <p class="text-[9px] text-slate-500 font-medium">Main Hero Carousel</p>
+          </div>
+          <div class="w-8 h-4 bg-blue-500 rounded-full relative cursor-pointer">
+            <div class="absolute right-1 top-0.5 w-3 h-3 bg-white rounded-full"></div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="w-full mt-4 bg-white/5 border border-white/10 py-3 rounded-lg flex items-center justify-center gap-2 group hover:border-blue-500/50 transition-all"
+      >
+        <mat-icon
+          svgIcon="open_in_new"
+          class="text-slate-400 group-hover:text-blue-500 text-sm"
+        ></mat-icon>
+        <span class="text-[10px] font-black tracking-widest text-white uppercase"
+          >Advanced Editor</span
+        >
+      </button>
+    </div>
+  </div>
+</main>

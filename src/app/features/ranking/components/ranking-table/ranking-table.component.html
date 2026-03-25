@@ -55,6 +55,11 @@
                   data-alt="Avatar of a competitive TCG player"
                   [src]="player.avatarUrl"
                   (error)="onAvatarError($event)"
+                  (click)="openAvatarImage($event, player.nickname)"
+                  (keyup.enter)="openAvatarImage($event, player.nickname)"
+                  (keyup.space)="openAvatarImage($event, player.nickname)"
+                  tabindex="0"
+                  role="button"
                 />
                 <div>
                   <p class="font-bold text-slate-900 dark:text-white">

@@ -2,6 +2,8 @@ import { Component, effect, inject, OnInit } from '@angular/core';
 import { RankingStore } from '../../../../core/state/app-ranking.service';
 import { MatIcon } from '@angular/material/icon';
 import { PlayerRanking } from '@models/player-ranking.interface';
+import { AvatarModalComponent } from '../avatar-modal/avatar-modal.component';
+import { DialogService } from '@shared/dialogs/dialog.service';
 
 @Component({
   selector: 'app-ranking-table',
@@ -11,6 +13,7 @@ import { PlayerRanking } from '@models/player-ranking.interface';
 })
 export class RankingTableComponent implements OnInit {
   store = inject(RankingStore);
+  dialogService = inject(DialogService);
   players: PlayerRanking[] = [];
   defaultAvatar = 'assets/avatares/default.jpg';
   start = 0;
@@ -59,5 +62,12 @@ export class RankingTableComponent implements OnInit {
   onPrizeError(event: Event) {
     const img = event.target as HTMLImageElement;
     img.src = 'assets/avatares/prize_default.jpg';
+  }
+
+  openAvatarImage(event: Event, name: string) {
+    const img = event.target as HTMLImageElement;
+    const url = img.src;
+    this.dialogService.open(AvatarModalComponent, { avatarUrl: url, name });
+    console.log('Avatar clicked:', url);
   }
 }

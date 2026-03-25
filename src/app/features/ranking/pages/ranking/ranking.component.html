@@ -33,10 +33,15 @@
           >
             <img
               [alt]="firstsPlayers[1].nickname"
-              class="w-full h-full rounded-full object-cover"
+              class="w-full h-full rounded-full object-cover cursor-pointer"
               data-alt="Avatar of the second place player"
               [src]="firstsPlayers[1].avatarUrl"
               (error)="onAvatarError($event)"
+              tabindex="0"
+              role="button"
+              (click)="openAvatarImage($event, firstsPlayers[1].nickname)"
+              (keyup.enter)="openAvatarImage($event, firstsPlayers[1].nickname)"
+              (keyup.space)="openAvatarImage($event, firstsPlayers[1].nickname)"
             />
           </div>
           <div
@@ -70,10 +75,15 @@
           >
             <img
               [alt]="firstsPlayers[0].nickname"
-              class="w-full h-full rounded-full object-cover"
+              class="w-full h-full rounded-full object-cover cursor-pointer"
               data-alt="Avatar of the first place champion player"
               [src]="firstsPlayers[0].avatarUrl"
               (error)="onAvatarError($event)"
+              tabindex="0"
+              role="button"
+              (click)="openAvatarImage($event, firstsPlayers[0].nickname)"
+              (keyup.enter)="openAvatarImage($event, firstsPlayers[0].nickname)"
+              (keyup.space)="openAvatarImage($event, firstsPlayers[0].nickname)"
             />
           </div>
           <div
@@ -116,10 +126,15 @@
           >
             <img
               [alt]="firstsPlayers[2].nickname"
-              class="w-full h-full rounded-full object-cover"
+              class="w-full h-full rounded-full object-cover cursor-pointer"
               data-alt="Avatar of the third place player"
               [src]="firstsPlayers[2].avatarUrl"
               (error)="onAvatarError($event)"
+              tabindex="0"
+              role="button"
+              (click)="openAvatarImage($event, firstsPlayers[2].nickname)"
+              (keyup.enter)="openAvatarImage($event, firstsPlayers[2].nickname)"
+              (keyup.space)="openAvatarImage($event, firstsPlayers[2].nickname)"
             />
           </div>
           <div
