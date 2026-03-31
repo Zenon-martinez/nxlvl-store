@@ -7,4 +7,9 @@ export const RANKING_ROUTES: Routes = [
     component: RankingComponent,
     title: 'Next Level | Ranking',
   },
+  {
+    path: '',
+    redirectTo: 'pokemon',
+    pathMatch: 'full',
+  },
 ];

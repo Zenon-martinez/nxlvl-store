@@ -2,11 +2,12 @@ import { Component, inject, signal } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { AppCartService } from '../../core/state/app-cart.service';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 import { MobileMenuStore } from '../store/mobile-menu.store';
 
 @Component({
   selector: 'app-header',
-  imports: [MatIconModule, RouterLinkActive, RouterLink],
+  imports: [MatIconModule, MatMenuModule, RouterLinkActive, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
@@ -17,6 +18,7 @@ export class HeaderComponent {
 
   cartCount = signal(0);
   activeGame = signal<'pokemon' | 'mtg'>('pokemon');
+  private menuTimeout: any;
 
   goToCart() {
     this.router.navigate(['/cart']);
@@ -36,5 +38,20 @@ export class HeaderComponent {
 
   toggleMobileMenu() {
     this.mobileMenu.toggle();
+  }
+
+  openMenu(trigger: any) {
+    clearTimeout(this.menuTimeout);
+    trigger.openMenu();
+  }
+
+  closeMenu(trigger: any) {
+    this.menuTimeout = setTimeout(() => {
+      trigger.closeMenu();
+    }, 150); // delay para evitar parpadeo
+  }
+
+  keepOpen() {
+    clearTimeout(this.menuTimeout);
   }
 }

@@ -8,6 +8,7 @@ import { RankingService } from '../../services/ranking.service';
 import { RankingStore } from '../../../../core/state/app-ranking.service';
 import { DialogService } from '@shared/dialogs/dialog.service';
 import { AvatarModalComponent } from '../../components/avatar-modal/avatar-modal.component';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-ranking',
@@ -20,6 +21,7 @@ export class RankingComponent implements OnInit {
   rankingService = inject(RankingService);
   store = inject(RankingStore);
   dialogService = inject(DialogService);
+  route = inject(ActivatedRoute);
 
   @Input() game!: string;
   gameText = '';
@@ -33,13 +35,15 @@ export class RankingComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.store.load(this.game);
-    this.gameText =
-      this.game === 'magic'
-        ? 'Magic: The Gathering'
-        : this.game === 'pokemon'
-          ? 'Pokémon TCG'
-          : '';
+    this.route.paramMap.subscribe((params) => {
+      this.store.load(this.game);
+      this.gameText =
+        this.game === 'magic'
+          ? 'Magic: The Gathering'
+          : this.game === 'pokemon'
+            ? 'Pokémon TCG'
+            : '';
+    });
   }
 
   private async loadFirstsPlayers() {

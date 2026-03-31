@@ -17,14 +17,23 @@
       </h1>
     </div>
     <nav class="hidden md:flex items-center gap-6">
-      <a
+      <button
+        type="button"
         class="text-sm font-semibold"
-        routerLink="/ranking/pokemon"
-        routerLinkActive="text-primary"
-        [routerLinkActiveOptions]="{ exact: true }"
+        #trigger="matMenuTrigger"
+        [matMenuTriggerFor]="rankingsMenu"
       >
-        Rankings</a
-      >
+        Rankings
+      </button>
+
+      <mat-menu #rankingsMenu="matMenu" panelClass="custom-menu">
+        <a mat-menu-item routerLink="/ranking/pokemon" (click)="trigger.closeMenu()"
+          >Pokémon TCG</a
+        >
+        <a mat-menu-item routerLink="/ranking/magic" (click)="trigger.closeMenu()"
+          >Magic The Gathering</a
+        >
+      </mat-menu>
 
       <a
         class="text-sm font-semibold"

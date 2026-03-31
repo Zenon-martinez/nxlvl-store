@@ -1,0 +1,30 @@
+::ng-deep .custom-menu .mat-mdc-menu-item {
+  color: #e2e8f0 !important;
+  font-weight: 500;
+}
+
+::ng-deep .custom-menu .mat-mdc-menu-item:hover {
+  background-color: #1e293b !important;
+  color: #38bdf8 !important;
+}
+
+::ng-deep .mat-mdc-menu-content {
+  background-color: #0f172a !important;
+  border-radius: 12px !important;
+  padding: 8px 0;
+  .mat-mdc-menu-item:hover {
+    background-color: #1e293b !important;
+    color: #38bdf8 !important;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
