@@ -72,7 +72,7 @@ export class RankingService {
           tournaments: 0,
           winRate: 0,
         },
-        {
+        /* {
           id: 2,
           nickname: 'Danilo',
           game: 'POKEMON',
@@ -86,7 +86,7 @@ export class RankingService {
           avatarUrl: 'assets/avatares/danilo.png',
           tournaments: 0,
           winRate: 0,
-        },
+        }, */
         {
           id: 3,
           nickname: 'Aza',
