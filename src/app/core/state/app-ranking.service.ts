@@ -15,9 +15,12 @@ export class RankingStore {
 
     return sorted
       .map((player) => {
-        player.winRate = Math.floor(
-          (player.wins / (player.wins + player.losses + player.draws)) * 100,
-        );
+        player.winRate =
+          player.wins + player.losses + player.draws > 0
+            ? Math.floor(
+                (player.wins / (player.wins + player.losses + player.draws)) * 100,
+              )
+            : 0;
         if (player.points !== lastPoints) {
           currentPosition++;
           lastPoints = player.points;
@@ -38,12 +41,12 @@ export class RankingStore {
 
   constructor(private service: RankingService) {}
 
-  async load() {
-    const data = await this.service.getRanking();
+  async load(game: string) {
+    const data = await this.service.getRanking(game);
     this.players.set(data);
   }
 
-  filterByGame(game: string | null) {
+  filterByGame(game: string) {
     this.selectedGame.set(game);
   }
 }

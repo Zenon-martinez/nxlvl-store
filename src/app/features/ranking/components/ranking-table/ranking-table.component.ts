@@ -35,7 +35,7 @@ export class RankingTableComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.store.load();
+    //this.store.load();
   }
 
   onAvatarError(event: Event) {

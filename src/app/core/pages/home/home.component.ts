@@ -26,6 +26,6 @@ export class HomeComponent {
   constructor(private router: Router) {}
 
   goToRankingPage() {
-    this.router.navigate(['/ranking']);
+    this.router.navigate(['/ranking/pokemon']);
   }
 }

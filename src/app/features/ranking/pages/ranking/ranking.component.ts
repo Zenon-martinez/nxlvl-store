@@ -1,4 +1,4 @@
-import { Component, OnInit, effect, inject } from '@angular/core';
+import { Component, Input, OnInit, effect, inject } from '@angular/core';
 import { RankingTableComponent } from '../../components/ranking-table/ranking-table.component';
 import { MatIcon } from '@angular/material/icon';
 import { RankingRulesComponent } from '../../components/ranking-rules/ranking-rules.component';
@@ -21,6 +21,8 @@ export class RankingComponent implements OnInit {
   store = inject(RankingStore);
   dialogService = inject(DialogService);
 
+  @Input() game!: string;
+  gameText = '';
   firstsPlayers: PlayerRanking[] = [];
   defaultAvatar = 'assets/avatares/default.jpg';
 
@@ -31,7 +33,13 @@ export class RankingComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.store.load();
+    this.store.load(this.game);
+    this.gameText =
+      this.game === 'magic'
+        ? 'Magic: The Gathering'
+        : this.game === 'pokemon'
+          ? 'Pokémon TCG'
+          : '';
   }
 
   private async loadFirstsPlayers() {
