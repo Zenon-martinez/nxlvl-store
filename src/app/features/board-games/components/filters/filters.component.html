@@ -1,0 +1,154 @@
+<!-- Filter Sidebar -->
+<aside
+  class="w-80 bg-surface-container-low border-r border-white/5 hidden lg:block overflow-y-auto custom-scrollbar sticky top-20 h-[calc(100vh-5rem)] p-8"
+>
+  <div class="flex items-center justify-between mb-8">
+    <h2 class="text-xs font-black uppercase tracking-[0.3em] text-white">
+      Refine Catalog
+    </h2>
+    <button
+      class="text-[10px] font-extrabold text-primary uppercase tracking-widest hover:underline transition-all"
+    >
+      Clear All
+    </button>
+  </div>
+  <!-- Product Type -->
+  <div class="mb-10">
+    <span
+      class="block text-[10px] font-black text-slate-500 uppercase tracking-widest mb-4"
+      >Product Type</span
+    >
+    <div class="space-y-3">
+      <label class="flex items-center gap-3 cursor-pointer group">
+        <input
+          class="w-4 h-4 rounded-none bg-white/5 border-white/20 text-primary focus:ring-0 focus:ring-offset-0 transition-colors"
+          type="checkbox"
+        />
+        <span
+          class="text-xs font-bold text-slate-400 group-hover:text-white transition-colors uppercase tracking-wider"
+          >Sealed</span
+        >
+      </label>
+      <label class="flex items-center gap-3 cursor-pointer group">
+        <input
+          class="w-4 h-4 rounded-none bg-white/5 border-white/20 text-primary focus:ring-0 focus:ring-offset-0 transition-colors"
+          type="checkbox"
+        />
+        <span
+          class="text-xs font-bold text-slate-400 group-hover:text-white transition-colors uppercase tracking-wider"
+          >Sample (Muestra)</span
+        >
+      </label>
+    </div>
+  </div>
+  <!-- Availability -->
+  <div class="mb-10">
+    <span
+      class="block text-[10px] font-black text-slate-500 uppercase tracking-widest mb-4"
+      >Availability</span
+    >
+    <div class="flex flex-wrap gap-2">
+      <button
+        class="px-3 py-1.5 bg-primary text-on-primary text-[10px] font-black uppercase tracking-widest border border-primary"
+      >
+        In Stock
+      </button>
+      <button
+        class="px-3 py-1.5 bg-white/5 text-slate-400 text-[10px] font-black uppercase tracking-widest border border-white/10 hover:border-white/20"
+      >
+        Pre-order
+      </button>
+    </div>
+  </div>
+  <!-- Players -->
+  <div class="mb-10">
+    <span
+      class="block text-[10px] font-black text-slate-500 uppercase tracking-widest mb-4"
+      >Number of Players</span
+    >
+    <div class="grid grid-cols-4 gap-2">
+      <button
+        class="aspect-square flex items-center justify-center bg-white/5 border border-white/10 text-[10px] font-black hover:border-primary transition-all"
+      >
+        1
+      </button>
+      <button
+        class="aspect-square flex items-center justify-center bg-primary border border-primary text-[10px] font-black"
+      >
+        2
+      </button>
+      <button
+        class="aspect-square flex items-center justify-center bg-white/5 border border-white/10 text-[10px] font-black hover:border-primary transition-all"
+      >
+        3
+      </button>
+      <button
+        class="aspect-square flex items-center justify-center bg-white/5 border border-white/10 text-[10px] font-black hover:border-primary transition-all"
+      >
+        4+
+      </button>
+    </div>
+  </div>
+  <!-- Play Time -->
+  <div class="mb-10">
+    <span
+      class="block text-[10px] font-black text-slate-500 uppercase tracking-widest mb-4"
+      >Play Time</span
+    >
+    <div class="space-y-2">
+      <button
+        class="w-full text-left px-4 py-2 bg-white/5 border border-white/10 text-[10px] font-extrabold uppercase tracking-widest text-slate-300 hover:bg-white/10 transition-all"
+      >
+        &lt;30m
+      </button>
+      <button
+        class="w-full text-left px-4 py-2 bg-white/5 border border-white/10 text-[10px] font-extrabold uppercase tracking-widest text-slate-300 hover:bg-white/10 transition-all"
+      >
+        30-60m
+      </button>
+      <button
+        class="w-full text-left px-4 py-2 bg-white/5 border border-white/10 text-[10px] font-extrabold uppercase tracking-widest text-slate-300 hover:bg-white/10 transition-all"
+      >
+        60-120m
+      </button>
+      <button
+        class="w-full text-left px-4 py-2 bg-white/5 border border-white/10 text-[10px] font-extrabold uppercase tracking-widest text-slate-300 hover:bg-white/10 transition-all"
+      >
+        120m+
+      </button>
+    </div>
+  </div>
+  <!-- Categories -->
+  <div class="mb-10">
+    <span
+      class="block text-[10px] font-black text-slate-500 uppercase tracking-widest mb-4"
+      >Categories</span
+    >
+    <div class="space-y-1">
+      <button
+        class="w-full flex justify-between items-center text-[10px] font-bold text-slate-400 py-1 hover:text-white"
+      >
+        <span>STRATEGY</span>
+        <span class="text-[8px] opacity-50">124</span>
+      </button>
+      <button
+        class="w-full flex justify-between items-center text-[10px] font-bold text-slate-400 py-1 hover:text-white"
+      >
+        <span>PARTY</span>
+        <span class="text-[8px] opacity-50">56</span>
+      </button>
+      <button
+        class="w-full flex justify-between items-center text-[10px] font-bold text-slate-400 py-1 hover:text-white"
+      >
+        <span>FAMILY</span>
+        <span class="text-[8px] opacity-50">89</span>
+      </button>
+      <button
+        class="w-full flex justify-between items-center text-[10px] font-bold text-slate-400 py-1 hover:text-white"
+      >
+        <span>LEGACY</span>
+        <span class="text-[8px] opacity-50">12</span>
+      </button>
+    </div>
+  </div>
+</aside>

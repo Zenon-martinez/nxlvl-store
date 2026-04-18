@@ -1,0 +1,48 @@
+import { Component, Input, SimpleChanges } from '@angular/core';
+import { BoardGameProduct } from '@models/product.interface';
+
+@Component({
+  selector: 'app-board-game-card',
+  imports: [],
+  templateUrl: './board-game-card.component.html',
+  styleUrl: './board-game-card.component.scss',
+})
+export class BoardGameCardComponent {
+  @Input({ required: true }) product!: BoardGameProduct;
+  status = '';
+  condition = '';
+
+  ngOnChanges(changes: SimpleChanges): void {
+    //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
+    //Add '${implements OnChanges}' to the class.
+    if (!changes['product'] || !changes['product'].currentValue) return;
+    this.status = this.setStatusLabel(this.product.status);
+    this.condition = this.setTypeLabel(this.product.condition!);
+    console.log('Product changed:', this.condition);
+  }
+
+  private setStatusLabel(status: string): string {
+    switch (status) {
+      case 'available':
+      case 'in_stock':
+        return 'Disponible';
+      case 'out-of-stock':
+        return 'Agotado';
+      case 'pre-order':
+        return 'Pre-orden';
+      default:
+        return status;
+    }
+  }
+
+  private setTypeLabel(type: string): string {
+    switch (type) {
+      case 'sealed':
+        return 'Sellado';
+      case 'demo':
+        return 'Demo';
+      default:
+        return type;
+    }
+  }
+}

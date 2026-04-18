@@ -1,0 +1,415 @@
+{
+  "products": [
+    {
+      "id": "bg-001",
+      "name": "Catan",
+      "slug": "catan",
+      "condition": "sealed",
+      "price": 700,
+      "originalPrice": null,
+      "currency": "MXN",
+      "stock": 2,
+      "status": "in_stock",
+      "images": [
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775586001/catan_fnlghc.jpg",
+          "type": "main"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775586266/catan_0_zri9g5.jpg",
+          "type": "gallery"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775586267/catan_1_zx7f5h.jpg",
+          "type": "gallery"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775586268/catan_2_no9o6u.jpg",
+          "type": "gallery"
+        }
+      ],
+      "thumbnail": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775586001/catan_fnlghc.jpg",
+      "categories": ["estrategia", "familiar"],
+      "mechanics": ["colocación de losetas", "comercio"],
+      "players": {
+        "min": 3,
+        "max": 4
+      },
+      "playTime": 90,
+      "age": 10,
+      "language": "Español",
+      "publisher": "Devir",
+      "expansions": [],
+      "description": "Juego de estrategia donde los jugadores compiten por colonizar una isla.",
+      "contents": ["Tablero modular", "Cartas de recursos", "Figuras de madera", "Dados"],
+      "rating": 4.8,
+      "reviewsCount": 120,
+      "isFeatured": true,
+      "createdAt": "2026-01-10"
+    },
+    {
+      "id": "bg-002",
+      "name": "Fantasma Blitz",
+      "slug": "fantasma-blitz",
+      "condition": "sealed",
+      "price": 350,
+      "originalPrice": null,
+      "currency": "MXN",
+      "stock": 5,
+      "status": "in_stock",
+      "images": [
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775587675/fantasma_blitz_obo02e.jpg",
+          "type": "main"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775587676/fantasma_blitz_0_hcewt0.jpg",
+          "type": "gallery"
+        }
+      ],
+      "thumbnail": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775587675/fantasma_blitz_obo02e.jpg",
+      "categories": ["familiar", "rapidez"],
+      "mechanics": ["reconocimiento de patrones", "reflejos"],
+      "players": { "min": 2, "max": 8 },
+      "playTime": 20,
+      "age": 8,
+      "language": "Español",
+      "publisher": "Devir",
+      "expansions": [],
+      "description": "Juego de rapidez mental donde debes identificar el objeto correcto lo más rápido posible.",
+      "contents": ["Cartas", "5 figuras de madera"],
+      "rating": 4.5,
+      "reviewsCount": 80,
+      "isFeatured": false,
+      "createdAt": "2026-01-10"
+    },
+    {
+      "id": "bg-003",
+      "name": "King of Tokyo",
+      "slug": "king-of-tokyo",
+      "condition": "sealed",
+      "price": 850,
+      "originalPrice": null,
+      "currency": "MXN",
+      "stock": 3,
+      "status": "in_stock",
+      "images": [
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775587913/king_of_tokyo_o4s1gr.jpg",
+          "type": "main"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775587914/king_of_tokyo_0_fr88i9.jpg",
+          "type": "gallery"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775587916/king_of_tokyo_1_n3fopk.jpg",
+          "type": "gallery"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775587918/king_of_tokyo_2_lwri0t.jpg",
+          "type": "gallery"
+        }
+      ],
+      "thumbnail": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775587913/king_of_tokyo_o4s1gr.jpg",
+      "categories": ["fiesta", "estrategia"],
+      "mechanics": ["dados", "push your luck"],
+      "players": { "min": 2, "max": 6 },
+      "playTime": 30,
+      "age": 8,
+      "language": "Español",
+      "publisher": "Devir",
+      "expansions": [],
+      "description": "Monstruos gigantes luchan por dominar Tokio usando dados y habilidades especiales.",
+      "contents": ["Dados", "Cartas", "Tablero", "Fichas"],
+      "rating": 4.7,
+      "reviewsCount": 150,
+      "isFeatured": true,
+      "createdAt": "2026-01-10"
+    },
+    {
+      "id": "bg-004",
+      "name": "La Isla Prohibida",
+      "slug": "la-isla-prohibida",
+      "condition": "sealed",
+      "price": 600,
+      "originalPrice": null,
+      "currency": "MXN",
+      "stock": 4,
+      "status": "in_stock",
+      "images": [
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775588745/la_isla_prohibida_dvp4nt.jpg",
+          "type": "main"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775588747/la_isla_prohibida_0_xwnuvs.jpg",
+          "type": "gallery"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775588748/la_isla_prohibida_1_swbpif.jpg",
+          "type": "gallery"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775588750/la_isla_prohibida_2_ryofsn.jpg",
+          "type": "gallery"
+        }
+      ],
+      "thumbnail": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775588745/la_isla_prohibida_dvp4nt.jpg",
+      "categories": ["cooperativo", "familiar"],
+      "mechanics": ["cooperativo", "gestión de mano"],
+      "players": { "min": 2, "max": 4 },
+      "playTime": 30,
+      "age": 10,
+      "language": "Español",
+      "publisher": "Devir",
+      "expansions": [],
+      "description": "Juego cooperativo donde los jugadores deben recuperar tesoros antes de que la isla se hunda.",
+      "contents": ["Losetas", "Cartas", "Peones"],
+      "rating": 4.6,
+      "reviewsCount": 95,
+      "isFeatured": false,
+      "createdAt": "2026-01-10"
+    },
+    {
+      "id": "bg-005",
+      "name": "Ouch!",
+      "slug": "ouch",
+      "condition": "sealed",
+      "price": 250,
+      "originalPrice": null,
+      "currency": "MXN",
+      "stock": 6,
+      "status": "in_stock",
+      "images": [
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775589004/ouch_mmtg76.jpg",
+          "type": "main"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775589006/ouch_0_n1nmhl.jpg",
+          "type": "gallery"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775589008/ouch_1_lztj2d.jpg",
+          "type": "gallery"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775589010/ouch_2_xqdwqh.jpg",
+          "type": "gallery"
+        }
+      ],
+      "thumbnail": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775589004/ouch_mmtg76.jpg",
+      "categories": ["familiar", "niños"],
+      "mechanics": ["memoria", "push your luck"],
+      "players": { "min": 2, "max": 5 },
+      "playTime": 15,
+      "age": 5,
+      "language": "Español",
+      "publisher": "Devir",
+      "expansions": [],
+      "description": "Juego ligero donde recolectas flores evitando los cactus.",
+      "contents": ["Cartas"],
+      "rating": 4.2,
+      "reviewsCount": 40,
+      "isFeatured": false,
+      "createdAt": "2026-01-10"
+    },
+    {
+      "id": "bg-006",
+      "name": "Quick Stop",
+      "slug": "quick-stop",
+      "condition": "sealed",
+      "price": 300,
+      "originalPrice": null,
+      "currency": "MXN",
+      "stock": 5,
+      "status": "in_stock",
+      "images": [
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775589190/quick_stop_wkticm.jpg",
+          "type": "main"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775589194/quick_stop_1_vqrlux.jpg",
+          "type": "gallery"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775589192/quick_stop_0_nxbeh3.jpg",
+          "type": "gallery"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775589197/quick_stop_2_jvug54.jpg",
+          "type": "gallery"
+        }
+      ],
+      "thumbnail": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775589190/quick_stop_wkticm.jpg",
+      "categories": ["fiesta", "rapidez"],
+      "mechanics": ["palabras", "reflejos"],
+      "players": { "min": 2, "max": 7 },
+      "playTime": 20,
+      "age": 10,
+      "language": "Español",
+      "publisher": "Devir",
+      "expansions": [],
+      "description": "Juego de palabras rápido donde debes responder antes que los demás.",
+      "contents": ["Cartas"],
+      "rating": 4.3,
+      "reviewsCount": 30,
+      "isFeatured": false,
+      "createdAt": "2026-01-10"
+    },
+    {
+      "id": "bg-007",
+      "name": "Skull King",
+      "slug": "skull-king",
+      "condition": "sealed",
+      "price": 400,
+      "originalPrice": null,
+      "currency": "MXN",
+      "stock": 4,
+      "status": "in_stock",
+      "images": [
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775589581/skull_king_mzw0n3.jpg",
+          "type": "main"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775589583/skull_king_0_uguz9w.jpg",
+          "type": "gallery"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775589586/skull_king_1_mhvmzd.jpg",
+          "type": "gallery"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775589588/skull_king_2_o49ez8.jpg",
+          "type": "gallery"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775589591/skull_king_3_ph6mxz.jpg",
+          "type": "gallery"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775589593/skull_king_4_ks7e09.jpg",
+          "type": "gallery"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775589596/skull_king_5_sddsa7.jpg",
+          "type": "gallery"
+        }
+      ],
+      "thumbnail": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775589581/skull_king_mzw0n3.jpg",
+      "categories": ["cartas", "estrategia"],
+      "mechanics": ["trick-taking", "apuestas"],
+      "players": { "min": 2, "max": 6 },
+      "playTime": 30,
+      "age": 8,
+      "language": "Español",
+      "publisher": "Devir",
+      "expansions": [],
+      "description": "Juego de bazas donde predices cuántas manos ganarás en cada ronda.",
+      "contents": ["Cartas"],
+      "rating": 4.7,
+      "reviewsCount": 110,
+      "isFeatured": true,
+      "createdAt": "2026-01-10"
+    },
+    {
+      "id": "bg-008",
+      "name": "Trio",
+      "slug": "trio",
+      "condition": "sealed",
+      "price": 280,
+      "originalPrice": null,
+      "currency": "MXN",
+      "stock": 5,
+      "status": "in_stock",
+      "images": [
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775590610/trio_gwiyxl.jpg",
+          "type": "main"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775590612/trio_0_onsadc.jpg",
+          "type": "gallery"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775590615/trio_1_sq8ne5.jpg",
+          "type": "gallery"
+        }
+      ],
+      "thumbnail": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775590610/trio_gwiyxl.jpg",
+      "categories": ["cartas", "familiar"],
+      "mechanics": ["memoria", "deducción"],
+      "players": { "min": 3, "max": 6 },
+      "playTime": 15,
+      "age": 7,
+      "language": "Español",
+      "publisher": "Devir",
+      "expansions": [],
+      "description": "Juego de cartas donde debes formar tríos usando memoria y observación.",
+      "contents": ["Cartas"],
+      "rating": 4.4,
+      "reviewsCount": 25,
+      "isFeatured": false,
+      "createdAt": "2026-01-10"
+    },
+    {
+      "id": "bg-009",
+      "name": "La Polilla Tramposa",
+      "slug": "la-polilla-tramposa",
+      "condition": "sealed",
+      "price": 320,
+      "originalPrice": null,
+      "currency": "MXN",
+      "stock": 6,
+      "status": "in_stock",
+      "images": [
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775590889/la_polilla_tramposa_zuku1b.jpg",
+          "type": "main"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775590892/la_polilla_tramposa_0_xwqjod.jpg",
+          "type": "gallery"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775590896/la_polilla_tramposa_1_nhzd1n.jpg",
+          "type": "gallery"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775590899/la_polilla_tramposa_2_bfd26c.jpg",
+          "type": "gallery"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775590902/la_polilla_tramposa_3_tsi26x.jpg",
+          "type": "gallery"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775590905/la_polilla_tramposa_4_ntiuc1.jpg",
+          "type": "gallery"
+        },
+        {
+          "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775590908/la_polilla_tramposa_5_hshddg.jpg",
+          "type": "gallery"
+        }
+      ],
+      "thumbnail": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1775590889/la_polilla_tramposa_zuku1b.jpg",
+      "categories": ["fiesta", "cartas"],
+      "mechanics": ["engaño", "destreza"],
+      "players": { "min": 3, "max": 5 },
+      "playTime": 25,
+      "age": 7,
+      "language": "Español",
+      "publisher": "Devir",
+      "expansions": [],
+      "description": "Juego de cartas donde hacer trampa es parte de la diversión.",
+      "contents": ["Cartas"],
+      "rating": 4.6,
+      "reviewsCount": 70,
+      "isFeatured": true,
+      "createdAt": "2026-01-10"
+    }
+  ]
+}

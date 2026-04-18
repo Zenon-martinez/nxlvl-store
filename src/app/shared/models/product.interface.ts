@@ -36,3 +36,85 @@ export enum RarityEnum {
   UltraRare = 'ultra-rare',
   SecretRare = 'secret-rare',
 }
+
+//Versión mejorada
+export type ProductType = 'tcg-card' | 'sealed-product' | 'accessory' | 'board-game';
+
+export interface BaseProduct {
+  id: number;
+  name: string;
+  slug: string;
+
+  type: ProductType;
+
+  price: number;
+  originalPrice?: number;
+
+  thumbnail: string;
+  imageUrl: string;
+  images?: string[];
+
+  description: string;
+
+  category: string;
+  tags?: string[];
+
+  status: 'available' | 'out-of-stock' | 'pre-order' | 'in_stock';
+  stockQuantity: number;
+
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface TcgCardProduct extends BaseProduct {
+  type: 'tcg-card';
+
+  rarity: RarityEnum;
+  foil: boolean;
+  cardStatus: CardStatusEnum;
+
+  set: string;
+  number: string;
+}
+
+export interface SealedProduct extends BaseProduct {
+  type: 'sealed-product';
+
+  game: 'pokemon' | 'magic';
+  expansion: string;
+
+  sealedType: 'booster-box' | 'etb' | 'bundle' | 'collection';
+
+  releaseDate?: Date;
+}
+
+export interface AccessoryProduct extends BaseProduct {
+  type: 'accessory';
+
+  accessoryType: 'sleeves' | 'deck-box' | 'binder' | 'playmat';
+
+  brand?: string;
+}
+
+export interface BoardGameProduct extends BaseProduct {
+  type: 'board-game';
+
+  condition?: 'new' | 'demo';
+
+  playersMin: number;
+  playersMax: number;
+  playTime: number;
+  age: number;
+
+  publisher: string;
+
+  // solo demo
+  demoDetails?: {
+    condition: 'excellent' | 'good' | 'used';
+    notes: string;
+  };
+}
+
+export interface BoardGameProductResponse {
+  products: BoardGameProduct[];
+}

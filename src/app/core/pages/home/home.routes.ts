@@ -24,6 +24,13 @@ export const HOME_ROUTES: Routes = [
     loadChildren: () =>
       import('../../../features/events/events.routes').then((m) => m.EVENTS_ROUTES),
   },
+  {
+    path: 'board-games',
+    loadChildren: () =>
+      import('../../../features/board-games/board-games.routes').then(
+        (m) => m.BOARD_GAMES_ROUTES,
+      ),
+  },
 
   /* // ===== DETALLE CARTA =====
   {

@@ -1,0 +1,79 @@
+<div
+  class="group relative bg-surface-container border border-white/10 hover:border-primary/50 transition-all duration-500 scale-100 hover:scale-[1.02] shadow-2xl shadow-black/50"
+>
+  <div class="relative aspect-[4/5] overflow-hidden">
+    <div
+      class="absolute inset-0 from-slate-950 via-transparent to-transparent opacity-60 z-10"
+    ></div>
+    <img
+      [alt]="product.name"
+      class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"
+      [src]="product.thumbnail"
+    />
+    <div class="absolute top-4 left-4 z-20 flex flex-col gap-2">
+      @if (condition !== 'Sellado') {
+        <span
+          class="bg-primary text-on-primary text-[9px] font-black uppercase tracking-widest px-2 py-1"
+          >{{ condition }}</span
+        >
+      }
+      <span
+        class="text-[9px] font-black uppercase tracking-widest px-2 py-1"
+        [class.bg-emerald-500]="
+          product.status === 'available' || product.status === 'in_stock'
+        "
+        [class.bg-amber-400]="product.status === 'pre-order'"
+        [class.bg-rose-500]="product.status === 'out-of-stock'"
+        [class.text-slate-950]="product.status !== 'out-of-stock'"
+        [class.text-white]="
+          product.status === 'out-of-stock' || product.status === 'in_stock'
+        "
+        >{{ status }}</span
+      >
+    </div>
+  </div>
+  <div class="p-6">
+    <div class="flex justify-between items-start mb-2">
+      <h3 class="text-sm font-black uppercase tracking-widest text-white leading-tight">
+        {{ product.name }}
+      </h3>
+      <span class="text-primary font-black text-sm">${{ product.price }}</span>
+    </div>
+    <p class="text-xs text-slate-300 line-clamp-2 mt-2">{{ product.description }}</p>
+    <div
+      class="flex items-center gap-3 text-[10px] font-extrabold text-slate-500 uppercase tracking-widest mt-4"
+    >
+      <span class="flex items-center gap-1"
+        ><span class="material-symbols-outlined text-[14px]">groups</span>
+        {{ product.playersMin }}-{{ product.playersMax }}</span
+      >
+      <span class="flex items-center gap-1"
+        ><span class="material-symbols-outlined text-[14px]">schedule</span>
+        {{ product.playTime }}m</span
+      >
+      <span>{{ product.age }}+</span>
+      <span>{{ product.publisher }}</span>
+    </div>
+
+    @if (product.tags?.length) {
+      <div class="flex flex-wrap gap-2 mt-4">
+        @for (tag of product.tags; track tag) {
+          <span
+            class="text-[10px] px-2 py-1 border border-white/10 rounded uppercase text-slate-300"
+          >
+            {{ tag }}
+          </span>
+        }
+      </div>
+    }
+
+    <button
+      class="w-full mt-6 py-3 border border-white/10 text-[10px] font-black uppercase tracking-[0.2em] hover:bg-primary hover:border-primary hover:text-white transition-all duration-300"
+      [disabled]="product.status === 'out-of-stock'"
+      [class.opacity-50]="product.status === 'out-of-stock'"
+      [class.cursor-not-allowed]="product.status === 'out-of-stock'"
+    >
+      {{ product.status === 'out-of-stock' ? 'Sin stock' : 'Agregar al carrito' }}
+    </button>
+  </div>
+</div>
