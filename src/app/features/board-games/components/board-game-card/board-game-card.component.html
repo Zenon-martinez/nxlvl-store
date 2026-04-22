@@ -1,7 +1,11 @@
 <div
   class="group relative bg-surface-container border border-white/10 hover:border-primary/50 transition-all duration-500 scale-100 hover:scale-[1.02] shadow-2xl shadow-black/50"
 >
-  <div class="relative aspect-[4/5] overflow-hidden">
+  <div
+    role="none"
+    class="relative aspect-[4/5] overflow-hidden cursor-pointer"
+    (click)="viewDetails()"
+  >
     <div
       class="absolute inset-0 from-slate-950 via-transparent to-transparent opacity-60 z-10"
     ></div>
