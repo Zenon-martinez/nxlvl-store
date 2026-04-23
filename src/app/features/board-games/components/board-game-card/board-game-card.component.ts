@@ -1,10 +1,11 @@
 import { Component, Input, SimpleChanges } from '@angular/core';
 import { Router } from '@angular/router';
 import { BoardGameProduct } from '@models/product.interface';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-board-game-card',
-  imports: [],
+  imports: [MatIcon],
   templateUrl: './board-game-card.component.html',
   styleUrl: './board-game-card.component.scss',
 })

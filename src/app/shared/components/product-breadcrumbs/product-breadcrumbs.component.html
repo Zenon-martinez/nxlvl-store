@@ -1,0 +1,25 @@
+@if (breadcrumbs.length) {
+  <nav
+    aria-label="Breadcrumb"
+    class="flex items-center gap-2 mb-8 text-[10px] font-extrabold uppercase tracking-widest text-slate-500"
+  >
+    @for (
+      item of breadcrumbs;
+      track item.url ?? item.label;
+      let last = $last;
+      let i = $index
+    ) {
+      @if (!last && item.url) {
+        <a [routerLink]="item.url" class="hover:text-primary transition-colors">{{
+          item.label
+        }}</a>
+      } @else {
+        <span class="text-white">{{ item.label }}</span>
+      }
+
+      @if (!isLast(i)) {
+        <mat-icon svgIcon="chevron_right"></mat-icon>
+      }
+    }
+  </nav>
+}

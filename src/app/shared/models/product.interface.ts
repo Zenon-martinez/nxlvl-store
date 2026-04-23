@@ -101,8 +101,7 @@ export interface BoardGameProduct extends BaseProduct {
 
   condition?: 'new' | 'demo';
 
-  playersMin: number;
-  playersMax: number;
+  players: Players;
   playTime: number;
   age: number;
 
@@ -113,6 +112,11 @@ export interface BoardGameProduct extends BaseProduct {
     condition: 'excellent' | 'good' | 'used';
     notes: string;
   };
+}
+
+export interface Players {
+  min: number;
+  max: number;
 }
 
 export interface BoardGameProductResponse {

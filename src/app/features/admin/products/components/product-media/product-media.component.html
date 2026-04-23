@@ -1,1 +1,147 @@
-<p>product-media works!</p>
+<div class="space-y-4">
+  <div
+    class="relative aspect-square bg-surface-container-high overflow-hidden group border border-white/10 bg-white"
+  >
+    <!-- Main image — wrapped in button for a11y -->
+    <button
+      type="button"
+      class="absolute inset-0 w-full h-full p-3"
+      (click)="openLightbox()"
+      [attr.aria-label]="'Ver ' + (selectedImage.alt || title) + ' en grande'"
+    >
+      <img
+        [alt]="selectedImage.alt || title"
+        class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105 cursor-zoom-in"
+        [src]="selectedImage.url"
+      />
+    </button>
+
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/60 to-transparent pointer-events-none"
+    ></div>
+
+    <!-- Zoom hint -->
+    <div
+      class="absolute top-3 right-3 z-10 w-8 h-8 flex items-center justify-center bg-surface-container-lowest/70 border border-white/10 text-white opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+    >
+      <mat-icon svgIcon="zoom_in" class="!text-base"></mat-icon>
+    </div>
+
+    <!-- Prev button -->
+    <button
+      type="button"
+      (click)="prev()"
+      [disabled]="!hasPrev"
+      class="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 flex items-center justify-center bg-surface-container-lowest/80 border border-white/10 text-white transition-all hover:bg-primary hover:border-primary disabled:opacity-0 disabled:pointer-events-none"
+      aria-label="Imagen anterior"
+    >
+      <mat-icon svgIcon="chevron_left"></mat-icon>
+    </button>
+
+    <!-- Next button -->
+    <button
+      type="button"
+      (click)="next()"
+      [disabled]="!hasNext"
+      class="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 flex items-center justify-center bg-surface-container-lowest/80 border border-white/10 text-white transition-all hover:bg-primary hover:border-primary disabled:opacity-0 disabled:pointer-events-none"
+      aria-label="Siguiente imagen"
+    >
+      <mat-icon svgIcon="chevron_right"></mat-icon>
+    </button>
+
+    <!-- Counter -->
+    <div
+      class="absolute bottom-4 right-4 z-10 px-2 py-0.5 bg-surface-container-lowest/80 text-[9px] font-black uppercase tracking-widest text-white pointer-events-none"
+    >
+      {{ selectedIndex + 1 }} / {{ galleryImages.length }}
+    </div>
+  </div>
+
+  <!-- Thumbnails -->
+  <div class="grid grid-cols-4 gap-3">
+    @for (image of galleryImages; track image.url; let i = $index) {
+      <button
+        type="button"
+        class="relative aspect-square overflow-hidden bg-surface-container border border-white/10 hover:border-primary/40 transition-colors"
+        [class.border-primary]="selectedIndex === i"
+        (click)="selectImage(i)"
+      >
+        <img
+          [alt]="image.alt || title + ' ' + (i + 1)"
+          class="w-full h-full object-cover"
+          [class.opacity-60]="selectedIndex !== i"
+          [src]="image.url"
+        />
+      </button>
+    }
+  </div>
+</div>
+
+<!-- Lightbox -->
+@if (lightboxOpen) {
+  <div
+    class="fixed inset-0 z-50"
+    role="dialog"
+    aria-modal="true"
+    [attr.aria-label]="selectedImage.alt || title"
+  >
+    <!-- Backdrop — semantic button, closes on click -->
+    <button
+      type="button"
+      class="absolute inset-0 w-full h-full bg-black/90 cursor-default"
+      (click)="closeLightbox()"
+      aria-label="Cerrar vista ampliada"
+      tabindex="-1"
+    ></button>
+
+    <!-- Centered content — children handle their own pointer events -->
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div class="relative flex items-center justify-center pointer-events-auto">
+        <img
+          [alt]="selectedImage.alt || title"
+          class="max-h-[85vh] max-w-[85vw] object-contain select-none"
+          [src]="selectedImage.url"
+        />
+
+        <!-- Prev -->
+        <button
+          type="button"
+          (click)="prev()"
+          [disabled]="!hasPrev"
+          class="absolute left-[-3.25rem] top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-surface-container-lowest/80 border border-white/10 text-white transition-all hover:bg-primary hover:border-primary disabled:opacity-0 disabled:pointer-events-none"
+          aria-label="Imagen anterior"
+        >
+          <mat-icon svgIcon="chevron_left"></mat-icon>
+        </button>
+
+        <!-- Next -->
+        <button
+          type="button"
+          (click)="next()"
+          [disabled]="!hasNext"
+          class="absolute right-[-3.25rem] top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-surface-container-lowest/80 border border-white/10 text-white transition-all hover:bg-primary hover:border-primary disabled:opacity-0 disabled:pointer-events-none"
+          aria-label="Siguiente imagen"
+        >
+          <mat-icon svgIcon="chevron_right"></mat-icon>
+        </button>
+
+        <!-- Counter -->
+        <div
+          class="absolute bottom-[-2.5rem] left-1/2 -translate-x-1/2 px-3 py-1 bg-surface-container-lowest/80 text-[10px] font-black uppercase tracking-widest text-white pointer-events-none"
+        >
+          {{ selectedIndex + 1 }} / {{ galleryImages.length }}
+        </div>
+      </div>
+    </div>
+
+    <!-- Close button -->
+    <button
+      type="button"
+      (click)="closeLightbox()"
+      class="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center bg-surface-container-lowest/80 border border-white/10 text-white hover:bg-primary hover:border-primary transition-all"
+      aria-label="Cerrar vista ampliada"
+    >
+      <mat-icon svgIcon="close"></mat-icon>
+    </button>
+  </div>
+}

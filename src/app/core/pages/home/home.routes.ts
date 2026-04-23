@@ -6,6 +6,9 @@ export const HOME_ROUTES: Routes = [
     path: '',
     component: HomeComponent,
     title: 'Next Level | Home',
+    data: {
+      breadcrumb: 'Inicio',
+    },
   },
 
   // ===== CATALOGO =====
@@ -26,6 +29,9 @@ export const HOME_ROUTES: Routes = [
   },
   {
     path: 'board-games',
+    data: {
+      breadcrumb: 'Juegos de Mesa',
+    },
     loadChildren: () =>
       import('../../../features/board-games/board-games.routes').then(
         (m) => m.BOARD_GAMES_ROUTES,

@@ -3,7 +3,7 @@
 >
   <div
     role="none"
-    class="relative aspect-[4/5] overflow-hidden cursor-pointer"
+    class="relative aspect-[4/5] overflow-hidden cursor-pointer p-2"
     (click)="viewDetails()"
   >
     <div
@@ -11,7 +11,7 @@
     ></div>
     <img
       [alt]="product.name"
-      class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"
+      class="w-full h-full object-fill grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700 rounded-sm"
       [src]="product.thumbnail"
     />
     <div class="absolute top-4 left-4 z-20 flex flex-col gap-2">
@@ -47,12 +47,12 @@
     <div
       class="flex items-center gap-3 text-[10px] font-extrabold text-slate-500 uppercase tracking-widest mt-4"
     >
-      <span class="flex items-center gap-1"
-        ><span class="material-symbols-outlined text-[14px]">groups</span>
-        {{ product.playersMin }}-{{ product.playersMax }}</span
+      <span class="flex items-center gap-1">
+        <mat-icon svgIcon="groups" class="text-[14px]"></mat-icon>
+        {{ product.players.min }}-{{ product.players.max }}</span
       >
       <span class="flex items-center gap-1"
-        ><span class="material-symbols-outlined text-[14px]">schedule</span>
+        ><mat-icon svgIcon="schedule" class="text-[14px]"></mat-icon>
         {{ product.playTime }}m</span
       >
       <span>{{ product.age }}+</span>

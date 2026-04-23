@@ -83,6 +83,12 @@ export class IconService {
       'download',
       'analytics',
       'add',
+      'package_2',
+      'inventory_2',
+      'menu_book',
+      'remove',
+      'crossword',
+      'zoom_in',
     ];
 
     icons.forEach((icon) => {
