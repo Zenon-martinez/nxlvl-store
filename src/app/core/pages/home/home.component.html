@@ -22,7 +22,7 @@
   <app-sealed></app-sealed>
   <app-events></app-events>
 </section>
-<div class="fixed bottom-8 right-8 z-[60]">
+<div class="fixed bottom-24 right-8 z-[60]">
   <button
     (click)="goToRankingPage()"
     class="flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full font-bold shadow-2xl shadow-primary/40 transition-all hover:scale-105 active:scale-95 group"
@@ -31,6 +31,18 @@
       svgIcon="trophy"
       class="text-xl group-hover:rotate-12 transition-transform"
     ></mat-icon>
-    <span class="text-sm uppercase tracking-wider">Next Level Leaderboard</span>
+    <span class="text-sm uppercase tracking-wider">Pokémon Leaderboard</span>
+  </button>
+</div>
+<div class="fixed bottom-8 right-8 z-[60]">
+  <button
+    (click)="goToMagicRankingPage()"
+    class="flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full font-bold shadow-2xl shadow-primary/40 transition-all hover:scale-105 active:scale-95 group"
+  >
+    <mat-icon
+      svgIcon="trophy"
+      class="text-xl group-hover:rotate-12 transition-transform"
+    ></mat-icon>
+    <span class="text-sm uppercase tracking-wider">Magic Leaderboard</span>
   </button>
 </div>

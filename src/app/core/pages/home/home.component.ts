@@ -28,4 +28,8 @@ export class HomeComponent {
   goToRankingPage() {
     this.router.navigate(['/ranking/pokemon']);
   }
+
+  goToMagicRankingPage() {
+    this.router.navigate(['/ranking/magic']);
+  }
 }

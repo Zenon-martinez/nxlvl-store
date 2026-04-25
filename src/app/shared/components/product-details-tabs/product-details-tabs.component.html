@@ -1,39 +1,154 @@
 <div class="border-t border-white/10 pt-12">
   <div class="flex gap-8 border-b border-white/10 mb-8 overflow-x-auto no-scrollbar">
-    <button
-      class="pb-4 text-primary border-b-2 border-primary text-[12px] font-black uppercase tracking-[0.2em] whitespace-nowrap"
-    >
-      Description
-    </button>
-    <button
-      class="pb-4 text-slate-400 hover:text-white transition-colors text-[12px] font-black uppercase tracking-[0.2em] whitespace-nowrap"
-    >
-      Real Photos (4)
-    </button>
-    <button
-      class="pb-4 text-slate-400 hover:text-white transition-colors text-[12px] font-black uppercase tracking-[0.2em] whitespace-nowrap"
-    >
-      Game Details
-    </button>
+    @for (tab of tabs; track tab.id) {
+      <button
+        (click)="selectTab(tab.id)"
+        [class]="
+          'pb-4 text-[12px] uppercase tracking-[0.2em] whitespace-nowrap ' +
+          (activeTab() === tab.id
+            ? 'text-primary border-b-2 border-primary font-black'
+            : 'text-slate-400 hover:text-white transition-colors')
+        "
+      >
+        {{ tab.label }}
+      </button>
+    }
   </div>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-    <div class="md:col-span-2 space-y-6">
-      <h2 class="text-2xl font-black uppercase tracking-tight text-white">
-        The Void Awaits Your Legacy
-      </h2>
-      <p class="text-on-surface-variant leading-relaxed">
-        Moeorn: Chronicles of the Void is a competitive deck-building legacy game set in
-        the dying embers of a forgotten galaxy. Players take the role of Void-Walkers,
-        harvesting remnants of shattered worlds to fuel their final escape. This specific
-        unit was used for our initial retail preview photography and has been handled with
-        extreme care.
-      </p>
-      <p class="text-on-surface-variant leading-relaxed">
-        The box exhibits minimal "shelf wear"—small whitening on two corners. Inside, the
-        components are pristine. The cards have never been shuffled, and the miniatures
-        remain in their original factory plastic inserts.
-      </p>
-    </div>
-    <app-product-specs-list></app-product-specs-list>
-  </div>
+
+  @if (activeTabData; as currentTab) {
+    @if (currentTab.id === 'description' && isDescription(currentTab.content)) {
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div class="md:col-span-2 space-y-6">
+          <h2 class="text-2xl font-black uppercase tracking-tight text-white">
+            Descripción
+          </h2>
+          <p class="text-on-surface-variant leading-relaxed">
+            {{ currentTab.content.long }}
+          </p>
+
+          @if (currentTab.content.highlights.length > 0) {
+            <div class="space-y-2">
+              <h3 class="text-xs font-black uppercase tracking-widest text-white">
+                Puntos clave
+              </h3>
+              <ul class="space-y-2 text-sm text-slate-300">
+                @for (highlight of currentTab.content.highlights; track highlight) {
+                  <li>• {{ highlight }}</li>
+                }
+              </ul>
+            </div>
+          }
+
+          @if (currentTab.content.components.length > 0) {
+            <div class="space-y-2">
+              <h3 class="text-xs font-black uppercase tracking-widest text-white">
+                Contenido
+              </h3>
+              <ul class="space-y-2 text-sm text-slate-300">
+                @for (component of currentTab.content.components; track component) {
+                  <li>• {{ component }}</li>
+                }
+              </ul>
+            </div>
+          }
+        </div>
+
+        <app-product-specs-list
+          [title]="'Resumen'"
+          [items]="[
+            { label: 'Pestaña', value: currentTab.label },
+            { label: 'Puntos clave', value: '' + currentTab.content.highlights.length },
+            { label: 'Componentes', value: '' + currentTab.content.components.length },
+          ]"
+        ></app-product-specs-list>
+      </div>
+    }
+
+    @if (currentTab.id === 'additional-info' && isAdditionalInfo(currentTab.content)) {
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div class="md:col-span-2 space-y-6">
+          <h2 class="text-2xl font-black uppercase tracking-tight text-white">
+            Información adicional
+          </h2>
+
+          @if (currentTab.content.tags.length > 0) {
+            <div class="flex flex-wrap gap-2">
+              @for (tag of currentTab.content.tags; track tag) {
+                <span
+                  class="text-[10px] px-2 py-1 border border-white/10 rounded uppercase text-slate-300"
+                >
+                  {{ tag }}
+                </span>
+              }
+            </div>
+          } @else {
+            <p class="text-sm text-slate-400">Sin tags registrados.</p>
+          }
+        </div>
+
+        <app-product-specs-list
+          [title]="'Especificaciones'"
+          [items]="additionalInfoSpecs"
+        ></app-product-specs-list>
+      </div>
+    }
+
+    @if (currentTab.id === 'how-to-play' && isHowToPlay(currentTab.content)) {
+      <div class="space-y-8">
+        <h2 class="text-2xl font-black uppercase tracking-tight text-white">
+          Cómo jugar
+        </h2>
+
+        @if (currentTab.content.length > 0) {
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            @for (section of currentTab.content; track section.title) {
+              <article class="bg-surface-container border border-white/10 p-5 space-y-4">
+                <h3 class="text-sm font-black uppercase tracking-widest text-white">
+                  {{ section.title }}
+                </h3>
+                <ol class="space-y-2 text-sm text-slate-300">
+                  @for (step of section.steps; track step) {
+                    <li>{{ $index + 1 }}. {{ step }}</li>
+                  }
+                </ol>
+              </article>
+            }
+          </div>
+        } @else {
+          <p class="text-sm text-slate-400">No hay instrucciones de juego disponibles.</p>
+        }
+      </div>
+    }
+
+    @if (currentTab.id === 'expansions' && isExpansions(currentTab.content)) {
+      <div class="space-y-6">
+        <h2 class="text-2xl font-black uppercase tracking-tight text-white">
+          Expansiones
+        </h2>
+
+        @if (currentTab.content.length > 0) {
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            @for (expansion of currentTab.content; track expansion.slug) {
+              <div
+                class="bg-surface-container border border-white/10 p-4 flex items-center justify-between"
+              >
+                <span class="text-sm font-black uppercase tracking-widest text-white">{{
+                  expansion.name
+                }}</span>
+                <span class="text-[10px] uppercase tracking-widest text-slate-400">{{
+                  expansion.slug
+                }}</span>
+              </div>
+            }
+          </div>
+        } @else {
+          <p class="text-sm text-slate-400">
+            Este producto no tiene expansiones registradas.
+          </p>
+        }
+      </div>
+    }
+  } @else {
+    <p class="text-sm text-slate-400">Selecciona una pestaña para ver el contenido.</p>
+  }
 </div>

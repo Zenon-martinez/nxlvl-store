@@ -1,4 +1,4 @@
-import { Component, Input, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Router } from '@angular/router';
 import { BoardGameProduct } from '@models/product.interface';
 import { MatIcon } from '@angular/material/icon';
@@ -9,7 +9,7 @@ import { MatIcon } from '@angular/material/icon';
   templateUrl: './board-game-card.component.html',
   styleUrl: './board-game-card.component.scss',
 })
-export class BoardGameCardComponent {
+export class BoardGameCardComponent implements OnChanges {
   @Input({ required: true }) product!: BoardGameProduct;
   status = '';
   condition = '';
@@ -17,22 +17,18 @@ export class BoardGameCardComponent {
   constructor(private router: Router) {}
 
   ngOnChanges(changes: SimpleChanges): void {
-    //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
-    //Add '${implements OnChanges}' to the class.
     if (!changes['product'] || !changes['product'].currentValue) return;
-    this.status = this.setStatusLabel(this.product.status);
-    this.condition = this.setTypeLabel(this.product.condition!);
-    console.log('Product changed:', this.condition);
+    this.status = this.setStatusLabel(this.product.inventory.status);
+    this.condition = this.setTypeLabel(this.product.inventory.condition);
   }
 
   private setStatusLabel(status: string): string {
     switch (status) {
-      case 'available':
       case 'in_stock':
         return 'Disponible';
-      case 'out-of-stock':
+      case 'out_of_stock':
         return 'Agotado';
-      case 'pre-order':
+      case 'pre_order':
         return 'Pre-orden';
       default:
         return status;
@@ -43,8 +39,8 @@ export class BoardGameCardComponent {
     switch (type) {
       case 'sealed':
         return 'Sellado';
-      case 'demo':
-        return 'Demo';
+      case 'used':
+        return 'Usado';
       default:
         return type;
     }

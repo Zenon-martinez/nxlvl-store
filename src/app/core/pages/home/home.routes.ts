@@ -37,6 +37,16 @@ export const HOME_ROUTES: Routes = [
         (m) => m.BOARD_GAMES_ROUTES,
       ),
   },
+  {
+    path: 'pokemon-tcg',
+    data: {
+      breadcrumb: 'Pokémon TCG',
+    },
+    loadChildren: () =>
+      import('../../../features/pokemon-tcg/pokemon-tcg.routes').then(
+        (m) => m.POKEMON_TCG_ROUTES,
+      ),
+  },
 
   /* // ===== DETALLE CARTA =====
   {

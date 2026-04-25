@@ -12,7 +12,7 @@
     <img
       [alt]="product.name"
       class="w-full h-full object-fill grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700 rounded-sm"
-      [src]="product.thumbnail"
+      [src]="product.media.thumbnail"
     />
     <div class="absolute top-4 left-4 z-20 flex flex-col gap-2">
       @if (condition !== 'Sellado') {
@@ -23,14 +23,13 @@
       }
       <span
         class="text-[9px] font-black uppercase tracking-widest px-2 py-1"
-        [class.bg-emerald-500]="
-          product.status === 'available' || product.status === 'in_stock'
-        "
-        [class.bg-amber-400]="product.status === 'pre-order'"
-        [class.bg-rose-500]="product.status === 'out-of-stock'"
-        [class.text-slate-950]="product.status !== 'out-of-stock'"
+        [class.bg-emerald-500]="product.inventory.status === 'in_stock'"
+        [class.bg-amber-400]="product.inventory.status === 'pre_order'"
+        [class.bg-rose-500]="product.inventory.status === 'out_of_stock'"
+        [class.text-slate-950]="product.inventory.status !== 'out_of_stock'"
         [class.text-white]="
-          product.status === 'out-of-stock' || product.status === 'in_stock'
+          product.inventory.status === 'out_of_stock' ||
+          product.inventory.status === 'in_stock'
         "
         >{{ status }}</span
       >
@@ -41,27 +40,29 @@
       <h3 class="text-sm font-black uppercase tracking-widest text-white leading-tight">
         {{ product.name }}
       </h3>
-      <span class="text-primary font-black text-sm">${{ product.price }}</span>
+      <span class="text-primary font-black text-sm">${{ product.pricing.price }}</span>
     </div>
-    <p class="text-xs text-slate-300 line-clamp-2 mt-2">{{ product.description }}</p>
+    <p class="text-xs text-slate-300 line-clamp-2 mt-2">
+      {{ product.description.short }}
+    </p>
     <div
       class="flex items-center gap-3 text-[10px] font-extrabold text-slate-500 uppercase tracking-widest mt-4"
     >
       <span class="flex items-center gap-1">
         <mat-icon svgIcon="groups" class="text-[14px]"></mat-icon>
-        {{ product.players.min }}-{{ product.players.max }}</span
+        {{ product.gameplay.players.min }}-{{ product.gameplay.players.max }}</span
       >
       <span class="flex items-center gap-1"
         ><mat-icon svgIcon="schedule" class="text-[14px]"></mat-icon>
-        {{ product.playTime }}m</span
+        {{ product.gameplay.playTime.min }}-{{ product.gameplay.playTime.max }}m</span
       >
-      <span>{{ product.age }}+</span>
-      <span>{{ product.publisher }}</span>
+      <span>{{ product.gameplay.age }}+</span>
+      <span>{{ product.editorial.publisher }}</span>
     </div>
 
-    @if (product.tags?.length) {
+    @if (product.additionalInfo.tags.length) {
       <div class="flex flex-wrap gap-2 mt-4">
-        @for (tag of product.tags; track tag) {
+        @for (tag of product.additionalInfo.tags; track tag) {
           <span
             class="text-[10px] px-2 py-1 border border-white/10 rounded uppercase text-slate-300"
           >
@@ -73,11 +74,13 @@
 
     <button
       class="w-full mt-6 py-3 border border-white/10 text-[10px] font-black uppercase tracking-[0.2em] hover:bg-primary hover:border-primary hover:text-white transition-all duration-300"
-      [disabled]="product.status === 'out-of-stock'"
-      [class.opacity-50]="product.status === 'out-of-stock'"
-      [class.cursor-not-allowed]="product.status === 'out-of-stock'"
+      [disabled]="product.inventory.status === 'out_of_stock'"
+      [class.opacity-50]="product.inventory.status === 'out_of_stock'"
+      [class.cursor-not-allowed]="product.inventory.status === 'out_of_stock'"
     >
-      {{ product.status === 'out-of-stock' ? 'Sin stock' : 'Agregar al carrito' }}
+      {{
+        product.inventory.status === 'out_of_stock' ? 'Sin stock' : 'Agregar al carrito'
+      }}
     </button>
   </div>
 </div>

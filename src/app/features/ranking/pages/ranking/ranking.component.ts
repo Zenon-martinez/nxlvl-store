@@ -36,11 +36,13 @@ export class RankingComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe((params) => {
-      this.store.load(this.game);
+      console.log('Route parameters:', params);
+      const gameParam = params.get('game') || '';
+      this.store.load(gameParam);
       this.gameText =
-        this.game === 'magic'
+        gameParam === 'magic'
           ? 'Magic: The Gathering'
-          : this.game === 'pokemon'
+          : gameParam === 'pokemon'
             ? 'Pokémon TCG'
             : '';
     });
