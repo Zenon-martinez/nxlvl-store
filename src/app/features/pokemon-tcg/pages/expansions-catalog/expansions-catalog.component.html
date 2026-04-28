@@ -1,1 +1,462 @@
-<p>expansions-catalog works!</p>
+<!-- Main Content Canvas -->
+<main class="pb-20 px-4 md:px-12 max-w-[1600px] mx-auto">
+  <!-- Header Section -->
+  <div class="mb-12 mt-4">
+    <h1
+      class="text-4xl md:text-5xl font-black tracking-tighter text-white mb-6 uppercase"
+    >
+      Catálogo de expansiones
+    </h1>
+    <p class="text-slate-400 text-sm md:text-xl font-medium leading-relaxed">
+      Explora nuestro catálogo completo de expansiones de Pokémon TCG, desde las clásicas
+      hasta las más recientes. Descubre los sets que han definido el juego a lo largo de
+      los años, con detalles sobre su lanzamiento, popularidad y disponibilidad. Ya seas
+      un coleccionista veterano o un nuevo entrenador, aquí encontrarás toda la
+      información que necesitas para sumergirte en el mundo de las expansiones de Pokémon.
+    </p>
+  </div>
+  <!-- Filters & Sort -->
+  <section
+    class="mb-16 flex flex-col md:flex-row gap-6 justify-between items-start md:items-center"
+  >
+    <div class="flex gap-2 bg-surface-container p-1 rounded-lg border border-white/5">
+      <button
+        class="px-6 py-2 bg-primary text-white text-[10px] font-black uppercase tracking-widest rounded shadow-lg shadow-primary/20"
+      >
+        Todas las expansiones
+      </button>
+      <button
+        class="px-6 py-2 text-slate-400 hover:text-white text-[10px] font-black uppercase tracking-widest rounded transition-colors"
+      >
+        Estándar
+      </button>
+      <button
+        class="px-6 py-2 text-slate-400 hover:text-white text-[10px] font-black uppercase tracking-widest rounded transition-colors"
+      >
+        Vintage
+      </button>
+    </div>
+    <div class="flex gap-4 items-center w-full md:w-auto">
+      <div class="flex-1 md:flex-none relative">
+        <mat-icon
+          svgIcon="search"
+          class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-sm"
+        ></mat-icon>
+        <input
+          class="bg-surface-container border border-white/10 rounded-full py-2.5 pl-10 pr-6 text-[10px] font-bold text-white tracking-widest focus:border-primary focus:ring-0 w-full md:w-64 placeholder:text-slate-600"
+          placeholder="Buscar por expansión..."
+          type="text"
+        />
+      </div>
+      <div class="relative group">
+        <button
+          class="flex items-center gap-2 bg-surface-container border border-white/10 px-4 py-2.5 rounded text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-white transition-colors"
+        >
+          Ordenar: Nuevo
+          <mat-icon svgIcon="expand_more" class="text-sm"></mat-icon>
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- Expansions Section -->
+  <section class="mb-20">
+    <div class="flex justify-between items-end mb-8 border-b border-white/5 pb-4">
+      <div>
+        <h2 class="text-2xl font-black uppercase tracking-tighter text-white">
+          Últimas expansiones
+        </h2>
+        <p class="text-slate-500 text-[10px] font-bold tracking-widest uppercase mt-1">
+          Recientes &amp; Estándar Legal
+        </p>
+      </div>
+      <a
+        class="text-primary text-[10px] font-black uppercase tracking-[0.2em] flex items-center gap-2 hover:text-white transition-colors"
+        href="#"
+      >
+        Ver todas las expansiones
+        <mat-icon svgIcon="arrow_forward" class="text-sm"></mat-icon>
+      </a>
+    </div>
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8"
+    >
+      @for (card of expansions; track card.id) {
+        <app-sealed-pkm-card [setData]="card"></app-sealed-pkm-card>
+      }
+    </div>
+  </section>
+  <!-- Offers Section -->
+  <section class="mb-20">
+    <div class="flex justify-between items-end mb-8 border-b border-white/5 pb-4">
+      <div>
+        <h2 class="text-2xl font-black uppercase tracking-tighter text-white">
+          Curated Offers
+        </h2>
+        <p class="text-slate-500 text-[10px] font-bold tracking-widest uppercase mt-1">
+          Rare finds &amp; Special pre-orders
+        </p>
+      </div>
+      <a
+        class="text-primary text-[10px] font-black uppercase tracking-[0.2em] flex items-center gap-2 hover:text-white transition-colors"
+        href="#"
+      >
+        View All Offers
+        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward"
+          >arrow_forward</span
+        >
+      </a>
+    </div>
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8"
+    >
+      <!-- Card 3: Base Set (Vintage) -->
+      <div
+        class="group relative bg-surface-container rounded-xl border border-white/10 overflow-hidden hover:border-primary/50 transition-all duration-500 hover:scale-[1.02] shadow-2xl"
+      >
+        <div class="aspect-[4/5] relative overflow-hidden">
+          <img
+            class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"
+            alt="Classic original Pokemon base set booster packs with vivid red and yellow colors on a dark wood table"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjhISXMMo2mNbOSBUxOyQ3XUNvWSa_PyJcW9-b31ZjQe73b5MG19L4AHOiiERnuR-ROSSkcsKjKdA8Kxc4auNiCeFYU9WbEZ0ABWr9lNDuvoHfPM_z_cVYbV5WBG9mwJy3Pxd33TzUhCKb4wUnc9rmknNU_4TcYLMNOEEQFNXn57QJORUo6X3LYT-LgVV_qAlQThpy8otAZeJM7uKayp_HhJstDaZmM37rjkng8tCldefVD4po-eO1IBw8Ym9zqYjc0FPPKuTCrk8"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent opacity-90"
+          ></div>
+          <div class="absolute top-4 left-4 flex flex-col gap-2">
+            <span
+              class="bg-error-container text-white text-[9px] font-black px-2 py-1 uppercase tracking-tighter rounded"
+              >Rare</span
+            >
+            <span
+              class="bg-surface-container-highest text-slate-300 text-[9px] font-black px-2 py-1 uppercase tracking-tighter rounded border border-white/10"
+              >Vintage</span
+            >
+          </div>
+          <div class="absolute bottom-6 left-6 right-6">
+            <div class="h-12 mb-4 flex items-end">
+              <span
+                class="text-white text-2xl font-black tracking-tighter uppercase leading-none"
+                >Base Set 1</span
+              >
+            </div>
+            <div class="flex justify-between items-center">
+              <span
+                class="text-[9px] font-extrabold text-slate-400 uppercase tracking-widest"
+                >Released: Jan 1999</span
+              >
+              <div class="flex items-center gap-1">
+                <div class="w-2 h-2 rounded-full bg-error"></div>
+                <span class="text-[8px] font-black text-error uppercase"
+                  >Out of Stock</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="p-4 bg-surface-container-high border-t border-white/5 flex justify-between items-center"
+        >
+          <div>
+            <p
+              class="text-[8px] font-extrabold text-slate-500 uppercase tracking-widest mb-1"
+            >
+              Set Symbols
+            </p>
+            <div class="flex gap-2">
+              <span
+                class="material-symbols-outlined text-slate-400 text-base"
+                data-icon="history"
+                >history</span
+              >
+              <span
+                class="material-symbols-outlined text-slate-400 text-base"
+                data-icon="token"
+                style="font-variation-settings: 'FILL' 1"
+                >token</span
+              >
+            </div>
+          </div>
+          <button
+            class="bg-primary/10 text-primary hover:bg-primary hover:text-white p-2 rounded transition-colors duration-300"
+          >
+            <span class="material-symbols-outlined text-sm" data-icon="chevron_right"
+              >chevron_right</span
+            >
+          </button>
+        </div>
+      </div>
+      <!-- Card 5: Obsidian Flames -->
+      <div
+        class="group relative bg-surface-container rounded-xl border border-white/10 overflow-hidden hover:border-primary/50 transition-all duration-500 hover:scale-[1.02] shadow-2xl"
+      >
+        <div class="aspect-[4/5] relative overflow-hidden">
+          <img
+            class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"
+            alt="Dramatic red and black Pokemon card box art with ember effects"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN3gq6hc59Sd82jpQ5zXzKtIytRyyfQUrZd7dB_63nwGYYNGbHjyqEayCarcB-BKlqY2rcTmKllXG08N0Eu4A7P70zYiqAePc897eP-IcL6S7_UQ1Wr95rMUCFaAG8uF0drmBGHv0lhR_JqeQPma6qUNJR4LIO52HsZ-VxdyvAYIvwGVR-jQTp_6ylpuem9WmLI9SuDv_hcjSfmb0G3ylv6eOLJbjbzbB3jHR5JlXdckY15KXzaRZ8jK9CdnAVnFZmCuQlYJ8GKXI"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent opacity-90"
+          ></div>
+          <div class="absolute top-4 left-4 flex flex-col gap-2">
+            <span
+              class="bg-primary text-white text-[9px] font-black px-2 py-1 uppercase tracking-tighter rounded"
+              >Upcoming</span
+            >
+          </div>
+          <div class="absolute bottom-6 left-6 right-6">
+            <div class="h-12 mb-4 flex items-end">
+              <span
+                class="text-white text-2xl font-black tracking-tighter uppercase leading-none"
+                >Obsidian Flames</span
+              >
+            </div>
+            <div class="flex justify-between items-center">
+              <span
+                class="text-[9px] font-extrabold text-slate-400 uppercase tracking-widest"
+                >Released: Aug 2023</span
+              >
+              <div class="flex items-center gap-1">
+                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                <span class="text-[8px] font-black text-blue-500 uppercase"
+                  >Pre-order</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="p-4 bg-surface-container-high border-t border-white/5 flex justify-between items-center"
+        >
+          <div>
+            <p
+              class="text-[8px] font-extrabold text-slate-500 uppercase tracking-widest mb-1"
+            >
+              Set Symbols
+            </p>
+            <div class="flex gap-2">
+              <span
+                class="material-symbols-outlined text-slate-400 text-base"
+                data-icon="local_fire_department"
+                >fire</span
+              >
+              <span
+                class="material-symbols-outlined text-slate-400 text-base"
+                data-icon="hexagon"
+                >hexagon</span
+              >
+            </div>
+          </div>
+          <button
+            class="bg-primary/10 text-primary hover:bg-primary hover:text-white p-2 rounded transition-colors duration-300"
+          >
+            <span class="material-symbols-outlined text-sm" data-icon="chevron_right"
+              >chevron_right</span
+            >
+          </button>
+        </div>
+      </div>
+      <!-- Card 7: Lost Origin -->
+      <div
+        class="group relative bg-surface-container rounded-xl border border-white/10 overflow-hidden hover:border-primary/50 transition-all duration-500 hover:scale-[1.02] shadow-2xl"
+      >
+        <div class="aspect-[4/5] relative overflow-hidden">
+          <img
+            class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"
+            alt="Swirling nebula style card art with deep pinks and purples"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2yVtTbYYTB0UYOYUNmYAQ9lVYa-Or9KgnWXfWszCFDtl7QLMSD7QbPn5apsK0JydRos0D5pVPVI6bUn-gG5HSybab2M71YyTzYfneQG0nGIKkU_yAjY3O_7ZW3Hi-18HSvAHhYYD6bjh49T-jEaxD_SVZ6mFfbeAKBq1GWZ6vJYv6jfpbrLNZvSHCRRsn3WlBkqeD802aFn0gf6b4c1zaK9h3FkFlyje8FENLIRbWrFF58Ncb0fPtoIIqDli66kOYgWyy9okgDbU"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent opacity-90"
+          ></div>
+          <div class="absolute bottom-6 left-6 right-6">
+            <div class="h-12 mb-4 flex items-end">
+              <span
+                class="text-white text-2xl font-black tracking-tighter uppercase leading-none"
+                >Lost Origin</span
+              >
+            </div>
+            <div class="flex justify-between items-center">
+              <span
+                class="text-[9px] font-extrabold text-slate-400 uppercase tracking-widest"
+                >Released: Sep 2022</span
+              >
+              <div class="flex items-center gap-1">
+                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                <span class="text-[8px] font-black text-green-500 uppercase"
+                  >Available</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="p-4 bg-surface-container-high border-t border-white/5 flex justify-between items-center"
+        >
+          <div>
+            <p
+              class="text-[8px] font-extrabold text-slate-500 uppercase tracking-widest mb-1"
+            >
+              Set Symbols
+            </p>
+            <div class="flex gap-2">
+              <span
+                class="material-symbols-outlined text-slate-400 text-base"
+                data-icon="vortex"
+                >vortex</span
+              >
+              <span
+                class="material-symbols-outlined text-slate-400 text-base"
+                data-icon="blur_on"
+                >blur</span
+              >
+            </div>
+          </div>
+          <button
+            class="bg-primary/10 text-primary hover:bg-primary hover:text-white p-2 rounded transition-colors duration-300"
+          >
+            <span class="material-symbols-outlined text-sm" data-icon="chevron_right"
+              >chevron_right</span
+            >
+          </button>
+        </div>
+      </div>
+      <!-- Card 8: Jungle (Vintage) -->
+      <div
+        class="group relative bg-surface-container rounded-xl border border-white/10 overflow-hidden hover:border-primary/50 transition-all duration-500 hover:scale-[1.02] shadow-2xl"
+      >
+        <div class="aspect-[4/5] relative overflow-hidden">
+          <img
+            class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"
+            alt="Classic green and yellow vintage Pokemon booster pack"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjhISXMMo2mNbOSBUxOyQ3XUNvWSa_PyJcW9-b31ZjQe73b5MG19L4AHOiiERnuR-ROSSkcsKjKdA8Kxc4auNiCeFYU9WbEZ0ABWr9lNDuvoHfPM_z_cVYbV5WBG9mwJy3Pxd33TzUhCKb4wUnc9rmknNU_4TcYLMNOEEQFNXn57QJORUo6X3LYT-LgVV_qAlQThpy8otAZeJM7uKayp_HhJstDaZmM37rjkng8tCldefVD4po-eO1IBw8Ym9zqYjc0FPPKuTCrk8"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent opacity-90"
+          ></div>
+          <div class="absolute top-4 left-4 flex flex-col gap-2">
+            <span
+              class="bg-surface-container-highest text-slate-300 text-[9px] font-black px-2 py-1 uppercase tracking-tighter rounded border border-white/10"
+              >Vintage</span
+            >
+          </div>
+          <div class="absolute bottom-6 left-6 right-6">
+            <div class="h-12 mb-4 flex items-end">
+              <span
+                class="text-white text-2xl font-black tracking-tighter uppercase leading-none"
+                >Jungle Set</span
+              >
+            </div>
+            <div class="flex justify-between items-center">
+              <span
+                class="text-[9px] font-extrabold text-slate-400 uppercase tracking-widest"
+                >Released: Jun 1999</span
+              >
+              <div class="flex items-center gap-1">
+                <div class="w-2 h-2 rounded-full bg-error"></div>
+                <span class="text-[8px] font-black text-error uppercase"
+                  >Out of Stock</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="p-4 bg-surface-container-high border-t border-white/5 flex justify-between items-center"
+        >
+          <div>
+            <p
+              class="text-[8px] font-extrabold text-slate-500 uppercase tracking-widest mb-1"
+            >
+              Set Symbols
+            </p>
+            <div class="flex gap-2">
+              <span
+                class="material-symbols-outlined text-slate-400 text-base"
+                data-icon="forest"
+                >forest</span
+              >
+              <span
+                class="material-symbols-outlined text-slate-400 text-base"
+                data-icon="psychiatry"
+                >flower</span
+              >
+            </div>
+          </div>
+          <button
+            class="bg-primary/10 text-primary hover:bg-primary hover:text-white p-2 rounded transition-colors duration-300"
+          >
+            <span class="material-symbols-outlined text-sm" data-icon="chevron_right"
+              >chevron_right</span
+            >
+          </button>
+        </div>
+      </div>
+      <!-- Card 10: Brilliant Stars -->
+      <div
+        class="group relative bg-surface-container rounded-xl border border-white/10 overflow-hidden hover:border-primary/50 transition-all duration-500 hover:scale-[1.02] shadow-2xl"
+      >
+        <div class="aspect-[4/5] relative overflow-hidden">
+          <img
+            class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"
+            alt="Dynamic golden and white card art with energy effects"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN3gq6hc59Sd82jpQ5zXzKtIytRyyfQUrZd7dB_63nwGYYNGbHjyqEayCarcB-BKlqY2rcTmKllXG08N0Eu4A7P70zYiqAePc897eP-IcL6S7_UQ1Wr95rMUCFaAG8uF0drmBGHv0lhR_JqeQPma6qUNJR4LIO52HsZ-VxdyvAYIvwGVR-jQTp_6ylpuem9WmLI9SuDv_hcjSfmb0G3ylv6eOLJbjbzbB3jHR5JlXdckY15KXzaRZ8jK9CdnAVnFZmCuQlYJ8GKXI"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent opacity-90"
+          ></div>
+          <div class="absolute bottom-6 left-6 right-6">
+            <div class="h-12 mb-4 flex items-end">
+              <span
+                class="text-white text-2xl font-black tracking-tighter uppercase leading-none"
+                >Brilliant Stars</span
+              >
+            </div>
+            <div class="flex justify-between items-center">
+              <span
+                class="text-[9px] font-extrabold text-slate-400 uppercase tracking-widest"
+                >Released: Feb 2022</span
+              >
+              <div class="flex items-center gap-1">
+                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                <span class="text-[8px] font-black text-green-500 uppercase"
+                  >Available</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="p-4 bg-surface-container-high border-t border-white/5 flex justify-between items-center"
+        >
+          <div>
+            <p
+              class="text-[8px] font-extrabold text-slate-500 uppercase tracking-widest mb-1"
+            >
+              Set Symbols
+            </p>
+            <div class="flex gap-2">
+              <span
+                class="material-symbols-outlined text-slate-400 text-base"
+                data-icon="star_rate"
+                >star</span
+              >
+              <span
+                class="material-symbols-outlined text-slate-400 text-base"
+                data-icon="brightness_7"
+                >shine</span
+              >
+            </div>
+          </div>
+          <button
+            class="bg-primary/10 text-primary hover:bg-primary hover:text-white p-2 rounded transition-colors duration-300"
+          >
+            <span class="material-symbols-outlined text-sm" data-icon="chevron_right"
+              >chevron_right</span
+            >
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

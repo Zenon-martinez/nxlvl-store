@@ -1,0 +1,82 @@
+{
+  "sets": [
+    {
+      "id": "sv02",
+      "name": "Paldea Evolved",
+      "slug": "paldea-evolved",
+
+      "tcg": {
+        "game": "pokemon",
+        "era": "Scarlet & Violet",
+        "setCode": "SV02"
+      },
+
+      "release": {
+        "date": "2023-06-09",
+        "formatted": "June 2023"
+      },
+
+      "status": {
+        "availability": "available",
+        "isNew": true,
+        "isTrending": true
+      },
+
+      "media": {
+        "coverImage": "https://example.com/paldea-evolved-cover.png",
+        "logo": "https://example.com/paldea-evolved-logo.png",
+        "symbol": "https://example.com/paldea-symbol.png",
+        "background": {
+          "type": "artwork",
+          "image": "https://example.com/tyranitar-art.png"
+        }
+      },
+
+      "ui": {
+        "badges": [
+          {
+            "label": "NEW",
+            "variant": "primary"
+          },
+          {
+            "label": "TRENDING",
+            "variant": "secondary"
+          }
+        ],
+        "cta": {
+          "label": "View Set",
+          "icon": "chevron_right",
+          "action": "navigate"
+        }
+      },
+
+      "stats": {
+        "totalCards": 279,
+        "secretRares": 36
+      },
+
+      "meta": {
+        "language": "en",
+        "region": "international"
+      }
+    },
+    {
+      "id": "custom-01",
+      "name": "Chaos Rising",
+      "slug": "chaos-rising",
+      "tcg": { "game": "pokemon", "era": "Custom", "setCode": "CR01" },
+      "release": { "date": null, "formatted": "TBA" },
+      "status": { "availability": "upcoming", "isNew": true, "isTrending": false },
+      "media": {
+        "coverImage": "...",
+        "symbol": "...",
+        "background": { "type": "artwork", "image": "..." }
+      },
+      "ui": {
+        "badges": [{ "label": "CUSTOM", "variant": "neutral" }],
+        "cta": { "label": "View Set", "icon": "chevron_right", "action": "navigate" }
+      },
+      "stats": { "totalCards": 0, "secretRares": 0 }
+    }
+  ]
+}

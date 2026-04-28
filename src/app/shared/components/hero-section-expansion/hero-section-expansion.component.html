@@ -1,0 +1,58 @@
+<section class="relative min-h-[400px] flex items-center overflow-hidden">
+  <!-- Immersive Background Artwork -->
+  <div class="absolute inset-0 z-0 opacity-40 bg-black">
+    <img
+      [alt]="data.name"
+      class="w-full h-full object-contain"
+      data-alt="Epic cinematic background of legendary psychic pokemon Mew floating in a swirling cosmic void with vibrant purple and blue nebulae"
+      [src]="heroBackground"
+    />
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-transparent"
+    ></div>
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"
+    ></div>
+  </div>
+  <div class="container mx-auto px-6 relative z-10 py-20">
+    <div class="max-w-3xl space-y-6">
+      <div class="flex flex-wrap gap-3">
+        <span
+          class="bg-tertiary-container text-white text-[10px] px-2 py-1 font-extrabold uppercase tracking-widest rounded-sm"
+          *ngFor="let badge of data.ui.badges"
+          [class]="
+            badgeClass(badge.variant) +
+            ' text-[10px] px-2 py-1 font-extrabold uppercase tracking-widest rounded-sm'
+          "
+          >{{ badge.label }}</span
+        >
+        <span
+          class="bg-white/10 text-slate-300 text-[10px] px-2 py-1 font-extrabold uppercase tracking-widest rounded-sm border border-white/10"
+          >Set ID: {{ data.id }}</span
+        >
+      </div>
+      <h1
+        class="text-[60px] leading-[1] font-black tracking-tighter text-white uppercase"
+      >
+        {{ heroTitleMain }}<span class="text-primary">{{ heroTitleCode }}</span>
+      </h1>
+      <div class="flex items-center gap-8 pt-4">
+        <div class="flex flex-col">
+          <span class="text-[10px] font-extrabold text-primary uppercase tracking-widest"
+            >Release Date</span
+          >
+          <span class="text-lg font-bold text-white">{{ releaseLabel }}</span>
+        </div>
+        <div class="h-10 w-px bg-white/10"></div>
+        <div class="flex flex-col">
+          <span class="text-[10px] font-extrabold text-primary uppercase tracking-widest"
+            >Status</span
+          >
+          <span class="text-lg font-bold text-white uppercase tracking-tight">{{
+            availabilityLabel
+          }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,6 +1,7 @@
 import { ActivatedRouteSnapshot, Data, Routes } from '@angular/router';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { ExpansionsCatalogComponent } from './pages/expansions-catalog/expansions-catalog.component';
+import { SealedPokemonCatalogComponent } from './pages/sealed-pokemon-catalog/sealed-pokemon-catalog.component';
 
 const detailBreadcrumb = (_data: Data, route: ActivatedRouteSnapshot): string => {
   const productId = route.paramMap.get('id');
@@ -22,6 +23,14 @@ export const POKEMON_TCG_ROUTES: Routes = [
     title: 'Next Level | Detalles del producto',
     data: {
       breadcrumb: detailBreadcrumb,
+    },
+  },
+  {
+    path: 'expansions/:id',
+    component: SealedPokemonCatalogComponent,
+    title: 'Next Level | Productos de la expansión',
+    data: {
+      breadcrumb: 'Expansión',
     },
   },
 ];

@@ -1,0 +1,170 @@
+{
+  "sets": [
+    {
+      "id": "me4",
+      "name": "Chaos Rising",
+      "slug": "chaos-rising",
+
+      "tcg": {
+        "game": "pokemon",
+        "era": "Mega Evolution",
+        "setCode": "Me4"
+      },
+
+      "release": {
+        "date": "2026-05-22",
+        "formatted": "Mayo 2026"
+      },
+
+      "status": {
+        "availability": "available",
+        "isNew": true,
+        "isComingSoon": true,
+        "isTrending": false
+      },
+
+      "media": {
+        "coverImage": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156559/Chaos_Rising_Logo_ylzhar.png",
+        "logo": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156559/Chaos_Rising_Logo_ylzhar.png",
+        "symbol": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156559/Chaos_Rising_Logo_ylzhar.png",
+        "background": {
+          "type": "artwork",
+          "image": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156559/Chaos_Rising_Logo_ylzhar.png"
+        }
+      },
+
+      "ui": {
+        "badges": [
+          {
+            "label": "Preventa",
+            "variant": "primary"
+          }
+        ],
+        "cta": {
+          "label": "View Set",
+          "icon": "chevron_right",
+          "action": "navigate"
+        }
+      },
+
+      "stats": {
+        "totalCards": 120,
+        "secretRares": 35
+      },
+
+      "meta": {
+        "language": "en",
+        "region": "international"
+      }
+    },
+    {
+      "id": "me3",
+      "name": "Perfect Order",
+      "slug": "perfect-order",
+
+      "tcg": {
+        "game": "pokemon",
+        "era": "Mega Evolution",
+        "setCode": "Me3"
+      },
+
+      "release": {
+        "date": "2026-03-27",
+        "formatted": "Marzo 2026"
+      },
+
+      "status": {
+        "availability": "available",
+        "isNew": true,
+        "isComingSoon": false,
+        "isTrending": false
+      },
+
+      "media": {
+        "coverImage": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156595/Perfect_Order_Logo_uj2hay.png",
+        "logo": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156595/Perfect_Order_Logo_uj2hay.png",
+        "symbol": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156595/Perfect_Order_Logo_uj2hay.png",
+        "background": {
+          "type": "artwork",
+          "image": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156595/Perfect_Order_Logo_uj2hay.png"
+        }
+      },
+
+      "ui": {
+        "badges": [
+          {
+            "label": "Nuevo",
+            "variant": "secondary"
+          }
+        ],
+        "cta": {
+          "label": "View Set",
+          "icon": "chevron_right",
+          "action": "navigate"
+        }
+      },
+
+      "stats": {
+        "totalCards": 124,
+        "secretRares": 35
+      },
+
+      "meta": {
+        "language": "en",
+        "region": "international"
+      }
+    },
+    {
+      "id": "me2",
+      "name": "Ascended Heroes",
+      "slug": "ascended-heroes",
+
+      "tcg": {
+        "game": "pokemon",
+        "era": "Mega Evolution",
+        "setCode": "Me2"
+      },
+
+      "release": {
+        "date": "2026-01-30",
+        "formatted": "Enero 2026"
+      },
+
+      "status": {
+        "availability": "available",
+        "isNew": true,
+        "isComingSoon": false,
+        "isTrending": false
+      },
+
+      "media": {
+        "coverImage": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156534/Ascended_Heroes_Logo_qv8m7f.png",
+        "logo": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156534/Ascended_Heroes_Logo_qv8m7f.png",
+        "symbol": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156534/Ascended_Heroes_Logo_qv8m7f.png",
+        "background": {
+          "type": "artwork",
+          "image": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156534/Ascended_Heroes_Logo_qv8m7f.png"
+        }
+      },
+
+      "ui": {
+        "badges": [],
+        "cta": {
+          "label": "View Set",
+          "icon": "chevron_right",
+          "action": "navigate"
+        }
+      },
+
+      "stats": {
+        "totalCards": 295,
+        "secretRares": 35
+      },
+
+      "meta": {
+        "language": "en",
+        "region": "international"
+      }
+    }
+  ]
+}
