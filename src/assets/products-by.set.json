@@ -1,0 +1,488 @@
+{
+  "results": [
+    {
+      "expansion": {
+        "id": "sv08",
+        "name": {
+          "es": "Surging Sparks",
+          "en": "Surging Sparks"
+        },
+        "code": "SV08",
+        "releaseDate": "2025-11-01"
+      },
+      "sections": [
+        {
+          "type": "booster_box",
+          "label": {
+            "es": "Booster Boxes",
+            "en": "Booster Boxes"
+          },
+          "order": 1,
+          "products": [
+            {
+              "id": "booster-box-chaos-rising",
+              "name": {
+                "es": "Boster Box - Caos creciente",
+                "en": "Boster Box - Chaos Rising"
+              },
+
+              "type": "booster_box",
+
+              "expansion": {
+                "code": "Me4",
+                "name": {
+                  "es": "Caos creciente",
+                  "en": "Chaos Rising"
+                }
+              },
+
+              "price": {
+                "amount": 3000,
+                "currency": "MXN"
+              },
+
+              "images": [
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156550/booster_box_yekdjg.png",
+                  "type:": "main"
+                }
+              ],
+
+              "content": {
+                "shortDescription": {
+                  "es": "Todo lo que necesitas para comenzar a jugar.",
+                  "en": "Everything you need to start playing."
+                },
+                "longDescription": {
+                  "es": "Incluye sobres, fundas y accesorios oficiales.",
+                  "en": "Includes booster packs, sleeves, and official accessories."
+                },
+                "features": [{ "es": "36 sobres", "en": "36 booster packs" }]
+              },
+              "contents": {
+                "boosterPacks": 36,
+                "promoCards": 0
+              },
+
+              "pullRates": {
+                "avgHits": 2.5
+              },
+
+              "isPokemonCenterExclusive": false,
+
+              "releaseDate": "22-05-2026",
+
+              "inventory": {
+                "stock": 5,
+                "status": "in_stock"
+              }
+            }
+          ]
+        },
+        {
+          "type": "elite_trainer_box",
+          "label": {
+            "es": "Elite Trainer Boxes",
+            "en": "Elite Trainer Boxes"
+          },
+          "order": 2,
+          "products": [
+            {
+              "id": "etb-chaos-rising",
+              "name": {
+                "es": "Caja de Entrenador Élite - Chaos Rising",
+                "en": "Elite Trainer Box - Chaos Rising"
+              },
+
+              "type": "elite_trainer_box",
+
+              "expansion": {
+                "code": "Me4",
+                "name": {
+                  "es": "Caos creciente",
+                  "en": "Chaos Rising"
+                }
+              },
+
+              "price": {
+                "amount": 1099,
+                "currency": "MXN"
+              },
+
+              "images": [
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156555/Elite_trainer_box_crhkof.jpg",
+                  "type:": "main"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156556/Elite_trainer_box_1_g6ykij.jpg",
+                  "type:": "gallery"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156556/Elite_trainer_box_2_tuu2if.jpg",
+                  "type:": "gallery"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156556/Elite_trainer_box_3_ajvdjb.jpg",
+                  "type:": "gallery"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156557/Elite_trainer_box_4_jdtamv.jpg",
+                  "type:": "gallery"
+                }
+              ],
+
+              "content": {
+                "shortDescription": {
+                  "es": "Todo lo que necesitas para comenzar a jugar.",
+                  "en": "Everything you need to start playing."
+                },
+                "longDescription": {
+                  "es": "Incluye sobres, fundas y accesorios oficiales.",
+                  "en": "Includes booster packs, sleeves, and official accessories."
+                },
+                "features": [
+                  { "es": "9 sobres", "en": "9 booster packs" },
+                  { "es": "Fundas incluidas", "en": "Card sleeves included" },
+                  { "es": "1 Carta promocional", "en": "1 promotional card" },
+                  { "es": "1 Carta promocional", "en": "1 promotional card" },
+                  { "es": "1 Guía de juego", "en": "1 Player guide" },
+                  { "es": "1 Caja para cartas", "en": "1 Deck box" },
+                  { "es": "1 Conjunto de dados", "en": "1 Damage counter dice" },
+                  { "es": "4 Divisores de cartas", "en": "4 Card dividers" }
+                ]
+              },
+              "contents": {
+                "boosterPacks": 9,
+                "promoCards": 1,
+                "sleeves": { "included": true, "quantity": 65 },
+                "energyCards": { "included": true, "quantity": 45 },
+                "dice": true,
+                "conditionMarkers": true,
+                "playerGuide": true,
+                "deckBox": true,
+                "dividers": 4,
+                "codeCard": true
+              },
+
+              "pullRates": {
+                "avgHits": 2.5
+              },
+
+              "isPokemonCenterExclusive": false,
+
+              "releaseDate": "22-05-2026",
+
+              "inventory": {
+                "stock": 5,
+                "status": "in_stock"
+              }
+            }
+          ]
+        },
+        {
+          "type": "build_battle",
+          "label": {
+            "es": "Combina y Combate",
+            "en": "Build and Battle"
+          },
+          "order": 3,
+          "products": [
+            {
+              "id": "build-battle-chaos-rising",
+              "name": {
+                "es": "Combina y Combate - Caos creciente",
+                "en": "Build and Battle - Chaos Rising"
+              },
+
+              "type": "booster_box",
+
+              "expansion": {
+                "code": "Me4",
+                "name": {
+                  "es": "Caos creciente",
+                  "en": "Chaos Rising"
+                }
+              },
+
+              "price": {
+                "amount": 550,
+                "currency": "MXN"
+              },
+
+              "images": [
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156554/Build_and_battle_1_ngieqv.jpg",
+                  "type:": "main"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156553/Build_and_battle_ivvf3n.jpg",
+                  "type:": "gallery"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156555/Build_and_battle_2_n4rzvp.webp",
+                  "type:": "gallery"
+                }
+              ],
+
+              "content": {
+                "shortDescription": {
+                  "es": "Todo lo que necesitas para comenzar a jugar.",
+                  "en": "Everything you need to start playing."
+                },
+                "longDescription": {
+                  "es": "Incluye sobres, fundas y accesorios oficiales.",
+                  "en": "Includes booster packs, sleeves, and official accessories."
+                },
+                "features": [
+                  { "es": "4 sobres", "en": "4 booster packs" },
+                  { "es": "1 Carta promocional", "en": "1 promotional card" },
+                  { "es": "1 Mazo inicial", "en": "1 Initial Deck" }
+                ]
+              },
+              "contents": {
+                "boosterPacks": 4,
+                "promoCards": 1,
+                "initialDeck": true
+              },
+
+              "pullRates": {
+                "avgHits": 2.5
+              },
+
+              "isPokemonCenterExclusive": false,
+
+              "releaseDate": "27-05-2026",
+
+              "inventory": {
+                "stock": 10,
+                "status": "in_stock"
+              }
+            }
+          ]
+        },
+        {
+          "type": "blister_three_pack",
+          "label": {
+            "es": "Blister de 3 Sobres",
+            "en": "Blister Three Pack"
+          },
+          "order": 4,
+          "products": [
+            {
+              "id": "blister-three-pack-chaos-rising",
+              "name": {
+                "es": "Blister de 3 Sobres - Caos creciente",
+                "en": "Blister Three Pack - Chaos Rising"
+              },
+
+              "type": "blister_three_pack",
+
+              "expansion": {
+                "code": "Me4",
+                "name": {
+                  "es": "Caos creciente",
+                  "en": "Chaos Rising"
+                }
+              },
+
+              "price": {
+                "amount": 550,
+                "currency": "MXN"
+              },
+
+              "images": [
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156547/Three_booster_Blister_w0inqw.jpg",
+                  "type:": "main"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156548/Three_booster_Blister_1_k39ysn.jpg",
+                  "type:": "gallery"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156548/Three_booster_Blister_2_h83dtc.jpg",
+                  "type:": "gallery"
+                }
+              ],
+
+              "content": {
+                "shortDescription": {
+                  "es": "Todo lo que necesitas para comenzar a jugar.",
+                  "en": "Everything you need to start playing."
+                },
+                "longDescription": {
+                  "es": "Incluye sobres, fundas y accesorios oficiales.",
+                  "en": "Includes booster packs, sleeves, and official accessories."
+                },
+                "features": [
+                  { "es": "3 sobres", "en": "3 booster packs" },
+                  { "es": "1 Carta promocional", "en": "1 promotional card" }
+                ]
+              },
+              "contents": {
+                "boosterPacks": 3,
+                "promoCards": 1
+              },
+
+              "pullRates": {
+                "avgHits": 2.5
+              },
+
+              "isPokemonCenterExclusive": false,
+
+              "releaseDate": "27-05-2026",
+
+              "inventory": {
+                "stock": 10,
+                "status": "in_stock"
+              }
+            }
+          ]
+        },
+        {
+          "type": "booster_bundle",
+          "label": {
+            "es": "Booster Bundle",
+            "en": "Booster Bundle"
+          },
+          "order": 5,
+          "products": [
+            {
+              "id": "booster-bundle-chaos-rising",
+              "name": {
+                "es": "Booster Bundle - Caos creciente",
+                "en": "Booster Bundle - Chaos Rising"
+              },
+
+              "type": "booster_bundle",
+
+              "expansion": {
+                "code": "Me4",
+                "name": {
+                  "es": "Caos creciente",
+                  "en": "Chaos Rising"
+                }
+              },
+
+              "price": {
+                "amount": 550,
+                "currency": "MXN"
+              },
+
+              "images": [
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156551/booster_bundle_1_c2zjad.jpg",
+                  "type:": "main"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156550/booster_bundle_mnnadk.jpg",
+                  "type:": "gallery"
+                }
+              ],
+
+              "content": {
+                "shortDescription": {
+                  "es": "Todo lo que necesitas para comenzar a jugar.",
+                  "en": "Everything you need to start playing."
+                },
+                "longDescription": {
+                  "es": "Incluye sobres, fundas y accesorios oficiales.",
+                  "en": "Includes booster packs, sleeves, and official accessories."
+                },
+                "features": [{ "es": "6 sobres", "en": "6 booster packs" }]
+              },
+              "contents": {
+                "boosterPacks": 6
+              },
+
+              "pullRates": {
+                "avgHits": 2.5
+              },
+
+              "isPokemonCenterExclusive": false,
+
+              "releaseDate": "27-05-2026",
+
+              "inventory": {
+                "stock": 10,
+                "status": "in_stock"
+              }
+            }
+          ]
+        },
+        {
+          "type": "blister_single_pack",
+          "label": {
+            "es": "Blister Single Pack",
+            "en": "Blister Single Pack"
+          },
+          "order": 6,
+          "products": [
+            {
+              "id": "blister_single_pack-chaos-rising",
+              "name": {
+                "es": "Blister Single Pack - Caos creciente",
+                "en": "Blister Single Pack - Chaos Rising"
+              },
+
+              "type": "booster_bundle",
+
+              "expansion": {
+                "code": "Me4",
+                "name": {
+                  "es": "Caos creciente",
+                  "en": "Chaos Rising"
+                }
+              },
+
+              "price": {
+                "amount": 550,
+                "currency": "MXN"
+              },
+
+              "images": [
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156551/booster_bundle_1_c2zjad.jpg",
+                  "type:": "main"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156550/booster_bundle_mnnadk.jpg",
+                  "type:": "gallery"
+                }
+              ],
+
+              "content": {
+                "shortDescription": {
+                  "es": "Todo lo que necesitas para comenzar a jugar.",
+                  "en": "Everything you need to start playing."
+                },
+                "longDescription": {
+                  "es": "Incluye sobres, fundas y accesorios oficiales.",
+                  "en": "Includes booster packs, sleeves, and official accessories."
+                },
+                "features": [{ "es": "6 sobres", "en": "6 booster packs" }]
+              },
+              "contents": {
+                "boosterPacks": 6
+              },
+
+              "pullRates": {
+                "avgHits": 2.5
+              },
+
+              "isPokemonCenterExclusive": false,
+
+              "releaseDate": "27-05-2026",
+
+              "inventory": {
+                "stock": 10,
+                "status": "in_stock"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

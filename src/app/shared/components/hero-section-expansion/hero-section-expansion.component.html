@@ -15,31 +15,30 @@
     ></div>
   </div>
   <div class="container mx-auto px-6 relative z-10 py-20">
-    <div class="max-w-3xl space-y-6">
+    <div class="space-y-6">
       <div class="flex flex-wrap gap-3">
         <span
           class="bg-tertiary-container text-white text-[10px] px-2 py-1 font-extrabold uppercase tracking-widest rounded-sm"
           *ngFor="let badge of data.ui.badges"
           [class]="
             badgeClass(badge.variant) +
-            ' text-[10px] px-2 py-1 font-extrabold uppercase tracking-widest rounded-sm'
+            ' text-[10px] px-2 py-1 font-bold uppercase rounded-sm'
           "
           >{{ badge.label }}</span
         >
-        <span
-          class="bg-white/10 text-slate-300 text-[10px] px-2 py-1 font-extrabold uppercase tracking-widest rounded-sm border border-white/10"
-          >Set ID: {{ data.id }}</span
-        >
+        <div class="px-3 rounded-md bg-black border-2 border-white font-black text-sm">
+          {{ data.tcg.setCode }}
+        </div>
       </div>
       <h1
-        class="text-[60px] leading-[1] font-black tracking-tighter text-white uppercase"
+        class="text-[60px] leading-[1] font-black tracking-tighter text-gray-300 uppercase"
       >
-        {{ heroTitleMain }}<span class="text-primary">{{ heroTitleCode }}</span>
+        {{ data.tcg.era }} - <span class="text-primary">{{ heroTitleMain }}</span>
       </h1>
       <div class="flex items-center gap-8 pt-4">
         <div class="flex flex-col">
           <span class="text-[10px] font-extrabold text-primary uppercase tracking-widest"
-            >Release Date</span
+            >Fecha de lanzamiento</span
           >
           <span class="text-lg font-bold text-white">{{ releaseLabel }}</span>
         </div>

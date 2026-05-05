@@ -7,6 +7,7 @@ export interface HeroSectionExpansionData {
   name: string;
   tcg: {
     setCode: string;
+    era: string;
   };
   release: {
     formatted: string;
@@ -49,13 +50,13 @@ export class HeroSectionExpansionComponent {
   get availabilityLabel(): string {
     switch (this.data.status.availability) {
       case 'available':
-        return 'Available Now';
+        return 'Disponible';
       case 'out_of_stock':
-        return 'Out of Stock';
+        return 'Agotado';
       case 'upcoming':
-        return 'Coming Soon';
+        return 'Próximamente';
       default:
-        return 'Unknown';
+        return 'Desconocido';
     }
   }
 
@@ -72,13 +73,13 @@ export class HeroSectionExpansionComponent {
   badgeClass(variant: string): string {
     switch (variant) {
       case 'primary':
-        return 'bg-tertiary-container text-white';
+        return 'bg-primary text-white';
       case 'secondary':
-        return 'bg-white/10 text-slate-300 border border-white/10';
+        return 'bg-green-600 text-white';
       case 'warning':
-        return 'bg-error text-white';
+        return 'bg-amber-400 text-slate-950';
       default:
-        return 'bg-white/10 text-slate-300 border border-white/10';
+        return 'bg-surface-container-highest border border-white/10 text-slate-300';
     }
   }
 
@@ -87,6 +88,7 @@ export class HeroSectionExpansionComponent {
     name: 'Scarlet & Violet—151',
     tcg: {
       setCode: '151',
+      era: 'Scarlet & Violet',
     },
     release: {
       formatted: 'Sept 22, 2023',

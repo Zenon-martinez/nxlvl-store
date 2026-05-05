@@ -17,17 +17,17 @@
           <th
             class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider text-center"
           >
+            Puntos Totales
+          </th>
+          <th
+            class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider text-center"
+          >
             Torneos
           </th>
           <th
             class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider text-center"
           >
             WR%
-          </th>
-          <th
-            class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider text-right"
-          >
-            Puntos Totales
           </th>
         </tr>
       </thead>
@@ -69,15 +69,15 @@
                 </div>
               </div>
             </td>
+            <td class="px-6 py-4 text-center">
+              <span class="text-lg font-black text-primary">{{ player.points }}</span>
+            </td>
             <td class="px-6 py-4 text-center font-semibold">{{ player.tournaments }}</td>
             <td class="px-6 py-4 text-center">
               <span
                 class="bg-emerald-500/10 text-emerald-500 px-2 py-0.5 rounded text-xs font-bold"
                 >{{ player.winRate }}%</span
               >
-            </td>
-            <td class="px-6 py-4 text-right">
-              <span class="text-lg font-black text-primary">{{ player.points }}</span>
             </td>
           </tr>
         }
@@ -140,8 +140,8 @@
       <li class="flex items-center gap-3 text-slate-400">
         <span class="size-2 rounded-full bg-yellow-500"></span>
         <span
-          ><strong class="text-slate-100">Top 1:</strong> Elite Trainer Box - Destined
-          Rivals</span
+          ><strong class="text-slate-100">Top 1:</strong> Elite Trainer Box - Chaos
+          Rising</span
         >
         <div class="w-full lg:w-48 aspect-square rounded-xl overflow-hidden shadow-2xl">
           <img

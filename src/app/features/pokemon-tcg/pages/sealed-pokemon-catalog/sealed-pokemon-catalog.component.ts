@@ -6,10 +6,11 @@ import {
 } from '@components/hero-section-expansion/hero-section-expansion.component';
 import { PokemonTcgService } from '../../services/pokemon-tcg.service';
 import { Set } from '@models/pokemon-tcg.interface';
+import { TcgProductCardComponent } from '@components/tcg-product-card/tcg-product-card.component';
 
 @Component({
   selector: 'app-sealed-pokemon-catalog',
-  imports: [HeroSectionExpansionComponent],
+  imports: [HeroSectionExpansionComponent, TcgProductCardComponent],
   templateUrl: './sealed-pokemon-catalog.component.html',
   styleUrl: './sealed-pokemon-catalog.component.scss',
 })
@@ -46,6 +47,7 @@ export class SealedPokemonCatalogComponent implements OnInit {
       name: set.name,
       tcg: {
         setCode: set.tcg.setCode,
+        era: set.tcg.era,
       },
       release: {
         formatted: set.release.formatted,
