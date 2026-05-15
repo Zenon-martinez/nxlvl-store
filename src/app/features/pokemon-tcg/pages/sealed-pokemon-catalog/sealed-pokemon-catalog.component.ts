@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {
@@ -7,16 +8,19 @@ import {
 import { PokemonTcgService } from '../../services/pokemon-tcg.service';
 import { Set } from '@models/pokemon-tcg.interface';
 import { TcgProductCardComponent } from '@components/tcg-product-card/tcg-product-card.component';
+import { ExpansionCatalog, ProductSection } from '@models/product.interface';
 
 @Component({
   selector: 'app-sealed-pokemon-catalog',
-  imports: [HeroSectionExpansionComponent, TcgProductCardComponent],
+  imports: [CommonModule, HeroSectionExpansionComponent, TcgProductCardComponent],
   templateUrl: './sealed-pokemon-catalog.component.html',
   styleUrl: './sealed-pokemon-catalog.component.scss',
 })
 export class SealedPokemonCatalogComponent implements OnInit {
   @Input() id!: string;
   heroData?: HeroSectionExpansionData;
+  catalogBySet: ExpansionCatalog | null = null;
+  productSections: ProductSection[] = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -37,6 +41,18 @@ export class SealedPokemonCatalogComponent implements OnInit {
       },
       error: (error) => {
         console.error('Error fetching expansion data:', error);
+      },
+    });
+    this.pokemonTcgService.getProductsByExpansionId(setId).subscribe({
+      next: (catalog) => {
+        if (catalog) {
+          this.catalogBySet = catalog;
+          this.productSections = catalog.sections.sort((a, b) => a.order - b.order);
+          console.log('Products for expansion:', this.catalogBySet);
+        }
+      },
+      error: (error) => {
+        console.error('Error fetching products for expansion:', error);
       },
     });
   }

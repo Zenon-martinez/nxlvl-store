@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Set, SetsResponse } from '@models/pokemon-tcg.interface';
+import { ExpansionCatalog } from '@models/product.interface';
 import { map, Observable } from 'rxjs';
 
 @Injectable({
@@ -8,6 +9,7 @@ import { map, Observable } from 'rxjs';
 })
 export class PokemonTcgService {
   private apiUrl = 'assets/sets.json';
+  private productApiUrl = 'assets/products-by-set.json';
 
   constructor(private http: HttpClient) {}
 
@@ -27,5 +29,16 @@ export class PokemonTcgService {
         return set;
       }),
     );
+  }
+
+  getProductsByExpansionId(expansionId: string): Observable<ExpansionCatalog> {
+    return this.http
+      .get<ExpansionCatalog>(this.productApiUrl)
+      .pipe(
+        map(
+          (sets) =>
+            Object.values(sets).find((set) => set.expansion.code === expansionId) || null,
+        ),
+      );
   }
 }

@@ -1,3 +1,5 @@
+import { ProductSectionType } from '@shared/enum/pkm-products.enum';
+
 export interface Product {
   id: number;
   name: string;
@@ -179,18 +181,18 @@ export type ProductV2 =
 export interface BaseProduct {
   id: string;
   name: string;
-  slug: string;
+  slug?: string;
 
   pricing: Pricing;
   inventory: Inventory;
   media: Media;
 
-  classification: Classification;
+  classification?: Classification;
 
-  rating: Rating;
-  flags: Flags;
-  seo: Seo | null;
-  audit: Audit;
+  rating?: Rating;
+  flags?: Flags;
+  seo?: Seo | null;
+  audit?: Audit;
 
   productType: ProductType;
 }
@@ -218,15 +220,36 @@ export interface TcgCardProduct extends BaseProduct {
   number: string;
 }
 
+export interface LocalizedText {
+  es: string;
+  en: string;
+}
+
+export interface ProductContent {
+  shortDescription: LocalizedText;
+  longDescription: LocalizedText;
+  features: LocalizedText[];
+}
+
+export interface ProductContents {
+  boosterPacks: number;
+  promoCards: number;
+}
+
 export interface TcgSealedProduct extends BaseProduct {
   type: 'tcg-sealed';
 
   game: 'pokemon' | 'magic';
-  expansion: string;
+  expansion: {
+    code: string;
+    name: string;
+  };
 
-  sealedType: 'booster-box' | 'etb' | 'bundle' | 'collection';
+  sealedType: ProductSectionType;
 
-  releaseDate?: Date;
+  releaseDate?: string;
+  content: ProductContent;
+  contents: ProductContents;
 }
 
 export interface AccessoryProduct extends BaseProduct {
@@ -321,3 +344,19 @@ export interface BoardGameProduct extends BaseProduct {
 
 
  */
+export interface ProductSection {
+  type: ProductSectionType;
+  label: LocalizedText;
+  order: number;
+  products: TcgSealedProduct[];
+}
+export interface ExpansionCatalog {
+  expansion: {
+    id: string;
+    name: string;
+    code: string;
+    releaseDate: string;
+  };
+
+  sections: ProductSection[];
+}
