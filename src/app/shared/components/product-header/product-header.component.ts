@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 export interface ProductHeaderData {
   name: string;
-  badge?: string;
+  badges?: string[];
   price: number;
   originalPrice?: number | null;
   currency?: string;
@@ -21,10 +21,7 @@ export class ProductHeaderComponent {
   @Input({ required: true }) data!: ProductHeaderData;
 
   get hasDiscount(): boolean {
-    return (
-      this.data.originalPrice != null &&
-      this.data.originalPrice > this.data.price
-    );
+    return this.data.originalPrice != null && this.data.originalPrice > this.data.price;
   }
 
   get currencySymbol(): string {
@@ -42,7 +39,7 @@ export class ProductHeaderComponent {
       case 'out-of-stock':
         return 'AGOTADO';
       case 'pre-order':
-        return 'PRE-ORDEN';
+        return 'Pre-venta';
       default:
         return '';
     }

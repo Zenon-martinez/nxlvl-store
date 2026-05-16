@@ -1,7 +1,11 @@
 <div
   class="group relative bg-surface-container rounded-xl border border-white/10 overflow-hidden hover:border-primary/50 transition-all duration-500 hover:scale-[1.02] shadow-2xl"
 >
-  <div class="aspect-[4/5] relative overflow-hidden">
+  <div
+    class="aspect-[4/5] relative overflow-hidden cursor-pointer"
+    (click)="goToExpansion()"
+    role="none"
+  >
     <img
       class="w-full h-full object-contain grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"
       [alt]="setData.name"

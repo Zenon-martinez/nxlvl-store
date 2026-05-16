@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
+import { ProductConditionData } from '@models/product.interface';
 
 @Component({
   selector: 'app-product-condition',
@@ -7,4 +8,7 @@ import { MatIcon } from '@angular/material/icon';
   templateUrl: './product-condition.component.html',
   styleUrl: './product-condition.component.scss',
 })
-export class ProductConditionComponent {}
+export class ProductConditionComponent {
+  @Input() data: ProductConditionData | null = null;
+}
+

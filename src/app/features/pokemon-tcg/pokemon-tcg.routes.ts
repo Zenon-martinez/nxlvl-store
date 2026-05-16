@@ -4,8 +4,8 @@ import { ExpansionsCatalogComponent } from './pages/expansions-catalog/expansion
 import { SealedPokemonCatalogComponent } from './pages/sealed-pokemon-catalog/sealed-pokemon-catalog.component';
 
 const detailBreadcrumb = (_data: Data, route: ActivatedRouteSnapshot): string => {
-  const productId = route.paramMap.get('id');
-  return productId ? `Producto ${productId}` : 'Detalle';
+  const productId = route.paramMap.get('id') || route.paramMap.get('productId');
+  return productId ? `${productId.replaceAll('-', ' ')}` : 'Detalle';
 };
 
 export const POKEMON_TCG_ROUTES: Routes = [
@@ -18,7 +18,7 @@ export const POKEMON_TCG_ROUTES: Routes = [
     },
   },
   {
-    path: 'details/:id',
+    path: 'details/:expansionId/:productId',
     component: ProductDetailComponent,
     title: 'Next Level | Detalles del producto',
     data: {

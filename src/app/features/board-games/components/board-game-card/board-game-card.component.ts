@@ -29,7 +29,7 @@ export class BoardGameCardComponent implements OnChanges {
       case 'out_of_stock':
         return 'Agotado';
       case 'pre_order':
-        return 'Pre-orden';
+        return 'Preventa';
       default:
         return status;
     }

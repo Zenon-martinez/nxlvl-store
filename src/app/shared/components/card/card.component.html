@@ -1,6 +1,8 @@
 @if (quickAccess) {
   <div
     class="relative h-64 rounded-xl overflow-hidden group cursor-pointer border border-white/5 shadow-2xl"
+    role="none"
+    (click)="goTo()"
   >
     <div
       class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"

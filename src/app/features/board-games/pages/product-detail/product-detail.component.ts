@@ -11,6 +11,7 @@ import {
   ProductPurchasePanelData,
 } from '@components/product-purchase-panel/product-purchase-panel.component';
 import { ProductConditionComponent } from '../../components/product-condition/product-condition.component';
+import { ProductConditionData } from '@models/product.interface';
 import { ProductDetailsTabsComponent } from '@components/product-details-tabs/product-details-tabs.component';
 import { RelatedProductsComponent } from '@components/related-products/related-products.component';
 import { ProductBreadcrumbsComponent } from '@components/product-breadcrumbs/product-breadcrumbs.component';
@@ -38,6 +39,7 @@ export class ProductDetailComponent implements OnInit {
   productTitle = 'Product image';
   productHeader: ProductHeaderData | null = null;
   productPurchasePanel: ProductPurchasePanelData | null = null;
+  productCondition: ProductConditionData | null = null;
   tabs: Tab[] = [];
   constructor(
     private readonly productService: BoardGamesService,
@@ -69,10 +71,16 @@ export class ProductDetailComponent implements OnInit {
               : undefined;
 
         const headerStatus = this.toHeaderStatus(product.inventory.status);
+        const language =
+          product.language === 'en'
+            ? 'Inglés'
+            : product.language === 'es'
+              ? 'Español'
+              : 'Desconocido';
 
         this.productHeader = {
           name: product.name,
-          badge: conditionLabel,
+          badges: [conditionLabel!, language],
           price: product.pricing.price,
           originalPrice: product.pricing.originalPrice ?? null,
           currency: product.pricing.currency,
@@ -85,6 +93,7 @@ export class ProductDetailComponent implements OnInit {
           stock: product.inventory.stock,
           available: headerStatus === 'in_stock' && product.inventory.stock > 0,
         };
+        this.productCondition = this.buildProductCondition(product);
         this.tabs = this.buildTabs(product);
         console.log('Product tabs:', this.tabs);
       },
@@ -115,6 +124,11 @@ export class ProductDetailComponent implements OnInit {
         id: 'description',
         label: 'Descripción',
         content: product.description,
+        resume: [
+          { label: 'Tipo de producto', value: product.productType },
+          { label: 'Expansión', value: product.editorial.publisher },
+          { label: 'Idioma', value: product.language },
+        ],
       });
     }
     if (product.additionalInfo) {
@@ -122,6 +136,10 @@ export class ProductDetailComponent implements OnInit {
         id: 'additional-info',
         label: 'Información adicional',
         content: product.additionalInfo,
+        resume: [
+          { label: 'Condición', value: product.inventory.condition },
+          { label: 'Estado', value: product.inventory.status },
+        ],
       });
     }
     if (product.howToPlay) {
@@ -129,6 +147,7 @@ export class ProductDetailComponent implements OnInit {
         id: 'how-to-play',
         label: 'Cómo jugar',
         content: product.howToPlay,
+        resume: [],
       });
     }
     if (product.expansions) {
@@ -136,9 +155,36 @@ export class ProductDetailComponent implements OnInit {
         id: 'expansions',
         label: 'Expansiones',
         content: product.expansions,
+        resume: [],
       });
     }
 
     return tabs;
+  }
+
+  private buildProductCondition(product: BoardGameProduct): ProductConditionData {
+    const isSealed = product.inventory.condition === 'sealed';
+
+    return {
+      condition: product.inventory.condition,
+      review: {
+        title: 'Revisión de componentes',
+        description: isSealed
+          ? 'Todas las piezas completas y selladas'
+          : 'Todas las piezas completas, comprobadas por el equipo',
+      },
+      box: {
+        title: 'Estado de la caja',
+        description: isSealed
+          ? 'Perfecto, sin daños ni marcas visibles'
+          : 'Buen estado general, puede presentar uso ligero',
+      },
+      manual: {
+        title: 'Manual de instrucciones',
+        description: 'Incluido y en buen estado',
+      },
+      certificateText:
+        'Certificado y garantizado por Next Level - Inspeccionado por nuestro equipo',
+    };
   }
 }

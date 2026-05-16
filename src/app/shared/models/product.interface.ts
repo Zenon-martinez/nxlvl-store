@@ -60,6 +60,19 @@ export interface Inventory {
 export type InventoryStatus = 'in_stock' | 'out_of_stock' | 'pre_order';
 export type ProductCondition = 'sealed' | 'used';
 
+export interface ProductConditionSection {
+  title: string;
+  description: string;
+}
+
+export interface ProductConditionData {
+  condition: ProductCondition;
+  review: ProductConditionSection;
+  box: ProductConditionSection;
+  manual?: ProductConditionSection;
+  certificateText: string;
+}
+
 export interface Media {
   thumbnail: string;
   images: ProductImage[];
@@ -195,6 +208,7 @@ export interface BaseProduct {
   audit?: Audit;
 
   productType: ProductType;
+  language: string;
 }
 
 export interface BoardGameProduct extends BaseProduct {
@@ -244,11 +258,13 @@ export interface TcgSealedProduct extends BaseProduct {
     code: string;
     name: string;
   };
+  serie: string;
 
   sealedType: ProductSectionType;
 
   releaseDate?: string;
-  content: ProductContent;
+  description: Description;
+  additionalInfo: AdditionalInfo;
   contents: ProductContents;
 }
 

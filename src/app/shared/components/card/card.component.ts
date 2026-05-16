@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card',
@@ -17,4 +18,10 @@ export class CardComponent {
     url: '#',
     text: 'Ver Detalles',
   };
+
+  constructor(private router: Router) {}
+
+  goTo() {
+    this.router.navigate([this.link.url]);
+  }
 }

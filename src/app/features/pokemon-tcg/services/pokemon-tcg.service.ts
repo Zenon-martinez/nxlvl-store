@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Set, SetsResponse } from '@models/pokemon-tcg.interface';
-import { ExpansionCatalog } from '@models/product.interface';
+import { ExpansionCatalog, TcgSealedProduct } from '@models/product.interface';
 import { map, Observable } from 'rxjs';
 
 @Injectable({
@@ -40,5 +40,28 @@ export class PokemonTcgService {
             Object.values(sets).find((set) => set.expansion.code === expansionId) || null,
         ),
       );
+  }
+
+  getProductDetails(
+    expansionId: string,
+    productId: string,
+  ): Observable<TcgSealedProduct | null> {
+    return this.http.get<ExpansionCatalog[]>(this.productApiUrl).pipe(
+      map((sets) => {
+        const set = Object.values(sets).find((set) => set.expansion.code === expansionId);
+        if (!set) {
+          throw new Error(`Expansion with id '${expansionId}' not found`);
+        }
+        const product = set.sections
+          .flatMap((section) => section.products)
+          .find((product) => String(product.id) === productId);
+        if (!product) {
+          throw new Error(
+            `Product with id '${productId}' not found in expansion '${expansionId}'`,
+          );
+        }
+        return product;
+      }),
+    );
   }
 }

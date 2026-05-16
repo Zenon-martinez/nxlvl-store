@@ -13,10 +13,10 @@
         <mat-icon svgIcon="inventory_2"></mat-icon>
         <div>
           <h4 class="text-xs font-bold text-white uppercase tracking-tight">
-            Revisión de componentes
+            {{ data?.review?.title || 'Revisión de componentes' }}
           </h4>
           <p class="text-[11px] text-slate-400 uppercase tracking-widest">
-            Todas las piezas completas
+            {{ data?.review?.description || 'Todas las piezas completas' }}
           </p>
         </div>
       </div>
@@ -24,30 +24,33 @@
         <mat-icon svgIcon="package_2"></mat-icon>
         <div>
           <h4 class="text-xs font-bold text-white uppercase tracking-tight">
-            Estado de la caja
+            {{ data?.box?.title || 'Estado de la caja' }}
           </h4>
           <p class="text-[11px] text-slate-400 uppercase tracking-widest">
-            Perfecto, sin daños ni marcas visibles
+            {{ data?.box?.description || 'Perfecto, sin daños ni marcas visibles' }}
           </p>
         </div>
       </div>
-      <div class="flex gap-3">
-        <mat-icon svgIcon="menu_book"></mat-icon>
-        <div>
-          <h4 class="text-xs font-bold text-white uppercase tracking-tight">
-            Manual de instrucciones
-          </h4>
-          <p class="text-[11px] text-slate-400 uppercase tracking-widest">
-            Incluido, como nuevo
-          </p>
+      @if (data?.manual) {
+        <div class="flex gap-3">
+          <mat-icon svgIcon="menu_book"></mat-icon>
+          <div>
+            <h4 class="text-xs font-bold text-white uppercase tracking-tight">
+              {{ data?.manual?.title || 'Manual de instrucciones' }}
+            </h4>
+            <p class="text-[11px] text-slate-400 uppercase tracking-widest">
+              {{ data?.manual?.description || 'Incluido, como nuevo' }}
+            </p>
+          </div>
         </div>
-      </div>
+      }
     </div>
     <div class="mt-6 pt-4 border-t border-white/5 flex items-center gap-2">
       <mat-icon svgIcon="verified" class="text-green-500 text-sm"></mat-icon>
-      <span class="text-[10px] font-black uppercase tracking-widest text-white"
-        >Certificado y garantizado por Next Level - Inspeccionado por nuestro equipo</span
-      >
+      <span class="text-[10px] font-black uppercase tracking-widest text-white">{{
+        data?.certificateText ??
+          'Certificado y garantizado por Next Level - Inspeccionado por nuestro equipo'
+      }}</span>
     </div>
   </div>
 </div>

@@ -20,7 +20,8 @@
             "name": "Boster Box - Chaos Rising",
             "type": "tcg-sealed",
             "sealedType": "booster_box",
-
+            "language": "en",
+            "serie": "Megaevolution",
             "expansion": {
               "code": "me4",
               "name": "Chaos Rising"
@@ -39,18 +40,6 @@
                 }
               ]
             },
-
-            "content": {
-              "shortDescription": {
-                "es": "Todo lo que necesitas para comenzar a jugar.",
-                "en": "Everything you need to start playing."
-              },
-              "longDescription": {
-                "es": "Incluye sobres, fundas y accesorios oficiales.",
-                "en": "Includes booster packs, sleeves, and official accessories."
-              },
-              "features": [{ "es": "36 sobres", "en": "36 booster packs" }]
-            },
             "contents": {
               "boosterPacks": 36,
               "promoCards": 0
@@ -66,9 +55,39 @@
 
             "inventory": {
               "stock": 5,
-              "status": "in_stock",
+              "status": "pre_order",
               "reserved": 0,
               "condition": "sealed"
+            },
+            "description": {
+              "short": "Juego de estrategia donde los jugadores compiten por colonizar una isla.",
+              "long": "¡Mega-Floette ex perturba el bullicio de la ciudad e irrumpe en las calles para sembrar el caos! Cargado de valentía y determinación, Mega-Greninja ex se dispone a controlar esta creciente amenaza y reúne a otros poderosos Pokémon ex Megaevolución, como Mega-Pyroar ex y Mega-Dragalge ex. Conforme cae la noche, el peligro acecha en cada esquina de la expansión Megaevolución-Caos Creciente de JCC Pokémon.",
+
+              "components": [
+                "36 sobres de refuerzo de Megaevolution - Chaos Rising de Pokémon TCG",
+                "Cada sobre de refuerzo contiene 10 cartas, 1 Energía Básica y 1 carta con código para JCC Pokémon Live. Las cartas varían según el sobre."
+              ],
+              "highlights": [
+                "36 Booster Packs incluidos",
+                "Ideal para apertura masiva de cartas (mass opening)",
+                "Mayor probabilidad de obtener cartas raras y pulls importantes",
+                "Producto principal para coleccionistas y jugadores competitivos",
+                "Excelente relación costo por sobre"
+              ]
+            },
+            "additionalInfo": {
+              "weight": {
+                "value": 1.2,
+                "unit": "kg"
+              },
+              "dimensions": {
+                "width": 29.5,
+                "height": 29.5,
+                "depth": 7,
+                "unit": "cm"
+              },
+              "material": "Cartón, madera y plástico",
+              "tags": ["Caos Rising", "Megaevolution", "J"]
             }
           }
         ]
@@ -86,13 +105,11 @@
             "name": "Elite Trainer Box - Chaos Rising",
             "type": "tcg-sealed",
             "sealedType": "elite_trainer_box",
-
+            "language": "en",
+            "serie": "Megaevolution",
             "expansion": {
-              "code": "Me4",
-              "name": {
-                "es": "Caos creciente",
-                "en": "Chaos Rising"
-              }
+              "code": "me4",
+              "name": "Chaos Rising"
             },
 
             "pricing": {
@@ -124,40 +141,46 @@
                 }
               ]
             },
+            "description": {
+              "short": "Contiene todo lo necesario para mejorar tu experiencia de juego.",
+              "long": "¡Mega-Floette ex perturba el bullicio de la ciudad e irrumpe en las calles para sembrar el caos! Cargado de valentía y determinación, Mega-Greninja ex se dispone a controlar esta creciente amenaza y reúne a otros poderosos Pokémon ex Megaevolución, como Mega-Pyroar ex y Mega-Dragalge ex. Conforme cae la noche, el peligro acecha en cada esquina de la expansión Megaevolución-Caos Creciente de JCC Pokémon.",
 
-            "content": {
-              "shortDescription": {
-                "es": "Todo lo que necesitas para comenzar a jugar.",
-                "en": "Everything you need to start playing."
-              },
-              "longDescription": {
-                "es": "Incluye sobres, fundas y accesorios oficiales.",
-                "en": "Includes booster packs, sleeves, and official accessories."
-              },
-              "features": [
-                { "es": "9 sobres", "en": "9 booster packs" },
-                { "es": "Fundas incluidas", "en": "Card sleeves included" },
-                { "es": "1 Carta promocional", "en": "1 promotional card" },
-                { "es": "1 Carta promocional", "en": "1 promotional card" },
-                { "es": "1 Guía de juego", "en": "1 Player guide" },
-                { "es": "1 Caja para cartas", "en": "1 Deck box" },
-                { "es": "1 Conjunto de dados", "en": "1 Damage counter dice" },
-                { "es": "4 Divisores de cartas", "en": "4 Card dividers" }
+              "components": [
+                "9 sobres de refuerzo de Megaevolution - Chaos Rising de Pokémon TCG",
+                "Cada sobre de refuerzo contiene 10 cartas, 1 Energía Básica y 1 carta con código para JCC Pokémon Live. Las cartas varían según el sobre.",
+                "1 carta promocional de Pokémon TCG exclusiva de esta caja",
+                "65 fundas de cartas con diseño exclusivo de Pokémon TCG",
+                "45 cartas de Energía Básica con diseño exclusivo de Pokémon TCG",
+                "1 dado de seis caras con diseño exclusivo de Pokémon TCG",
+                "1 moneda de plástico con diseño exclusivo de Pokémon TCG",
+                "1 guía de juego con consejos y estrategias para jugar con tu nuevo mazo",
+                "1 caja de mazo con diseño exclusivo de Pokémon TCG para guardar tus cartas",
+                "4 divisores de cartas con diseño exclusivo de Pokémon TCG para organizar tu mazo",
+                "1 carta con código para desbloquear contenido digital exclusivo en JCC Pokémon Live"
+              ],
+              "highlights": [
+                "Booster Packs incluidos",
+                "Carta promocional exclusiva",
+                "Sleeves y accesorios oficiales para jugar",
+                "Caja de almacenamiento y organización",
+                "Diseño temático de la expansión",
+                "Producto premium ideal para jugadores y coleccionistas"
               ]
             },
-            "contents": {
-              "boosterPacks": 9,
-              "promoCards": 1,
-              "sleeves": { "included": true, "quantity": 65 },
-              "energyCards": { "included": true, "quantity": 45 },
-              "dice": true,
-              "conditionMarkers": true,
-              "playerGuide": true,
-              "deckBox": true,
-              "dividers": 4,
-              "codeCard": true
+            "additionalInfo": {
+              "weight": {
+                "value": 1.2,
+                "unit": "kg"
+              },
+              "dimensions": {
+                "width": 29.5,
+                "height": 29.5,
+                "depth": 7,
+                "unit": "cm"
+              },
+              "material": "Cartón, madera y plástico",
+              "tags": ["Caos Rising", "Megaevolution", "J"]
             },
-
             "pullRates": {
               "avgHits": 2.5
             },
@@ -168,7 +191,7 @@
 
             "inventory": {
               "stock": 5,
-              "status": "in_stock",
+              "status": "pre_order",
               "reserved": 0,
               "condition": "sealed"
             }
@@ -186,16 +209,14 @@
           {
             "id": "build-battle-chaos-rising",
             "name": "Build and Battle - Chaos Rising",
-
+            "language": "en",
             "type": "tcg-sealed",
             "sealedType": "build_battle",
+            "serie": "Megaevolution",
 
             "expansion": {
-              "code": "Me4",
-              "name": {
-                "es": "Caos creciente",
-                "en": "Chaos Rising"
-              }
+              "code": "me4",
+              "name": "Chaos Rising"
             },
 
             "pricing": {
@@ -219,26 +240,110 @@
                 }
               ]
             },
+            "description": {
+              "short": "Todo lo que necesitas para comenzar a jugar.",
+              "long": "¡Mega-Floette ex perturba el bullicio de la ciudad e irrumpe en las calles para sembrar el caos! Cargado de valentía y determinación, Mega-Greninja ex se dispone a controlar esta creciente amenaza y reúne a otros poderosos Pokémon ex Megaevolución, como Mega-Pyroar ex y Mega-Dragalge ex. Conforme cae la noche, el peligro acecha en cada esquina de la expansión Megaevolución-Caos Creciente de JCC Pokémon.",
 
-            "content": {
-              "shortDescription": {
-                "es": "Todo lo que necesitas para comenzar a jugar.",
-                "en": "Everything you need to start playing."
-              },
-              "longDescription": {
-                "es": "Incluye sobres, fundas y accesorios oficiales.",
-                "en": "Includes booster packs, sleeves, and official accessories."
-              },
-              "features": [
-                { "es": "4 sobres", "en": "4 booster packs" },
-                { "es": "1 Carta promocional", "en": "1 promotional card" },
-                { "es": "1 Mazo inicial", "en": "1 Initial Deck" }
+              "components": [
+                "4 sobres de refuerzo de Megaevolution - Chaos Rising de Pokémon TCG",
+                "Cada sobre de refuerzo contiene 10 cartas, 1 Energía Básica y 1 carta con código para JCC Pokémon Live. Las cartas varían según el sobre.",
+                "1 carta promocional de Pokémon TCG exclusiva de esta caja",
+                "1 mazo inicial preconstruido con 60 cartas listo para jugar",
+                "Incluye reglas y guía para construir tu propio mazo"
+              ],
+              "highlights": [
+                "Booster Packs incluidos",
+                "Carta promocional exclusiva",
+                "Mazo inicial preconstruido listo para jugar",
+                "Guía para construir tu propio mazo",
+                "Producto ideal para nuevos jugadores y aquellos que buscan una experiencia completa"
               ]
             },
-            "contents": {
-              "boosterPacks": 4,
-              "promoCards": 1,
-              "initialDeck": true
+            "pullRates": {
+              "avgHits": 2.5
+            },
+
+            "isPokemonCenterExclusive": false,
+
+            "releaseDate": "27-05-2026",
+
+            "inventory": {
+              "stock": 10,
+              "status": "pre_order",
+              "reserved": 0,
+              "condition": "sealed"
+            }
+          },
+          {
+            "id": "combina-y-comabate-caos-creciente",
+            "name": "Combina y Combate - Caos Creciente",
+            "language": "es",
+            "type": "tcg-sealed",
+            "sealedType": "build_battle",
+            "serie": "Megaevolution",
+
+            "expansion": {
+              "code": "me4",
+              "name": "Chaos Rising"
+            },
+
+            "pricing": {
+              "price": 500,
+              "currency": "MXN"
+            },
+
+            "media": {
+              "images": [
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1778888253/Build_and_battle_espa%C3%B1ol_zvlqhu.jpg",
+                  "type:": "main"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156555/Build_and_battle_2_n4rzvp.webp",
+                  "type:": "gallery"
+                }
+              ]
+            },
+
+            "description": {
+              "short": "Contiene todo lo necesario para mejorar tu experiencia de juego.",
+              "long": "¡Mega-Floette ex perturba el bullicio de la ciudad e irrumpe en las calles para sembrar el caos! Cargado de valentía y determinación, Mega-Greninja ex se dispone a controlar esta creciente amenaza y reúne a otros poderosos Pokémon ex Megaevolución, como Mega-Pyroar ex y Mega-Dragalge ex. Conforme cae la noche, el peligro acecha en cada esquina de la expansión Megaevolución-Caos Creciente de JCC Pokémon.",
+
+              "components": [
+                "9 sobres de refuerzo de Megaevolution - Chaos Rising de Pokémon TCG",
+                "Cada sobre de refuerzo contiene 10 cartas, 1 Energía Básica y 1 carta con código para JCC Pokémon Live. Las cartas varían según el sobre.",
+                "1 carta promocional de Pokémon TCG exclusiva de esta caja",
+                "65 fundas de cartas con diseño exclusivo de Pokémon TCG",
+                "45 cartas de Energía Básica con diseño exclusivo de Pokémon TCG",
+                "1 dado de seis caras con diseño exclusivo de Pokémon TCG",
+                "1 moneda de plástico con diseño exclusivo de Pokémon TCG",
+                "1 guía de juego con consejos y estrategias para jugar con tu nuevo mazo",
+                "1 caja de mazo con diseño exclusivo de Pokémon TCG para guardar tus cartas",
+                "4 divisores de cartas con diseño exclusivo de Pokémon TCG para organizar tu mazo",
+                "1 carta con código para desbloquear contenido digital exclusivo en JCC Pokémon Live"
+              ],
+              "highlights": [
+                "Booster Packs incluidos",
+                "Carta promocional exclusiva",
+                "Sleeves y accesorios oficiales para jugar",
+                "Caja de almacenamiento y organización",
+                "Diseño temático de la expansión",
+                "Producto premium ideal para jugadores y coleccionistas"
+              ]
+            },
+            "additionalInfo": {
+              "weight": {
+                "value": 1.2,
+                "unit": "kg"
+              },
+              "dimensions": {
+                "width": 29.5,
+                "height": 29.5,
+                "depth": 7,
+                "unit": "cm"
+              },
+              "material": "Cartón, madera y plástico",
+              "tags": ["Caos Rising", "Megaevolution", "J"]
             },
 
             "pullRates": {
@@ -251,7 +356,7 @@
 
             "inventory": {
               "stock": 10,
-              "status": "in_stock",
+              "status": "pre_order",
               "reserved": 0,
               "condition": "sealed"
             }
@@ -271,13 +376,12 @@
             "name": "Blister Three Pack - Chaos Rising",
             "type": "tcg-sealed",
             "sealedType": "blister_three_pack",
+            "language": "en",
+            "serie": "Megaevolution",
 
             "expansion": {
-              "code": "Me4",
-              "name": {
-                "es": "Caos creciente",
-                "en": "Chaos Rising"
-              }
+              "code": "me4",
+              "name": "Chaos Rising"
             },
 
             "pricing": {
@@ -300,6 +404,36 @@
                   "type:": "gallery"
                 }
               ]
+            },
+            "description": {
+              "short": "Contiene todo lo necesario para mejorar tu experiencia de juego.",
+              "long": "¡Mega-Floette ex perturba el bullicio de la ciudad e irrumpe en las calles para sembrar el caos! Cargado de valentía y determinación, Mega-Greninja ex se dispone a controlar esta creciente amenaza y reúne a otros poderosos Pokémon ex Megaevolución, como Mega-Pyroar ex y Mega-Dragalge ex. Conforme cae la noche, el peligro acecha en cada esquina de la expansión Megaevolución-Caos Creciente de JCC Pokémon.",
+
+              "components": [
+                "3 Sobres de refuerzo de Megaevolution - Chaos Rising de Pokémon TCG",
+                "1 Carta promocional de Pokémon TCG exclusiva de esta caja"
+              ],
+              "highlights": [
+                "Booster Packs incluidos",
+                "Carta promocional exclusiva",
+                "Producto accesible y económico para abrir sobres",
+                "Ideal para jugadores casuales y coleccionistas",
+                "Excelente opción para compras rápidas o impulsivas"
+              ]
+            },
+            "additionalInfo": {
+              "weight": {
+                "value": 1.2,
+                "unit": "kg"
+              },
+              "dimensions": {
+                "width": 29.5,
+                "height": 29.5,
+                "depth": 7,
+                "unit": "cm"
+              },
+              "material": "Cartón, madera y plástico",
+              "tags": ["Caos Rising", "Megaevolution", "J"]
             },
 
             "content": {
@@ -331,7 +465,7 @@
 
             "inventory": {
               "stock": 10,
-              "status": "in_stock",
+              "status": "pre_order",
               "reserved": 0,
               "condition": "sealed"
             }
@@ -349,16 +483,14 @@
           {
             "id": "booster-bundle-chaos-rising",
             "name": "Booster Bundle - Chaos Rising",
-
+            "language": "en",
             "type": "tcg-sealed",
             "sealedType": "booster_bundle",
+            "serie": "Megaevolution",
 
             "expansion": {
-              "code": "Me4",
-              "name": {
-                "es": "Caos creciente",
-                "en": "Chaos Rising"
-              }
+              "code": "me4",
+              "name": "Chaos Rising"
             },
 
             "pricing": {
@@ -404,7 +536,7 @@
 
             "inventory": {
               "stock": 10,
-              "status": "in_stock",
+              "status": "pre_order",
               "reserved": 0,
               "condition": "sealed"
             }
@@ -422,16 +554,13 @@
           {
             "id": "blister_single_pack-chaos-rising",
             "name": "Blister Single Pack - Chaos Rising",
-
+            "language": "en",
             "type": "tcg-sealed",
             "sealedType": "blister_single_pack",
-
+            "serie": "Megaevolution",
             "expansion": {
-              "code": "Me4",
-              "name": {
-                "es": "Caos creciente",
-                "en": "Chaos Rising"
-              }
+              "code": "me4",
+              "name": "Chaos Rising"
             },
 
             "pricing": {
@@ -442,11 +571,23 @@
             "media": {
               "images": [
                 {
-                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156551/booster_bundle_1_c2zjad.jpg",
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777594585/2_mw0ak7.jpg",
                   "type:": "main"
                 },
                 {
-                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156550/booster_bundle_mnnadk.jpg",
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777594585/all_nlcobc.jpg",
+                  "type:": "gallery"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777594586/3_awpmd3.jpg",
+                  "type:": "gallery"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777594585/1_fi6acx.jpg",
+                  "type:": "gallery"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777594585/all_nlcobc.jpg",
                   "type:": "gallery"
                 }
               ]
@@ -477,7 +618,7 @@
 
             "inventory": {
               "stock": 10,
-              "status": "in_stock",
+              "status": "pre_order",
               "reserved": 0,
               "condition": "sealed"
             }

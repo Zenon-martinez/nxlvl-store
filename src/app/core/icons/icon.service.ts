@@ -90,6 +90,7 @@ export class IconService {
       'crossword',
       'zoom_in',
       'pokeball',
+      'arrow-forward',
     ];
 
     icons.forEach((icon) => {

@@ -1,1 +1,26 @@
-<p>product-detail works!</p>
+<main class="pt-2 pb-20 px-4 md:px-8 max-w-7xl mx-auto">
+  <!-- Breadcrumb -->
+  <app-product-breadcrumbs></app-product-breadcrumbs>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+    <!-- Left Column: Image Gallery -->
+    <app-product-media
+      [images]="productImages"
+      [title]="productTitle"
+    ></app-product-media>
+    <!-- Right Column: Product Info -->
+    <div class="space-y-8">
+      @if (productHeader) {
+        <app-product-header [data]="productHeader"></app-product-header>
+      }
+      <app-product-purchase-panel
+        [data]="productPurchasePanel"
+      ></app-product-purchase-panel>
+      <!-- Confidence Section -->
+      <app-product-condition [data]="productCondition"></app-product-condition>
+    </div>
+  </div>
+  <!-- Lower Content: Tabs -->
+  <app-product-details-tabs [tabs]="tabs"></app-product-details-tabs>
+  <!-- Related Products -->
+  <app-related-products></app-related-products>
+</main>

@@ -55,11 +55,7 @@
 
         <app-product-specs-list
           [title]="'Resumen'"
-          [items]="[
-            { label: 'Pestaña', value: currentTab.label },
-            { label: 'Puntos clave', value: '' + currentTab.content.highlights.length },
-            { label: 'Componentes', value: '' + currentTab.content.components.length },
-          ]"
+          [items]="currentTab.resume"
         ></app-product-specs-list>
       </div>
     }
@@ -87,8 +83,8 @@
         </div>
 
         <app-product-specs-list
-          [title]="'Especificaciones'"
-          [items]="additionalInfoSpecs"
+          [title]="'Resumen'"
+          [items]="currentTab.resume"
         ></app-product-specs-list>
       </div>
     }
