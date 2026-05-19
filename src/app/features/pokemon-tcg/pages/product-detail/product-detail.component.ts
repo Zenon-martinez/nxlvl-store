@@ -1,4 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnInit,
+} from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { PokemonTcgService } from '../../services/pokemon-tcg.service';
 import { ProductConditionData, TcgSealedProduct } from '@models/product.interface';
 import { ProductBreadcrumbsComponent } from '@components/product-breadcrumbs/product-breadcrumbs.component';
@@ -46,7 +51,10 @@ export class ProductDetailComponent implements OnInit {
   tabs: Tab[] = [];
   productCondition: ProductConditionData | null = null;
 
-  constructor(private pokemonTcgService: PokemonTcgService) {}
+  constructor(
+    private pokemonTcgService: PokemonTcgService,
+    private route: ActivatedRoute,
+  ) {}
 
   ngOnInit() {
     console.log(
@@ -55,19 +63,33 @@ export class ProductDetailComponent implements OnInit {
       'and productId:',
       this.productId,
     );
+    console.log('Route snapshot params:', this.route);
 
-    this.pokemonTcgService
-      .getProductDetails(this.expansionId!, this.productId!)
-      .subscribe({
-        next: (product) => {
-          this.product = product;
-          this.processProductData(product);
-          console.log('Product details fetched successfully:', product);
-        },
-        error: (error) => {
-          console.error('Error fetching product details:', error);
-        },
+    // Read params from the route (supports nested route: parent 'id' and child 'productId')
+    const routeProductId = this.route.snapshot.paramMap.get('productId');
+    const routeExpansionId = this.route.snapshot.parent!.paramMap.get('expansionId');
+
+    const expansionId = this.expansionId || routeExpansionId || undefined;
+    const productId = this.productId || routeProductId || undefined;
+
+    if (!expansionId || !productId) {
+      console.warn('Missing expansionId or productId in route or inputs', {
+        expansionId,
+        productId,
       });
+      return;
+    }
+
+    this.pokemonTcgService.getProductDetails(expansionId, productId).subscribe({
+      next: (product) => {
+        this.product = product;
+        this.processProductData(product);
+        console.log('Product details fetched successfully:', product);
+      },
+      error: (error) => {
+        console.error('Error fetching product details:', error);
+      },
+    });
   }
 
   private processProductData(product: TcgSealedProduct | null): void {

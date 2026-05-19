@@ -1,6 +1,15 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  Input,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
+import { Router, RouterModule, NavigationEnd } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
+import { filter } from 'rxjs/operators';
 import {
   HeroSectionExpansionComponent,
   HeroSectionExpansionData,
@@ -12,24 +21,40 @@ import { ExpansionCatalog, ProductSection } from '@models/product.interface';
 
 @Component({
   selector: 'app-sealed-pokemon-catalog',
-  imports: [CommonModule, HeroSectionExpansionComponent, TcgProductCardComponent],
+  imports: [
+    CommonModule,
+    HeroSectionExpansionComponent,
+    TcgProductCardComponent,
+    RouterModule,
+  ],
   templateUrl: './sealed-pokemon-catalog.component.html',
   styleUrl: './sealed-pokemon-catalog.component.scss',
 })
-export class SealedPokemonCatalogComponent implements OnInit {
-  @Input() id!: string;
+export class SealedPokemonCatalogComponent implements OnInit, AfterViewInit {
+  @ViewChild('scrollContainer') scrollContainer!: ElementRef;
+
+  @Input() expansionId!: string;
   heroData?: HeroSectionExpansionData;
   catalogBySet: ExpansionCatalog | null = null;
   productSections: ProductSection[] = [];
+  showCatalog = true;
 
   constructor(
     private route: ActivatedRoute,
     private pokemonTcgService: PokemonTcgService,
+    private router: Router,
   ) {}
 
   ngOnInit(): void {
-    const routeId = this.route.snapshot.paramMap.get('id');
-    const setId = routeId || this.id;
+    // hide catalog when navigating to child 'details' route
+    this.updateCatalogVisibility(this.router.url);
+    this.router.events.pipe(filter((e) => e instanceof NavigationEnd)).subscribe((e) => {
+      const nav = e as NavigationEnd;
+      this.updateCatalogVisibility(nav.urlAfterRedirects);
+    });
+
+    const routeId = this.route.snapshot.paramMap.get('expansionId');
+    const setId = routeId || this.expansionId;
 
     if (!setId) {
       return;
@@ -57,6 +82,18 @@ export class SealedPokemonCatalogComponent implements OnInit {
     });
   }
 
+  ngAfterViewInit(): void {
+    this.centerScroll(600);
+  }
+
+  centerScroll(time = 300) {
+    setTimeout(() => {
+      const container = this.scrollContainer.nativeElement;
+      const centerPosition = container.scrollWidth / 2 - container.clientWidth / 2;
+      container.scrollLeft = centerPosition;
+    }, time);
+  }
+
   private mapSetToHeroData(set: Set): HeroSectionExpansionData {
     return {
       id: set.id,
@@ -81,5 +118,9 @@ export class SealedPokemonCatalogComponent implements OnInit {
         badges: set.ui.badges,
       },
     };
+  }
+
+  private updateCatalogVisibility(url: string) {
+    this.showCatalog = !url.includes('/details/');
   }
 }

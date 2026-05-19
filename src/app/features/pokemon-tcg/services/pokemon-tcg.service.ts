@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Set, SetsResponse } from '@models/pokemon-tcg.interface';
 import { ExpansionCatalog, TcgSealedProduct } from '@models/product.interface';
-import { map, Observable } from 'rxjs';
+import { map, Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -10,6 +10,13 @@ import { map, Observable } from 'rxjs';
 export class PokemonTcgService {
   private apiUrl = 'assets/sets.json';
   private productApiUrl = 'assets/products-by-set.json';
+  private expansionById: Record<string, string> = {
+    me4: 'Chaos Rising',
+    me3: 'Perfect Order',
+    me2: 'Ascended Heroes',
+    me1: 'Phantasmal Flames',
+    me: 'Megaevolution',
+  };
 
   constructor(private http: HttpClient) {}
 
@@ -63,5 +70,9 @@ export class PokemonTcgService {
         return product;
       }),
     );
+  }
+
+  getExpansionNameById(id: string): Observable<string> {
+    return of(this.expansionById[id] || 'Unknown Expansion');
   }
 }

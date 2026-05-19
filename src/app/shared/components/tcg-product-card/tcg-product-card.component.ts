@@ -20,11 +20,18 @@ export class TcgProductCardComponent {
   constructor(private router: Router) {}
 
   viewDetails() {
-    // Implementation for viewing product details
+    if (!this.product) return;
+
+    const expansionCode = this.product.expansion?.code ?? '';
+
+    // Match route: /pokemon-tcg/expansions/:id/details/:expansionId/:productId
+    // Use expansionCode for both the parent :id and the child :expansionId
     this.router.navigate([
-      '/pokemon-tcg/details',
-      this.product?.expansion.code,
-      this.product?.id,
+      '/pokemon-tcg',
+      'expansions',
+      expansionCode,
+      'details',
+      this.product.id,
     ]);
   }
 }

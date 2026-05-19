@@ -288,7 +288,7 @@
             },
 
             "pricing": {
-              "price": 500,
+              "price": 550,
               "currency": "MXN"
             },
 
@@ -385,7 +385,7 @@
             },
 
             "pricing": {
-              "price": 550,
+              "price": 350,
               "currency": "MXN"
             },
 
@@ -510,6 +510,32 @@
                 }
               ]
             },
+            "description": {
+              "short": "Contiene todo lo necesario para mejorar tu experiencia de juego.",
+              "long": "¡Mega-Floette ex perturba el bullicio de la ciudad e irrumpe en las calles para sembrar el caos! Cargado de valentía y determinación, Mega-Greninja ex se dispone a controlar esta creciente amenaza y reúne a otros poderosos Pokémon ex Megaevolución, como Mega-Pyroar ex y Mega-Dragalge ex. Conforme cae la noche, el peligro acecha en cada esquina de la expansión Megaevolución-Caos Creciente de JCC Pokémon.",
+
+              "components": [
+                "6 sobres de refuerzo de Megaevolution - Chaos Rising de Pokémon TCG"
+              ],
+              "highlights": [
+                "Booster Packs incluidos",
+                "Producto premium ideal para jugadores y coleccionistas"
+              ]
+            },
+            "additionalInfo": {
+              "weight": {
+                "value": 1.2,
+                "unit": "kg"
+              },
+              "dimensions": {
+                "width": 29.5,
+                "height": 29.5,
+                "depth": 7,
+                "unit": "cm"
+              },
+              "material": "Cartón, madera y plástico",
+              "tags": ["Caos Rising", "Megaevolution", "J"]
+            },
 
             "content": {
               "shortDescription": {
@@ -564,7 +590,7 @@
             },
 
             "pricing": {
-              "price": 550,
+              "price": 110,
               "currency": "MXN"
             },
 
@@ -592,6 +618,484 @@
                 }
               ]
             },
+            "description": {
+              "short": "Contiene todo lo necesario para mejorar tu experiencia de juego.",
+              "long": "¡Mega-Floette ex perturba el bullicio de la ciudad e irrumpe en las calles para sembrar el caos! Cargado de valentía y determinación, Mega-Greninja ex se dispone a controlar esta creciente amenaza y reúne a otros poderosos Pokémon ex Megaevolución, como Mega-Pyroar ex y Mega-Dragalge ex. Conforme cae la noche, el peligro acecha en cada esquina de la expansión Megaevolución-Caos Creciente de JCC Pokémon.",
+
+              "components": [
+                "1 sobre de refuerzo de Megaevolution - Chaos Rising de Pokémon TCG"
+              ],
+              "highlights": ["Producto básico para jugadores y coleccionistas"]
+            },
+            "additionalInfo": {
+              "weight": {
+                "value": 1.2,
+                "unit": "kg"
+              },
+              "dimensions": {
+                "width": 29.5,
+                "height": 29.5,
+                "depth": 7,
+                "unit": "cm"
+              },
+              "material": "Cartón, madera y plástico",
+              "tags": ["Caos Rising", "Megaevolution", "J"]
+            },
+
+            "pullRates": {
+              "avgHits": 2.5
+            },
+
+            "isPokemonCenterExclusive": false,
+
+            "releaseDate": "27-05-2026",
+
+            "inventory": {
+              "stock": 10,
+              "status": "pre_order",
+              "reserved": 0,
+              "condition": "sealed"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "me3": {
+    "expansion": {
+      "id": "me3",
+      "name": "Perfect Order",
+      "code": "me3",
+      "releaseDate": "2026-03-27"
+    },
+    "sections": [
+      {
+        "type": "booster_box",
+        "label": {
+          "es": "Booster Boxes",
+          "en": "Booster Boxes"
+        },
+        "order": 1,
+        "products": [
+          {
+            "id": "booster-box-perfect-order",
+            "name": "Boster Box - Perfect Order",
+            "type": "tcg-sealed",
+            "sealedType": "booster_box",
+            "language": "en",
+            "serie": "Megaevolution",
+            "expansion": {
+              "code": "me3",
+              "name": "Perfect Order"
+            },
+
+            "pricing": {
+              "price": 3000,
+              "currency": "MXN"
+            },
+
+            "media": {
+              "images": [
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1779226440/Perfect_Order_Booster_Box_wljcmc.webp",
+                  "type:": "main"
+                }
+              ]
+            },
+            "contents": {
+              "boosterPacks": 36,
+              "promoCards": 0
+            },
+
+            "pullRates": {
+              "avgHits": 2.5
+            },
+
+            "isPokemonCenterExclusive": false,
+
+            "releaseDate": "22-05-2026",
+
+            "inventory": {
+              "stock": 0,
+              "status": "out_of_stock",
+              "reserved": 0,
+              "condition": "sealed"
+            },
+            "description": {
+              "short": "Juego de estrategia donde los jugadores compiten por colonizar una isla.",
+              "long": "El pulso de la ciudad late en armonía con los Pokémon y las personas que la habitan. Detrás de este equilibrio yace su protector, Mega-Zygarde ex, el Pokémon Legendario que simboliza la fuerza de la unión. Con toda amenaza bajo control, ahora solo reinará la paz entre los residentes de la ciudad, ¡incluyendo a Mega-Clefable ex, Mega-Starmie ex, Meowth ex y muchos otros Pokémon que podrás encontrar en la expansión Megaevolución-Equilibrio Perfecto de JCC Pokémon!",
+
+              "components": [
+                "36 sobres de refuerzo de Megaevolution - Perfect Order de Pokémon TCG",
+                "Cada sobre de refuerzo contiene 10 cartas, 1 Energía Básica y 1 carta con código para JCC Pokémon Live. Las cartas varían según el sobre."
+              ],
+              "highlights": [
+                "36 Booster Packs incluidos",
+                "Ideal para apertura masiva de cartas (mass opening)",
+                "Mayor probabilidad de obtener cartas raras y pulls importantes",
+                "Producto principal para coleccionistas y jugadores competitivos",
+                "Excelente relación costo por sobre"
+              ]
+            },
+            "additionalInfo": {
+              "weight": {
+                "value": 1.2,
+                "unit": "kg"
+              },
+              "dimensions": {
+                "width": 29.5,
+                "height": 29.5,
+                "depth": 7,
+                "unit": "cm"
+              },
+              "material": "Cartón, madera y plástico",
+              "tags": ["Perfect Order", "Megaevolution", "J"]
+            }
+          }
+        ]
+      },
+      {
+        "type": "elite_trainer_box",
+        "label": {
+          "es": "Elite Trainer Boxes",
+          "en": "Elite Trainer Boxes"
+        },
+        "order": 2,
+        "products": [
+          {
+            "id": "etb-perfect-order",
+            "name": "Elite Trainer Box - Perfect Order",
+            "type": "tcg-sealed",
+            "sealedType": "elite_trainer_box",
+            "language": "en",
+            "serie": "Megaevolution",
+            "expansion": {
+              "code": "me3",
+              "name": "Perfect Order"
+            },
+
+            "pricing": {
+              "price": 1099,
+              "currency": "MXN"
+            },
+
+            "media": {
+              "images": [
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156590/Elite_Trainer_Box_mxbiof.png",
+                  "type:": "main"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156590/Elite_Trainer_Box_1_akka7o.jpg",
+                  "type:": "gallery"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156590/Elite_Trainer_Box_2_hc4xlz.jpg",
+                  "type:": "gallery"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156591/Elite_Trainer_Box_3_rywn35.jpg",
+                  "type:": "gallery"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156591/Elite_Trainer_Box_5_h95rjo.jpg",
+                  "type:": "gallery"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156591/Elite_Trainer_Box_4_ufymmg.jpg",
+                  "type:": "gallery"
+                }
+              ]
+            },
+            "description": {
+              "short": "Contiene todo lo necesario para mejorar tu experiencia de juego.",
+              "long": "El pulso de la ciudad late en armonía con los Pokémon y las personas que la habitan. Detrás de este equilibrio yace su protector, Mega-Zygarde ex, el Pokémon Legendario que simboliza la fuerza de la unión. Con toda amenaza bajo control, ahora solo reinará la paz entre los residentes de la ciudad, ¡incluyendo a Mega-Clefable ex, Mega-Starmie ex, Meowth ex y muchos otros Pokémon que podrás encontrar en la expansión Megaevolución-Equilibrio Perfecto de JCC Pokémon!",
+
+              "components": [
+                "9 sobres de refuerzo de Megaevolution - Perfect Order de Pokémon TCG",
+                "Cada sobre de refuerzo contiene 10 cartas, 1 Energía Básica y 1 carta con código para JCC Pokémon Live. Las cartas varían según el sobre.",
+                "1 carta promocional de Pokémon TCG exclusiva de esta caja",
+                "65 fundas de cartas con diseño exclusivo de Pokémon TCG",
+                "45 cartas de Energía Básica con diseño exclusivo de Pokémon TCG",
+                "1 dado de seis caras con diseño exclusivo de Pokémon TCG",
+                "1 moneda de plástico con diseño exclusivo de Pokémon TCG",
+                "1 guía de juego con consejos y estrategias para jugar con tu nuevo mazo",
+                "1 caja de mazo con diseño exclusivo de Pokémon TCG para guardar tus cartas",
+                "4 divisores de cartas con diseño exclusivo de Pokémon TCG para organizar tu mazo",
+                "1 carta con código para desbloquear contenido digital exclusivo en JCC Pokémon Live"
+              ],
+              "highlights": [
+                "Booster Packs incluidos",
+                "Carta promocional exclusiva",
+                "Sleeves y accesorios oficiales para jugar",
+                "Caja de almacenamiento y organización",
+                "Diseño temático de la expansión",
+                "Producto premium ideal para jugadores y coleccionistas"
+              ]
+            },
+            "additionalInfo": {
+              "weight": {
+                "value": 1.2,
+                "unit": "kg"
+              },
+              "dimensions": {
+                "width": 29.5,
+                "height": 29.5,
+                "depth": 7,
+                "unit": "cm"
+              },
+              "material": "Cartón, madera y plástico",
+              "tags": ["Perfect Order", "Megaevolution", "J"]
+            },
+            "pullRates": {
+              "avgHits": 2.5
+            },
+
+            "isPokemonCenterExclusive": false,
+
+            "releaseDate": "22-05-2026",
+
+            "inventory": {
+              "stock": 5,
+              "status": "in_stock",
+              "reserved": 0,
+              "condition": "sealed"
+            }
+          }
+        ]
+      },
+      {
+        "type": "build_battle",
+        "label": {
+          "es": "Combina y Combate",
+          "en": "Build and Battle"
+        },
+        "order": 3,
+        "products": [
+          {
+            "id": "build-battle-perfect-order",
+            "name": "Build and Battle - Perfect Order",
+            "language": "en",
+            "type": "tcg-sealed",
+            "sealedType": "build_battle",
+            "serie": "Megaevolution",
+
+            "expansion": {
+              "code": "me3",
+              "name": "Perfect Order"
+            },
+
+            "pricing": {
+              "price": 550,
+              "currency": "MXN"
+            },
+
+            "media": {
+              "images": [
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156586/build_and_battle_1_ixhu93.jpg",
+                  "type:": "main"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156586/build_and_battle_jt2kld.jpg",
+                  "type:": "gallery"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156587/build_and_battle_2_jvrzjq.jpg",
+                  "type:": "gallery"
+                }
+              ]
+            },
+            "description": {
+              "short": "Todo lo que necesitas para comenzar a jugar.",
+              "long": "El pulso de la ciudad late en armonía con los Pokémon y las personas que la habitan. Detrás de este equilibrio yace su protector, Mega-Zygarde ex, el Pokémon Legendario que simboliza la fuerza de la unión. Con toda amenaza bajo control, ahora solo reinará la paz entre los residentes de la ciudad, ¡incluyendo a Mega-Clefable ex, Mega-Starmie ex, Meowth ex y muchos otros Pokémon que podrás encontrar en la expansión Megaevolución-Equilibrio Perfecto de JCC Pokémon!",
+
+              "components": [
+                "4 sobres de refuerzo de Megaevolution - Perfect Order de Pokémon TCG",
+                "Cada sobre de refuerzo contiene 10 cartas, 1 Energía Básica y 1 carta con código para JCC Pokémon Live. Las cartas varían según el sobre.",
+                "1 carta promocional de Pokémon TCG exclusiva de esta caja",
+                "1 mazo inicial preconstruido con 60 cartas listo para jugar",
+                "Incluye reglas y guía para construir tu propio mazo"
+              ],
+              "highlights": [
+                "Booster Packs incluidos",
+                "Carta promocional exclusiva",
+                "Mazo inicial preconstruido listo para jugar",
+                "Guía para construir tu propio mazo",
+                "Producto ideal para nuevos jugadores y aquellos que buscan una experiencia completa"
+              ]
+            },
+            "pullRates": {
+              "avgHits": 2.5
+            },
+
+            "isPokemonCenterExclusive": false,
+
+            "releaseDate": "27-05-2026",
+
+            "inventory": {
+              "stock": 10,
+              "status": "in_stock",
+              "reserved": 0,
+              "condition": "sealed"
+            }
+          }
+        ]
+      },
+      {
+        "type": "blister_three_pack",
+        "label": {
+          "es": "Blister de 3 Sobres",
+          "en": "Blister Three Pack"
+        },
+        "order": 4,
+        "products": [
+          {
+            "id": "blister-three-pack-perfect-order",
+            "name": "Blister Three Pack - Perfect Order",
+            "type": "tcg-sealed",
+            "sealedType": "blister_three_pack",
+            "language": "en",
+            "serie": "Megaevolution",
+
+            "expansion": {
+              "code": "me3",
+              "name": "Perfect Order"
+            },
+
+            "pricing": {
+              "price": 350,
+              "currency": "MXN"
+            },
+
+            "media": {
+              "images": [
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156578/three_booster_blister_bimdiz.jpg",
+                  "type:": "main"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156578/three_booster_blister_1_qxbl5k.jpg",
+                  "type:": "gallery"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156582/three_booster_blister_2_tloxxy.jpg",
+                  "type:": "gallery"
+                }
+              ]
+            },
+            "description": {
+              "short": "Contiene todo lo necesario para mejorar tu experiencia de juego.",
+              "long": "El pulso de la ciudad late en armonía con los Pokémon y las personas que la habitan. Detrás de este equilibrio yace su protector, Mega-Zygarde ex, el Pokémon Legendario que simboliza la fuerza de la unión. Con toda amenaza bajo control, ahora solo reinará la paz entre los residentes de la ciudad, ¡incluyendo a Mega-Clefable ex, Mega-Starmie ex, Meowth ex y muchos otros Pokémon que podrás encontrar en la expansión Megaevolución-Equilibrio Perfecto de JCC Pokémon!",
+
+              "components": [
+                "3 Sobres de refuerzo de Megaevolution - Perfect Order de Pokémon TCG",
+                "1 Carta promocional de Pokémon TCG exclusiva de esta caja"
+              ],
+              "highlights": [
+                "Booster Packs incluidos",
+                "Carta promocional exclusiva",
+                "Producto accesible y económico para abrir sobres",
+                "Ideal para jugadores casuales y coleccionistas",
+                "Excelente opción para compras rápidas o impulsivas"
+              ]
+            },
+            "additionalInfo": {
+              "weight": {
+                "value": 1.2,
+                "unit": "kg"
+              },
+              "dimensions": {
+                "width": 29.5,
+                "height": 29.5,
+                "depth": 7,
+                "unit": "cm"
+              },
+              "material": "Cartón, madera y plástico",
+              "tags": ["Perfect Order", "Megaevolution", "J"]
+            },
+
+            "pullRates": {
+              "avgHits": 2.5
+            },
+
+            "isPokemonCenterExclusive": false,
+
+            "releaseDate": "27-05-2026",
+
+            "inventory": {
+              "stock": 10,
+              "status": "in_stock",
+              "reserved": 0,
+              "condition": "sealed"
+            }
+          }
+        ]
+      },
+      {
+        "type": "booster_bundle",
+        "label": {
+          "es": "Booster Bundle",
+          "en": "Booster Bundle"
+        },
+        "order": 5,
+        "products": [
+          {
+            "id": "booster-bundle-perfect-order",
+            "name": "Booster Bundle - Perfect Order",
+            "language": "en",
+            "type": "tcg-sealed",
+            "sealedType": "booster_bundle",
+            "serie": "Megaevolution",
+
+            "expansion": {
+              "code": "me3",
+              "name": "Perfect Order"
+            },
+
+            "pricing": {
+              "price": 550,
+              "currency": "MXN"
+            },
+
+            "media": {
+              "images": [
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156582/booster_bundle_1_c570uv.jpg",
+                  "type:": "main"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156582/booster_bundle_gk8vye.jpg",
+                  "type:": "gallery"
+                }
+              ]
+            },
+            "description": {
+              "short": "Contiene todo lo necesario para mejorar tu experiencia de juego.",
+              "long": "El pulso de la ciudad late en armonía con los Pokémon y las personas que la habitan. Detrás de este equilibrio yace su protector, Mega-Zygarde ex, el Pokémon Legendario que simboliza la fuerza de la unión. Con toda amenaza bajo control, ahora solo reinará la paz entre los residentes de la ciudad, ¡incluyendo a Mega-Clefable ex, Mega-Starmie ex, Meowth ex y muchos otros Pokémon que podrás encontrar en la expansión Megaevolución-Equilibrio Perfecto de JCC Pokémon!",
+
+              "components": [
+                "6 sobres de refuerzo de Megaevolution - Perfect Order de Pokémon TCG"
+              ],
+              "highlights": [
+                "Booster Packs incluidos",
+                "Producto premium ideal para jugadores y coleccionistas"
+              ]
+            },
+            "additionalInfo": {
+              "weight": {
+                "value": 1.2,
+                "unit": "kg"
+              },
+              "dimensions": {
+                "width": 29.5,
+                "height": 29.5,
+                "depth": 7,
+                "unit": "cm"
+              },
+              "material": "Cartón, madera y plástico",
+              "tags": ["Perfect Order", "Megaevolution", "J"]
+            },
 
             "content": {
               "shortDescription": {
@@ -618,7 +1122,93 @@
 
             "inventory": {
               "stock": 10,
-              "status": "pre_order",
+              "status": "in_stock",
+              "reserved": 0,
+              "condition": "sealed"
+            }
+          }
+        ]
+      },
+      {
+        "type": "blister_single_pack",
+        "label": {
+          "es": "Blister Single Pack",
+          "en": "Blister Single Pack"
+        },
+        "order": 6,
+        "products": [
+          {
+            "id": "blister_single_pack-perfect-order",
+            "name": "Blister Single Pack - Perfect Order",
+            "language": "en",
+            "type": "tcg-sealed",
+            "sealedType": "blister_single_pack",
+            "serie": "Megaevolution",
+            "expansion": {
+              "code": "me3",
+              "name": "Perfect Order"
+            },
+
+            "pricing": {
+              "price": 100,
+              "currency": "MXN"
+            },
+
+            "media": {
+              "images": [
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156585/Pokemon_TCG_Mega_Evolution__Perfect_Order_Booster_Wrap_Meowth_p16rnj.png",
+                  "type:": "main"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156585/Pokemon_TCG_Mega_Evolution__Perfect_Order_Booster_Wrap_Mega_Zygarde_dc4amo.png",
+                  "type:": "gallery"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156583/Pokemon_TCG_Mega_Evolution__Perfect_Order_Booster_Wrap_Mega_Clefable_wbodaq.png",
+                  "type:": "gallery"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156583/Pokemon_TCG_Mega_Evolution__Perfect_Order_Booster_Wrap_Mega_Starmie_tutgpu.png",
+                  "type:": "gallery"
+                }
+              ]
+            },
+            "description": {
+              "short": "Contiene todo lo necesario para mejorar tu experiencia de juego.",
+              "long": "El pulso de la ciudad late en armonía con los Pokémon y las personas que la habitan. Detrás de este equilibrio yace su protector, Mega-Zygarde ex, el Pokémon Legendario que simboliza la fuerza de la unión. Con toda amenaza bajo control, ahora solo reinará la paz entre los residentes de la ciudad, ¡incluyendo a Mega-Clefable ex, Mega-Starmie ex, Meowth ex y muchos otros Pokémon que podrás encontrar en la expansión Megaevolución-Equilibrio Perfecto de JCC Pokémon!",
+
+              "components": [
+                "1 sobre de refuerzo de Megaevolution - Perfect Order de Pokémon TCG"
+              ],
+              "highlights": ["Producto básico para jugadores y coleccionistas"]
+            },
+            "additionalInfo": {
+              "weight": {
+                "value": 1.2,
+                "unit": "kg"
+              },
+              "dimensions": {
+                "width": 29.5,
+                "height": 29.5,
+                "depth": 7,
+                "unit": "cm"
+              },
+              "material": "Cartón, madera y plástico",
+              "tags": ["Caos Rising", "Megaevolution", "J"]
+            },
+
+            "pullRates": {
+              "avgHits": 2.5
+            },
+
+            "isPokemonCenterExclusive": false,
+
+            "releaseDate": "27-05-2026",
+
+            "inventory": {
+              "stock": 10,
+              "status": "in_stock",
               "reserved": 0,
               "condition": "sealed"
             }
