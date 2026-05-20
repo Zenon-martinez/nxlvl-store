@@ -10,6 +10,7 @@ import {
 import { AppLoaderService } from '@services/app-loader.service';
 import { MaintenanceService } from '@services/maintenance.service';
 import { IconService } from './core/icons/icon.service';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -32,6 +33,10 @@ export class AppComponent {
         this.router.navigate(['/home']);
       }
     });
+
+    this.router.events
+      .pipe(filter((e) => e instanceof NavigationEnd))
+      .subscribe(() => window.scrollTo({ top: 0, left: 0 }));
 
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {

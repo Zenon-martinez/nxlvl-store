@@ -91,6 +91,7 @@ export class SealedPokemonCatalogComponent implements OnInit, AfterViewInit {
       const container = this.scrollContainer.nativeElement;
       const centerPosition = container.scrollWidth / 2 - container.clientWidth / 2;
       container.scrollLeft = centerPosition;
+      console.log('Scroll container centered at position:', centerPosition);
     }, time);
   }
 
