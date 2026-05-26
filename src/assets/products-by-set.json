@@ -1216,5 +1216,349 @@
         ]
       }
     ]
+  },
+  "me2": {
+    "expansion": {
+      "id": "me2",
+      "name": "Ascended Heroes",
+      "code": "me2",
+      "releaseDate": "2026-03-27"
+    },
+    "sections": [
+      {
+        "type": "booster_box",
+        "label": {
+          "es": "Booster Boxes",
+          "en": "Booster Boxes"
+        },
+        "order": 1,
+        "products": []
+      },
+      {
+        "type": "elite_trainer_box",
+        "label": {
+          "es": "Elite Trainer Boxes",
+          "en": "Elite Trainer Boxes"
+        },
+        "order": 2,
+        "products": []
+      },
+      {
+        "type": "blister_three_pack",
+        "label": {
+          "es": "Blister de 3 Sobres",
+          "en": "Blister Three Pack"
+        },
+        "order": 4,
+        "products": []
+      },
+      {
+        "type": "booster_bundle",
+        "label": {
+          "es": "Booster Bundle",
+          "en": "Booster Bundle"
+        },
+        "order": 5,
+        "products": [
+          {
+            "id": "booster-bundle-ascended-heroes",
+            "name": "Booster Bundle - Ascended Heroes",
+            "language": "en",
+            "type": "tcg-sealed",
+            "sealedType": "booster_bundle",
+            "serie": "Megaevolution",
+
+            "expansion": {
+              "code": "me2",
+              "name": "Ascended Heroes"
+            },
+
+            "pricing": {
+              "price": 850,
+              "currency": "MXN"
+            },
+
+            "media": {
+              "images": [
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156529/Booster_Bundle_wdjfia.png",
+                  "type:": "main"
+                }
+              ]
+            },
+            "description": {
+              "short": "Contiene todo lo necesario para mejorar tu experiencia de juego.",
+              "long": "Maravíllate ante el increíble potencial de Mega-Dragonite ex, ¡que alza el vuelo para liderar a un grupo estelar de Pokémon en combate! Los Pokémon de Entrenadores y los Pokémon ex Teracristal Astrales se unen a nuevos y conocidos Pokémon ex Megaevolución, algunos de ellos con ilustraciones especiales que muestran sus más osados y devastadores ataques. ¡Rinde homenaje a las estrellas de Escarlata y Púrpura y a los albores de la serie Megaevolución con la expansión Megaevolución-Ascenso Heroico de JCC Pokémon!",
+
+              "components": [
+                "6 sobres de refuerzo de Megaevolution - Ascended Heroes de Pokémon TCG"
+              ],
+              "highlights": [
+                "Booster Packs incluidos",
+                "Producto premium ideal para jugadores y coleccionistas"
+              ]
+            },
+            "additionalInfo": {
+              "weight": {
+                "value": 1.2,
+                "unit": "kg"
+              },
+              "dimensions": {
+                "width": 29.5,
+                "height": 29.5,
+                "depth": 7,
+                "unit": "cm"
+              },
+              "material": "Cartón, madera y plástico",
+              "tags": ["Ascended Heroes", "Megaevolution", "I"]
+            },
+
+            "pullRates": {
+              "avgHits": 2.5
+            },
+
+            "isPokemonCenterExclusive": false,
+
+            "releaseDate": "27-05-2026",
+
+            "inventory": {
+              "stock": 7,
+              "status": "in_stock",
+              "reserved": 0,
+              "condition": "sealed"
+            }
+          }
+        ]
+      },
+      {
+        "type": "blister_single_pack",
+        "label": {
+          "es": "Blister Single Pack",
+          "en": "Blister Single Pack"
+        },
+        "order": 6,
+        "products": []
+      },
+      {
+        "type": "special_collection",
+        "label": {
+          "es": "Colección Especial",
+          "en": "Special Collection"
+        },
+        "order": 7,
+        "products": [
+          {
+            "id": "special-collection-ascended-heroes",
+            "name": "Mega Meganium ex Box",
+            "language": "en",
+            "type": "tcg-sealed",
+            "sealedType": "special_collection",
+            "serie": "Megaevolution",
+
+            "expansion": {
+              "code": "me2",
+              "name": "Ascended Heroes"
+            },
+
+            "pricing": {
+              "price": 650,
+              "currency": "MXN"
+            },
+
+            "media": {
+              "images": [
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1779291981/Mega_Meganium_ex_Box_dosfle.png",
+                  "type:": "main"
+                }
+              ]
+            },
+            "description": {
+              "short": "Contiene todo lo necesario para mejorar tu experiencia de juego.",
+              "long": "Maravíllate ante el increíble potencial de Mega-Dragonite ex, ¡que alza el vuelo para liderar a un grupo estelar de Pokémon en combate! Los Pokémon de Entrenadores y los Pokémon ex Teracristal Astrales se unen a nuevos y conocidos Pokémon ex Megaevolución, algunos de ellos con ilustraciones especiales que muestran sus más osados y devastadores ataques. ¡Rinde homenaje a las estrellas de Escarlata y Púrpura y a los albores de la serie Megaevolución con la expansión Megaevolución-Ascenso Heroico de JCC Pokémon!",
+
+              "components": [
+                "4 sobres de refuerzo de Megaevolution - Ascended Heroes de Pokémon TCG",
+                "1 carta promocional de Mega Meganium ex exclusiva de esta caja",
+                "1 carta Jumbo de Mega Meganium ex exclusiva de esta caja"
+              ],
+              "highlights": [
+                "Booster Packs incluidos",
+                "Producto premium ideal para jugadores y coleccionistas"
+              ]
+            },
+            "additionalInfo": {
+              "weight": {
+                "value": 1.2,
+                "unit": "kg"
+              },
+              "dimensions": {
+                "width": 29.5,
+                "height": 29.5,
+                "depth": 7,
+                "unit": "cm"
+              },
+              "material": "Cartón, madera y plástico",
+              "tags": ["Ascended Heroes", "Megaevolution", "I"]
+            },
+
+            "pullRates": {
+              "avgHits": 2.5
+            },
+
+            "isPokemonCenterExclusive": false,
+
+            "releaseDate": "27-05-2026",
+
+            "inventory": {
+              "stock": 7,
+              "status": "in_stock",
+              "reserved": 0,
+              "condition": "sealed"
+            }
+          },
+          {
+            "id": "special-collection-ascended-heroes",
+            "name": "Mega Emboar ex Box",
+            "language": "en",
+            "type": "tcg-sealed",
+            "sealedType": "special_collection",
+            "serie": "Megaevolution",
+
+            "expansion": {
+              "code": "me2",
+              "name": "Ascended Heroes"
+            },
+
+            "pricing": {
+              "price": 650,
+              "currency": "MXN"
+            },
+
+            "media": {
+              "images": [
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1779291980/Mega_Emboar_ex_Box_arosfm.png",
+                  "type:": "main"
+                }
+              ]
+            },
+            "description": {
+              "short": "Contiene todo lo necesario para mejorar tu experiencia de juego.",
+              "long": "Maravíllate ante el increíble potencial de Mega-Dragonite ex, ¡que alza el vuelo para liderar a un grupo estelar de Pokémon en combate! Los Pokémon de Entrenadores y los Pokémon ex Teracristal Astrales se unen a nuevos y conocidos Pokémon ex Megaevolución, algunos de ellos con ilustraciones especiales que muestran sus más osados y devastadores ataques. ¡Rinde homenaje a las estrellas de Escarlata y Púrpura y a los albores de la serie Megaevolución con la expansión Megaevolución-Ascenso Heroico de JCC Pokémon!",
+
+              "components": [
+                "4 sobres de refuerzo de Megaevolution - Ascended Heroes de Pokémon TCG",
+                "1 carta promocional de Mega Emboar ex exclusiva de esta caja",
+                "1 carta Jumbo de Mega Emboar ex exclusiva de esta caja"
+              ],
+              "highlights": [
+                "Booster Packs incluidos",
+                "Producto premium ideal para jugadores y coleccionistas"
+              ]
+            },
+            "additionalInfo": {
+              "weight": {
+                "value": 1.2,
+                "unit": "kg"
+              },
+              "dimensions": {
+                "width": 29.5,
+                "height": 29.5,
+                "depth": 7,
+                "unit": "cm"
+              },
+              "material": "Cartón, madera y plástico",
+              "tags": ["Ascended Heroes", "Megaevolution", "I"]
+            },
+
+            "pullRates": {
+              "avgHits": 2.5
+            },
+
+            "isPokemonCenterExclusive": false,
+
+            "releaseDate": "27-05-2026",
+
+            "inventory": {
+              "stock": 7,
+              "status": "in_stock",
+              "reserved": 0,
+              "condition": "sealed"
+            }
+          },
+          {
+            "id": "special-collection-ascended-heroes",
+            "name": "Mega Feraligart ex Box",
+            "language": "en",
+            "type": "tcg-sealed",
+            "sealedType": "special_collection",
+            "serie": "Megaevolution",
+
+            "expansion": {
+              "code": "me2",
+              "name": "Ascended Heroes"
+            },
+
+            "pricing": {
+              "price": 650,
+              "currency": "MXN"
+            },
+
+            "media": {
+              "images": [
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1779291980/Mega_Feraligatr_ex_Box_swaagb.png",
+                  "type:": "main"
+                }
+              ]
+            },
+            "description": {
+              "short": "Contiene todo lo necesario para mejorar tu experiencia de juego.",
+              "long": "Maravíllate ante el increíble potencial de Mega-Dragonite ex, ¡que alza el vuelo para liderar a un grupo estelar de Pokémon en combate! Los Pokémon de Entrenadores y los Pokémon ex Teracristal Astrales se unen a nuevos y conocidos Pokémon ex Megaevolución, algunos de ellos con ilustraciones especiales que muestran sus más osados y devastadores ataques. ¡Rinde homenaje a las estrellas de Escarlata y Púrpura y a los albores de la serie Megaevolución con la expansión Megaevolución-Ascenso Heroico de JCC Pokémon!",
+
+              "components": [
+                "4 sobres de refuerzo de Megaevolution - Ascended Heroes de Pokémon TCG",
+                "1 carta promocional de Mega Feraligatr ex exclusiva de esta caja",
+                "1 carta Jumbo de Mega Feraligatr ex exclusiva de esta caja"
+              ],
+              "highlights": [
+                "Booster Packs incluidos",
+                "Producto premium ideal para jugadores y coleccionistas"
+              ]
+            },
+            "additionalInfo": {
+              "weight": {
+                "value": 1.2,
+                "unit": "kg"
+              },
+              "dimensions": {
+                "width": 29.5,
+                "height": 29.5,
+                "depth": 7,
+                "unit": "cm"
+              },
+              "material": "Cartón, madera y plástico",
+              "tags": ["Ascended Heroes", "Megaevolution", "I"]
+            },
+
+            "pullRates": {
+              "avgHits": 2.5
+            },
+
+            "isPokemonCenterExclusive": false,
+
+            "releaseDate": "27-05-2026",
+
+            "inventory": {
+              "stock": 7,
+              "status": "in_stock",
+              "reserved": 0,
+              "condition": "sealed"
+            }
+          }
+        ]
+      }
+    ]
   }
 }
