@@ -15,6 +15,7 @@ export interface SetTcg {
   game: TcgGame;
   era: string;
   setCode: string;
+  symbol: string;
 }
 
 export type TcgGame = 'pokemon' | 'magic' | 'one_piece' | 'yugioh';

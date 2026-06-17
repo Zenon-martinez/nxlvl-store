@@ -8,6 +8,7 @@ export interface HeroSectionExpansionData {
   tcg: {
     setCode: string;
     era: string;
+    symbol: string;
   };
   release: {
     formatted: string;
@@ -67,7 +68,7 @@ export class HeroSectionExpansionComponent {
 
   get heroTitleCode(): string {
     const parts = this.data.name.split('—');
-    return parts.length > 1 ? parts[parts.length - 1] : this.data.tcg.setCode;
+    return parts.length > 1 ? parts[parts.length - 1] : this.data.tcg.symbol;
   }
 
   badgeClass(variant: string): string {
@@ -89,6 +90,7 @@ export class HeroSectionExpansionComponent {
     tcg: {
       setCode: '151',
       era: 'Scarlet & Violet',
+      symbol: '151',
     },
     release: {
       formatted: 'Sept 22, 2023',

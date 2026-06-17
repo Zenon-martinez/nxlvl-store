@@ -102,6 +102,7 @@ export class SealedPokemonCatalogComponent implements OnInit, AfterViewInit {
       tcg: {
         setCode: set.tcg.setCode,
         era: set.tcg.era,
+        symbol: set.tcg.symbol,
       },
       release: {
         formatted: set.release.formatted,

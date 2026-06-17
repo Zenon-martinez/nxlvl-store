@@ -1,0 +1,548 @@
+<main>
+  <!-- Hero Section -->
+  <div class="relative flex items-center pt-20 overflow-hidden">
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"
+    ></div>
+    <div
+      class="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center"
+    >
+      <div class="space-y-8">
+        <div
+          class="inline-block px-4 py-1 border border-primary/50 bg-primary/10 rounded-full"
+        >
+          <span class="text-xs font-black uppercase tracking-[0.2em] text-primary"
+            >Próxima Temporada: En Curso</span
+          >
+        </div>
+        <h1
+          class="text-5xl md:text-7xl font-black tracking-tighter uppercase leading-tight italic"
+        >
+          NXLV Masters <br />
+          <span class="text-primary text-glow">Championship</span>
+        </h1>
+        <p
+          class="text-xl md:text-2xl font-light text-on-surface-variant max-w-xl leading-relaxed"
+        >
+          El circuito mensual más intenso de Pokémon y Magic en Next Level.
+        </p>
+        <p class="text-on-surface-variant/80 max-w-lg">
+          Compite durante todo el mes, acumula participación y clasifica a la gran final
+          para disputar la bolsa acumulada y el título de campeón.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <button
+            type="button"
+            (click)="scrollToRules($event)"
+            class="px-8 py-4 bg-primary hover:bg-primary/90 text-white font-black uppercase tracking-widest transition-all rounded inline-flex items-center justify-center"
+          >
+            Ver reglas
+          </button>
+          <button
+            type="button"
+            (click)="scrollToClassification($event)"
+            class="px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-on-surface font-black uppercase tracking-widest transition-all rounded"
+          >
+            Cómo clasificar
+          </button>
+        </div>
+      </div>
+      <div class="relative hidden lg:block group">
+        <div
+          class="absolute -inset-4 bg-primary/20 blur-3xl opacity-20 group-hover:opacity-40 transition-opacity duration-700"
+        ></div>
+        <img
+          alt="NXLV Masters Hero"
+          class="relative rounded-xl border border-white/10 shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
+          data-alt="A cinematic, low-angle photograph of an elite gaming setup in a dimly lit studio environment with deep obsidian surfaces. The scene features a high-performance computer tower with vibrant blue internal lighting, a mechanical keyboard with subtle RGB accents, and a large curved monitor displaying abstract competitive patterns. Atmospheric smoke or mist drifts through the cool blue and black space, evoking a sense of high-stakes esports prestige and modern technological elegance."
+          src="https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1781713027/IMG-20260615-WA0113_apenlf.jpg"
+        />
+      </div>
+    </div>
+  </div>
+  <!-- Section 1: Features -->
+  <section
+    id="nxl-masters-features"
+    class="py-24 bg-surface-container-lowest scroll-mt-24"
+  >
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div
+          class="p-8 bg-surface border border-white/5 hover:border-primary/50 transition-all group rounded-xl"
+        >
+          <mat-icon
+            svgIcon="trophy"
+            class="text-4xl-icon text-primary group-hover:scale-110 transition-transform"
+          ></mat-icon>
+          <h3 class="text-lg font-black uppercase tracking-tight mb-2">Liga mensual</h3>
+          <p class="text-sm text-on-surface-variant">
+            Ciclos de competencia mensuales con ranking dinámico.
+          </p>
+        </div>
+        <div
+          class="p-8 bg-surface border border-white/5 hover:border-primary/50 transition-all group rounded-xl"
+        >
+          <mat-icon
+            svgIcon="calendar_month"
+            class="text-4xl-icon text-primary group-hover:scale-110 transition-transform"
+          ></mat-icon>
+          <h3 class="text-lg font-black uppercase tracking-tight mb-2">8 torneos</h3>
+          <p class="text-sm text-on-surface-variant">
+            Doble oportunidad semanal para sumar puntos críticos.
+          </p>
+        </div>
+        <div
+          class="p-8 bg-surface border border-white/5 hover:border-primary/50 transition-all group rounded-xl"
+        >
+          <mat-icon
+            svgIcon="swords"
+            class="text-4xl-icon text-primary group-hover:scale-110 transition-transform"
+          ></mat-icon>
+          <h3 class="text-lg font-black uppercase tracking-tight mb-2">Dual Format</h3>
+          <p class="text-sm text-on-surface-variant">
+            Lo mejor de Pokémon TCG y Magic: The Gathering.
+          </p>
+        </div>
+        <div
+          class="p-8 bg-surface border border-white/5 hover:border-primary/50 transition-all group rounded-xl"
+        >
+          <mat-icon
+            svgIcon="stars"
+            class="text-4xl-icon text-primary group-hover:scale-110 transition-transform"
+          ></mat-icon>
+          <h3 class="text-lg font-black uppercase tracking-tight mb-2">Gran Final</h3>
+          <p class="text-sm text-on-surface-variant">
+            Suma participación y asegura tu plaza en el evento estelar.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section 2: Timeline -->
+  <section class="py-24 bg-background scroll-mt-24">
+    <div class="container mx-auto px-6">
+      <h2
+        class="text-3xl font-black uppercase tracking-tighter mb-16 border-l-4 border-primary pl-6"
+      >
+        Calendario de la Liga
+      </h2>
+      <div class="relative">
+        <div
+          class="absolute top-1/2 left-0 w-full h-px bg-white/10 -translate-y-1/2 hidden md:block"
+        ></div>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+          <!-- Week 1 -->
+          <div class="relative z-10">
+            <div
+              class="bg-surface border border-white/10 p-6 rounded-xl hover:scale-105 transition-transform bg-primary-black"
+            >
+              <span
+                class="text-primary font-black text-xs uppercase tracking-widest block mb-4"
+                >Semana 1</span
+              >
+              <div class="space-y-2">
+                <div class="text-sm font-bold border-b border-white/5 pb-2">Torneo 1</div>
+                <div class="text-sm font-bold">Torneo 2</div>
+              </div>
+            </div>
+          </div>
+          <!-- Week 2 -->
+          <div class="relative z-10">
+            <div
+              class="bg-surface border border-white/10 p-6 rounded-xl hover:scale-105 transition-transform bg-primary-black"
+            >
+              <span
+                class="text-primary font-black text-xs uppercase tracking-widest block mb-4"
+                >Semana 2</span
+              >
+              <div class="space-y-2">
+                <div class="text-sm font-bold border-b border-white/5 pb-2">Torneo 3</div>
+                <div class="text-sm font-bold">Torneo 4</div>
+              </div>
+            </div>
+          </div>
+          <!-- Week 3 -->
+          <div class="relative z-10">
+            <div
+              class="bg-surface border border-white/10 p-6 rounded-xl hover:scale-105 transition-transform bg-primary-black"
+            >
+              <span
+                class="text-primary font-black text-xs uppercase tracking-widest block mb-4"
+                >Semana 3</span
+              >
+              <div class="space-y-2">
+                <div class="text-sm font-bold border-b border-white/5 pb-2">Torneo 5</div>
+                <div class="text-sm font-bold">Torneo 6</div>
+              </div>
+            </div>
+          </div>
+          <!-- Week 4 -->
+          <div class="relative z-10">
+            <div
+              class="bg-surface border border-white/10 p-6 rounded-xl hover:scale-105 transition-transform bg-primary-black"
+            >
+              <span
+                class="text-primary font-black text-xs uppercase tracking-widest block mb-4"
+                >Semana 4</span
+              >
+              <div class="space-y-2">
+                <div class="text-sm font-bold border-b border-white/5 pb-2">Torneo 7</div>
+                <div class="text-sm font-bold">Torneo 8</div>
+              </div>
+            </div>
+          </div>
+          <!-- Grand Finale -->
+          <div class="relative z-10">
+            <div
+              class="bg-primary border border-primary p-6 rounded-xl shadow-[0_0_30px_-5px_rgba(19,127,236,0.5)] hover:scale-110 transition-transform"
+            >
+              <span
+                class="text-white font-black text-xs uppercase tracking-widest block mb-4"
+                >Final</span
+              >
+              <div class="text-lg font-black text-white italic uppercase tracking-tight">
+                Gran Final NXLV
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section 3: Bolsa Acumulada -->
+  <section class="py-32 relative overflow-hidden bg-surface-container-low">
+    <div class="absolute inset-0 opacity-10">
+      <div
+        class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,var(--tw-gradient-from)_0%,transparent_70%)] from-tertiary"
+      ></div>
+    </div>
+    <div class="container mx-auto px-6 relative z-10">
+      <div
+        class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12 bg-background/50 backdrop-blur-xl p-12 rounded-3xl border border-tertiary/20"
+      >
+        <div class="text-center md:text-left space-y-4 flex-1">
+          <h2 class="text-tertiary text-7xl font-black tracking-tighter gold-glow italic">
+            20%
+          </h2>
+          <h3 class="text-2xl font-black uppercase tracking-tight">
+            De cada inscripción
+          </h3>
+          <p class="text-on-surface-variant leading-relaxed">
+            El 20% de cada inscripción se destina directamente a la bolsa acumulada. La
+            bolsa crece semana tras semana y se entrega íntegra en la Gran Final Mensual.
+          </p>
+        </div>
+        <div class="flex-shrink-0 grid grid-cols-2 gap-4">
+          <div
+            class="w-32 h-32 bg-tertiary/10 rounded-2xl flex items-center justify-center border border-tertiary/30"
+          >
+            <mat-icon
+              svgIcon="payments"
+              class="text-5xl-icon text-tertiary"
+              style="font-variation-settings: 'FILL' 1"
+            ></mat-icon>
+          </div>
+          <div
+            class="w-32 h-32 bg-tertiary/10 rounded-2xl flex items-center justify-center border border-tertiary/30"
+          >
+            <mat-icon
+              svgIcon="inventory_2"
+              class="text-5xl-icon text-tertiary"
+              style="font-variation-settings: 'FILL' 1"
+            ></mat-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section 4: Cómo Clasificas -->
+  <section id="nxl-masters-classification" class="py-24 bg-background">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-black uppercase tracking-tighter mb-16 italic">
+        ¿Cómo <span class="text-primary">Clasificas</span>?
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto relative">
+        <div class="space-y-6">
+          <div
+            class="w-20 h-20 bg-surface-container-high rounded-full flex items-center justify-center mx-auto border-2 border-primary/20 font-black text-2xl text-primary"
+          >
+            1
+          </div>
+          <h4 class="text-lg font-black uppercase tracking-tight">Inscríbete</h4>
+          <p class="text-sm text-on-surface-variant">
+            Únete a cualquiera de nuestros 8 torneos clasificatorios mensuales.
+          </p>
+        </div>
+        <div class="space-y-6">
+          <div
+            class="w-20 h-20 bg-surface-container-high rounded-full flex items-center justify-center mx-auto border-2 border-primary/20 font-black text-2xl text-primary"
+          >
+            2
+          </div>
+          <h4 class="text-lg font-black uppercase tracking-tight">Participa</h4>
+          <p class="text-sm text-on-surface-variant">
+            Juega en al menos 4 eventos durante el mes en curso.
+          </p>
+        </div>
+        <div class="space-y-6 relative">
+          <div
+            class="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto border-2 border-primary font-black text-2xl text-primary"
+          >
+            3
+          </div>
+          <h4 class="text-lg font-black uppercase tracking-tight">Obtén tu plaza</h4>
+          <p class="text-sm text-on-surface-variant">
+            ¡Felicidades! Estás dentro de la Gran Final NXLV.
+          </p>
+        </div>
+        <div
+          class="absolute -top-4 -right-4 bg-tertiary text-on-tertiary px-3 py-1 rounded text-[10px] font-black uppercase tracking-widest animate-pulse"
+        >
+          Clasificado
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section 5: Filosofía -->
+  <section class="py-24 bg-surface-container-lowest">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-surface-container-high p-1 border-l-2 border-primary">
+          <div class="p-8 space-y-4">
+            <span class="text-[12px] font-black text-primary uppercase tracking-[0.3em]"
+              >Principio 01</span
+            >
+            <h4 class="text-xl font-bold leading-tight">
+              Más participación = más clasificados
+            </h4>
+            <p class="text-xs text-on-surface-variant uppercase tracking-wider">
+              Democratizando la elite
+            </p>
+          </div>
+        </div>
+        <div class="bg-surface-container-high p-1 border-l-2 border-primary">
+          <div class="p-8 space-y-4">
+            <span class="text-[12px] font-black text-primary uppercase tracking-[0.3em]"
+              >Principio 02</span
+            >
+            <h4 class="text-xl font-bold leading-tight">
+              Más jugadores = mejor experiencia
+            </h4>
+            <p class="text-xs text-on-surface-variant uppercase tracking-wider">
+              Creciendo la comunidad
+            </p>
+          </div>
+        </div>
+        <div class="bg-surface-container-high p-1 border-l-2 border-primary">
+          <div class="p-8 space-y-4">
+            <span class="text-[12px] font-black text-primary uppercase tracking-[0.3em]"
+              >Principio 03</span
+            >
+            <h4 class="text-xl font-bold leading-tight">
+              Más torneos = bolsa más grande
+            </h4>
+            <p class="text-xs text-on-surface-variant uppercase tracking-wider">
+              Premios exponenciales
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section 6: Premios -->
+  <section class="py-24 bg-background">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16 space-y-2">
+        <h2 class="text-4xl font-black uppercase tracking-tighter italic">
+          Premios del <span class="text-tertiary">Campeón</span>
+        </h2>
+        <p class="text-on-surface-variant uppercase text-xs tracking-[0.4em]">
+          The Legend's Spoils
+        </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <!-- Prize 1 -->
+        <div
+          class="bg-surface border border-tertiary/10 p-8 rounded-xl text-center group hover:bg-tertiary transition-all duration-500"
+        >
+          <mat-icon
+            svgIcon="workspace_premium"
+            class="text-4xl-icon text-tertiary group-hover:text-on-tertiary mb-6 transition-colors"
+          ></mat-icon>
+          <h5
+            class="text-sm font-black uppercase tracking-tight group-hover:text-on-tertiary"
+          >
+            Título Oficial NXLV Champion
+          </h5>
+        </div>
+        <!-- Prize 2 -->
+        <div
+          class="bg-surface border border-tertiary/10 p-8 rounded-xl text-center group hover:bg-tertiary transition-all duration-500"
+        >
+          <mat-icon
+            svgIcon="photo_camera"
+            class="text-4xl-icon text-tertiary group-hover:text-on-tertiary mb-6 transition-colors"
+          ></mat-icon>
+          <h5
+            class="text-sm font-black uppercase tracking-tight group-hover:text-on-tertiary"
+          >
+            Foto en el Muro de Campeones
+          </h5>
+        </div>
+        <!-- Prize 3 -->
+        <div
+          class="bg-surface border border-tertiary/10 p-8 rounded-xl text-center group hover:bg-tertiary transition-all duration-500"
+        >
+          <mat-icon
+            svgIcon="confirmation_number"
+            class="text-4xl-icon text-tertiary group-hover:text-on-tertiary mb-6 transition-colors"
+          ></mat-icon>
+          <h5
+            class="text-sm font-black uppercase tracking-tight group-hover:text-on-tertiary"
+          >
+            Próximo Torneo Gratis
+          </h5>
+        </div>
+        <!-- Prize 4 -->
+        <div
+          class="bg-surface border border-tertiary/10 p-8 rounded-xl text-center group hover:bg-tertiary transition-all duration-500"
+        >
+          <mat-icon
+            svgIcon="sell"
+            class="text-4xl-icon text-tertiary group-hover:text-on-tertiary mb-6 transition-colors"
+          ></mat-icon>
+          <h5
+            class="text-sm font-black uppercase tracking-tight group-hover:text-on-tertiary"
+          >
+            10% Descuento Producto Sellado
+          </h5>
+        </div>
+        <!-- Prize 5 -->
+        <div
+          class="bg-surface border border-tertiary/10 p-8 rounded-xl text-center group hover:bg-tertiary transition-all duration-500"
+        >
+          <mat-icon
+            svgIcon="shield"
+            class="text-4xl-icon text-tertiary group-hover:text-on-tertiary mb-6 transition-colors"
+          ></mat-icon>
+          <h5
+            class="text-sm font-black uppercase tracking-tight group-hover:text-on-tertiary"
+          >
+            Plaza Reservada Defensor
+          </h5>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section 7: FAQ -->
+  <section class="py-24 bg-surface-container-lowest">
+    <div class="container mx-auto px-6 max-w-3xl">
+      <h2 class="text-3xl font-black uppercase tracking-tighter mb-12 text-center italic">
+        Preguntas Frecuentes
+      </h2>
+      <div class="space-y-4">
+        <details
+          class="group bg-surface rounded-lg border border-white/5 overflow-hidden"
+        >
+          <summary
+            class="flex justify-between items-center p-6 cursor-pointer hover:bg-white/5 transition-colors list-none"
+          >
+            <span class="font-bold uppercase tracking-tight text-sm"
+              >¿Cómo me inscribo a los torneos?</span
+            >
+            <mat-icon
+              svgIcon="keyboard_arrow_down"
+              class="text-on-surface-variant transition-transform group-open:rotate-180"
+            ></mat-icon>
+          </summary>
+          <div
+            class="p-6 pt-0 text-on-surface-variant text-sm leading-relaxed border-t border-white/5"
+          >
+            Puedes inscribirte directamente en nuestra tienda física Next Level o a través
+            de nuestro portal de eventos online. Cada torneo tiene un cupo limitado, así
+            que recomendamos reservar con antelación.
+          </div>
+        </details>
+        <details
+          class="group bg-surface rounded-lg border border-white/5 overflow-hidden"
+        >
+          <summary
+            class="flex justify-between items-center p-6 cursor-pointer hover:bg-white/5 transition-colors list-none"
+          >
+            <span class="font-bold uppercase tracking-tight text-sm"
+              >¿Cuáles son los requisitos de los mazos?</span
+            >
+            <mat-icon
+              svgIcon="keyboard_arrow_down"
+              class="text-on-surface-variant transition-transform group-open:rotate-180"
+            ></mat-icon>
+          </summary>
+          <div
+            class="p-6 pt-0 text-on-surface-variant text-sm leading-relaxed border-t border-white/5"
+          >
+            Para Pokémon TCG seguimos el formato Estándar vigente. Para Magic: The
+            Gathering, los torneos suelen ser formato Modern o Pioneer dependiendo de la
+            semana programada. Consulta el calendario específico para más detalles.
+          </div>
+        </details>
+        <details
+          class="group bg-surface rounded-lg border border-white/5 overflow-hidden"
+        >
+          <summary
+            class="flex justify-between items-center p-6 cursor-pointer hover:bg-white/5 transition-colors list-none"
+          >
+            <span class="font-bold uppercase tracking-tight text-sm"
+              >¿Cuándo se entrega la bolsa acumulada?</span
+            >
+            <mat-icon
+              svgIcon="keyboard_arrow_down"
+              class="text-on-surface-variant transition-transform group-open:rotate-180"
+            ></mat-icon>
+          </summary>
+          <div
+            class="p-6 pt-0 text-on-surface-variant text-sm leading-relaxed border-t border-white/5"
+          >
+            La bolsa total se entrega íntegramente al finalizar la Gran Final Mensual,
+            repartiéndose entre los mejores jugadores del evento final según el standing.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+  <!-- Section 8: Final CTA -->
+  <section class="py-32 relative overflow-hidden">
+    <img
+      alt="Final Call to Action Background"
+      class="absolute inset-0 w-full h-full object-cover grayscale opacity-20"
+      data-alt="A wide-angle, low-key photograph of a professional esports arena stage bathed in dramatic dark blue lighting. The center of the stage features a sleek, geometric trophy stand with a silver cup illuminated by a sharp top-down spotlight. The background is a massive dark screen displaying glowing blue particles and high-contrast championship logos. The overall atmosphere is intense, prestigious, and cinematic, emphasizing the competitive peak of gaming."
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSpeR9x1W8WdacFew01MTmJf6v1asXgAeSwEVFZwWfHfxSx8YaB6_B1a_CnJTSyzukCBfZU1FboFTDLjjCbUTE6-YMqYe1zdAIvoQkKKL8ldpMOIUr_x7eKaDGEWVfejamHgumP8yHEoJL-yTNqE2fmcXjG8ssVj6TLavK4dZ-N6HVAxEolWeOX-3mPDDYBiTIiCtNuqevk18LbjeuHRmp9bqa7kBNSuU7N2r98Mhz9N8ljwbijnWh5zQFFiujCkP8DOHRZAL-WCk"
+    />
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"
+    ></div>
+    <div class="container mx-auto px-6 relative z-10 text-center space-y-8">
+      <h2
+        class="text-4xl md:text-6xl font-black uppercase tracking-tighter max-w-4xl mx-auto italic"
+      >
+        ¿Tienes lo necesario para convertirte en la
+        <span class="text-primary">leyenda del mes</span>?
+      </h2>
+      <p class="text-xl text-on-surface-variant max-w-2xl mx-auto">
+        Demuestra tu nivel y conquista el título de NXLV Masters Champion. Las
+        inscripciones para la próxima semana ya están abiertas.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button
+          class="px-10 py-5 bg-primary hover:scale-105 transition-all text-white font-black uppercase tracking-[0.2em] rounded"
+        >
+          Ver próximos torneos
+        </button>
+        <button
+          class="px-10 py-5 bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-on-surface font-black uppercase tracking-[0.2em] rounded"
+        >
+          Contactar a Next Level
+        </button>
+      </div>
+    </div>
+  </section>
+</main>

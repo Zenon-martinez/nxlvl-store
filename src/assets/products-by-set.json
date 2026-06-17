@@ -4,7 +4,8 @@
       "id": "me4",
       "name": "Chaos Rising",
       "code": "me4",
-      "releaseDate": "22-05-2026"
+      "releaseDate": "22-05-2026",
+      "symbol": "CRI"
     },
     "sections": [
       {
@@ -666,6 +667,7 @@
       "id": "me3",
       "name": "Perfect Order",
       "code": "me3",
+      "symbol": "POR",
       "releaseDate": "2026-03-27"
     },
     "sections": [
@@ -1217,12 +1219,13 @@
       }
     ]
   },
-  "me2": {
+  "me2pt5": {
     "expansion": {
-      "id": "me2",
+      "id": "me2pt5",
       "name": "Ascended Heroes",
-      "code": "me2",
-      "releaseDate": "2026-03-27"
+      "code": "me2pt5",
+      "releaseDate": "2026-03-27",
+      "symbol": "ASC"
     },
     "sections": [
       {
@@ -1552,6 +1555,282 @@
 
             "inventory": {
               "stock": 7,
+              "status": "in_stock",
+              "reserved": 0,
+              "condition": "sealed"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "me2": {
+    "expansion": {
+      "id": "me2",
+      "name": "Phantasmal Flames",
+      "code": "me2",
+      "releaseDate": "2025-11-14",
+      "symbol": "PFL"
+    },
+    "sections": [
+      {
+        "type": "booster_box",
+        "label": {
+          "es": "Booster Boxes",
+          "en": "Booster Boxes"
+        },
+        "order": 1,
+        "products": [
+          {
+            "id": "booster-box-phantasmal-flames",
+            "name": "Booster Box - Phantasmal Flames",
+            "type": "tcg-sealed",
+            "sealedType": "booster_box",
+            "language": "en",
+            "serie": "Megaevolution",
+            "expansion": {
+              "code": "me2",
+              "name": "Phantasmal Flames"
+            },
+
+            "pricing": {
+              "price": 7000,
+              "currency": "MXN"
+            },
+
+            "media": {
+              "images": [
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1780016052/booster-display-box-en_jdyf0h.webp",
+                  "type:": "main"
+                }
+              ]
+            },
+            "contents": {
+              "boosterPacks": 36,
+              "promoCards": 0
+            },
+
+            "pullRates": {
+              "avgHits": 2.5
+            },
+
+            "isPokemonCenterExclusive": false,
+
+            "releaseDate": "14-11-2025",
+
+            "inventory": {
+              "stock": 0,
+              "status": "out_of_stock",
+              "reserved": 0,
+              "condition": "sealed"
+            },
+            "description": {
+              "short": "Juego de estrategia donde los jugadores compiten por colonizar una isla.",
+              "long": "Envuelto en el ardor de sus llamas azules, Mega-Charizard X ex atraviesa un oscuro campo de combate y levanta vuelo para acechar a sus rivales desde lo más alto. Entre las sombras, la siniestra silueta de Mega-Gengar ex emerge, provocando un gélido escalofrío capaz de combatir el intenso calor. Conforme ambos preparan sus ataques, Mega-Heracross ex, Mega-Lopunny ex y muchos otros Pokémon se posicionan para demostrar todo su poder en la expansión Megaevolución-Llamaradas Fantasmales de JCC Pokémon.",
+
+              "components": [
+                "36 sobres de refuerzo de Megaevolution - Phantasmal Flames de Pokémon TCG",
+                "Cada sobre de refuerzo contiene 10 cartas, 1 Energía Básica y 1 carta con código para JCC Pokémon Live. Las cartas varían según el sobre."
+              ],
+              "highlights": [
+                "36 Booster Packs incluidos",
+                "Ideal para apertura masiva de cartas (mass opening)",
+                "Mayor probabilidad de obtener cartas raras y pulls importantes",
+                "Producto principal para coleccionistas y jugadores competitivos",
+                "Excelente relación costo por sobre"
+              ]
+            },
+            "additionalInfo": {
+              "weight": {
+                "value": 1.2,
+                "unit": "kg"
+              },
+              "dimensions": {
+                "width": 29.5,
+                "height": 29.5,
+                "depth": 7,
+                "unit": "cm"
+              },
+              "material": "Cartón, madera y plástico",
+              "tags": ["Phantasmal Flames", "Megaevolution", "I"]
+            }
+          }
+        ]
+      },
+      {
+        "type": "elite_trainer_box",
+        "label": {
+          "es": "Elite Trainer Boxes",
+          "en": "Elite Trainer Boxes"
+        },
+        "order": 2,
+        "products": [
+          {
+            "id": "etb-phantasmal-flames",
+            "name": "Elite Trainer Box - Phantasmal Flames",
+            "type": "tcg-sealed",
+            "sealedType": "elite_trainer_box",
+            "language": "en",
+            "serie": "Megaevolution",
+            "expansion": {
+              "code": "me2",
+              "name": "Phantasmal Flames"
+            },
+
+            "pricing": {
+              "price": 1700,
+              "currency": "MXN"
+            },
+
+            "media": {
+              "images": [
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156515/ETB_EN_l8hmb9.png",
+                  "type:": "main"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156510/Elite_trainer_box_2_kwrfgq.jpg",
+                  "type:": "gallery"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156510/Elite_trainer_box_1_xarbb2.jpg",
+                  "type:": "gallery"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156513/Elite_trainer_box_4_y0hxnl.jpg",
+                  "type:": "gallery"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156513/Elite_trainer_box_5_bh6lt9.jpg",
+                  "type:": "gallery"
+                }
+              ]
+            },
+            "description": {
+              "short": "Contiene todo lo necesario para mejorar tu experiencia de juego.",
+              "long": "Envuelto en el ardor de sus llamas azules, Mega-Charizard X ex atraviesa un oscuro campo de combate y levanta vuelo para acechar a sus rivales desde lo más alto. Entre las sombras, la siniestra silueta de Mega-Gengar ex emerge, provocando un gélido escalofrío capaz de combatir el intenso calor. Conforme ambos preparan sus ataques, Mega-Heracross ex, Mega-Lopunny ex y muchos otros Pokémon se posicionan para demostrar todo su poder en la expansión Megaevolución-Llamaradas Fantasmales de JCC Pokémon.",
+
+              "components": [
+                "9 sobres de refuerzo de Megaevolution - Phantasmal Flames de Pokémon TCG",
+                "Cada sobre de refuerzo contiene 10 cartas, 1 Energía Básica y 1 carta con código para JCC Pokémon Live. Las cartas varían según el sobre.",
+                "1 carta promocional de Pokémon TCG exclusiva de esta caja",
+                "65 fundas de cartas con diseño exclusivo de Pokémon TCG",
+                "45 cartas de Energía Básica con diseño exclusivo de Pokémon TCG",
+                "1 dado de seis caras con diseño exclusivo de Pokémon TCG",
+                "1 moneda de plástico con diseño exclusivo de Pokémon TCG",
+                "1 guía de juego con consejos y estrategias para jugar con tu nuevo mazo",
+                "1 caja de mazo con diseño exclusivo de Pokémon TCG para guardar tus cartas",
+                "4 divisores de cartas con diseño exclusivo de Pokémon TCG para organizar tu mazo",
+                "1 carta con código para desbloquear contenido digital exclusivo en JCC Pokémon Live"
+              ],
+              "highlights": [
+                "Booster Packs incluidos",
+                "Carta promocional exclusiva",
+                "Sleeves y accesorios oficiales para jugar",
+                "Caja de almacenamiento y organización",
+                "Diseño temático de la expansión",
+                "Producto premium ideal para jugadores y coleccionistas"
+              ]
+            },
+            "additionalInfo": {
+              "weight": {
+                "value": 1.2,
+                "unit": "kg"
+              },
+              "dimensions": {
+                "width": 29.5,
+                "height": 29.5,
+                "depth": 7,
+                "unit": "cm"
+              },
+              "material": "Cartón, madera y plástico",
+              "tags": ["Phantasmal Flames", "Megaevolution", "J"]
+            },
+            "pullRates": {
+              "avgHits": 2.5
+            },
+
+            "isPokemonCenterExclusive": false,
+
+            "releaseDate": "22-05-2026",
+
+            "inventory": {
+              "stock": 0,
+              "status": "out_of_stock",
+              "reserved": 0,
+              "condition": "sealed"
+            }
+          }
+        ]
+      },
+      {
+        "type": "build_battle",
+        "label": {
+          "es": "Combina y Combate",
+          "en": "Build and Battle"
+        },
+        "order": 3,
+        "products": [
+          {
+            "id": "build-battle-phantasmal-flames",
+            "name": "Build and Battle - Phantasmal Flames",
+            "language": "en",
+            "type": "tcg-sealed",
+            "sealedType": "build_battle",
+            "serie": "Megaevolution",
+
+            "expansion": {
+              "code": "me2",
+              "name": "Phantasmal Flames"
+            },
+
+            "pricing": {
+              "price": 600,
+              "currency": "MXN"
+            },
+
+            "media": {
+              "images": [
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156509/build_and_battle_xi5npr.jpg",
+                  "type:": "main"
+                },
+                {
+                  "url": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156509/build_and_battle_1_wu2qj7.jpg",
+                  "type:": "gallery"
+                }
+              ]
+            },
+            "description": {
+              "short": "Todo lo que necesitas para comenzar a jugar.",
+              "long": "Envuelto en el ardor de sus llamas azules, Mega-Charizard X ex atraviesa un oscuro campo de combate y levanta vuelo para acechar a sus rivales desde lo más alto. Entre las sombras, la siniestra silueta de Mega-Gengar ex emerge, provocando un gélido escalofrío capaz de combatir el intenso calor. Conforme ambos preparan sus ataques, Mega-Heracross ex, Mega-Lopunny ex y muchos otros Pokémon se posicionan para demostrar todo su poder en la expansión Megaevolución-Llamaradas Fantasmales de JCC Pokémon.",
+
+              "components": [
+                "4 sobres de refuerzo de Megaevolution - Phantasmal Flames de Pokémon TCG",
+                "Cada sobre de refuerzo contiene 10 cartas, 1 Energía Básica y 1 carta con código para JCC Pokémon Live. Las cartas varían según el sobre.",
+                "1 carta promocional de Pokémon TCG exclusiva de esta caja",
+                "1 mazo inicial preconstruido con 60 cartas listo para jugar",
+                "Incluye reglas y guía para construir tu propio mazo"
+              ],
+              "highlights": [
+                "Booster Packs incluidos",
+                "Carta promocional exclusiva",
+                "Mazo inicial preconstruido listo para jugar",
+                "Guía para construir tu propio mazo",
+                "Producto ideal para nuevos jugadores y aquellos que buscan una experiencia completa"
+              ]
+            },
+            "pullRates": {
+              "avgHits": 2.5
+            },
+
+            "isPokemonCenterExclusive": false,
+
+            "releaseDate": "14-12-2025",
+
+            "inventory": {
+              "stock": 1,
               "status": "in_stock",
               "reserved": 0,
               "condition": "sealed"

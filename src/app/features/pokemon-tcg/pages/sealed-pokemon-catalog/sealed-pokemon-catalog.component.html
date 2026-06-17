@@ -6,23 +6,25 @@
     <section class="container mx-auto px-6 py-20 space-y-24">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
         @for (section of productSections; track section) {
-          <div class="space-y-10">
-            <div class="flex items-baseline gap-4">
-              <h2
-                class="text-2xl font-black uppercase tracking-widest text-white whitespace-nowrap"
-              >
-                {{ section.label.en }}
-              </h2>
-              <div class="flex-grow h-px bg-white/10"></div>
+          @if (section.products.length) {
+            <div class="space-y-10">
+              <div class="flex items-baseline gap-4">
+                <h2
+                  class="text-2xl font-black uppercase tracking-widest text-white whitespace-nowrap"
+                >
+                  {{ section.label.en }}
+                </h2>
+                <div class="flex-grow h-px bg-white/10"></div>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- UPC -->
+                <app-tcg-product-card
+                  [product]="product"
+                  *ngFor="let product of section.products"
+                ></app-tcg-product-card>
+              </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <!-- UPC -->
-              <app-tcg-product-card
-                [product]="product"
-                *ngFor="let product of section.products"
-              ></app-tcg-product-card>
-            </div>
-          </div>
+          }
         }
       </div>
     </section>

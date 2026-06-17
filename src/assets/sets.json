@@ -8,7 +8,8 @@
       "tcg": {
         "game": "pokemon",
         "era": "Mega Evolution",
-        "setCode": "Me4"
+        "setCode": "Me4",
+        "symbol": "CRI"
       },
 
       "release": {
@@ -65,7 +66,8 @@
       "tcg": {
         "game": "pokemon",
         "era": "Mega Evolution",
-        "setCode": "Me3"
+        "setCode": "Me3",
+        "symbol": "POR"
       },
 
       "release": {
@@ -115,14 +117,15 @@
       }
     },
     {
-      "id": "me2",
+      "id": "me2pt5",
       "name": "Ascended Heroes",
       "slug": "ascended-heroes",
 
       "tcg": {
         "game": "pokemon",
         "era": "Mega Evolution",
-        "setCode": "Me2"
+        "setCode": "Me2",
+        "symbol": "ASC"
       },
 
       "release": {
@@ -159,6 +162,112 @@
       "stats": {
         "totalCards": 295,
         "secretRares": 35
+      },
+
+      "meta": {
+        "language": "en",
+        "region": "international"
+      }
+    },
+    {
+      "id": "me2",
+      "name": "Phantasmal Flames",
+      "slug": "phantasmal-flames",
+
+      "tcg": {
+        "game": "pokemon",
+        "era": "Mega Evolution",
+        "setCode": "Me2",
+        "symbol": "PFL"
+      },
+
+      "release": {
+        "date": "2025-11-14",
+        "formatted": "Noviembre 2025"
+      },
+
+      "status": {
+        "availability": "available",
+        "isNew": true,
+        "isComingSoon": false,
+        "isTrending": false
+      },
+
+      "media": {
+        "coverImage": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156516/Phantasmal_Flames_Logo_arp7dq.png",
+        "logo": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156516/Phantasmal_Flames_Logo_arp7dq.png",
+        "symbol": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156516/Phantasmal_Flames_Logo_arp7dq.png",
+        "background": {
+          "type": "artwork",
+          "image": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156516/Phantasmal_Flames_Logo_arp7dq.png"
+        }
+      },
+
+      "ui": {
+        "badges": [],
+        "cta": {
+          "label": "View Set",
+          "icon": "chevron_right",
+          "action": "navigate"
+        }
+      },
+
+      "stats": {
+        "totalCards": 130,
+        "secretRares": 36
+      },
+
+      "meta": {
+        "language": "en",
+        "region": "international"
+      }
+    },
+    {
+      "id": "me1",
+      "name": "Mega Evolution",
+      "slug": "mega-evolution",
+
+      "tcg": {
+        "game": "pokemon",
+        "era": "Mega Evolution",
+        "setCode": "Me1",
+        "symbol": "MEG"
+      },
+
+      "release": {
+        "date": "2025-09-26",
+        "formatted": "Septiembre 2025"
+      },
+
+      "status": {
+        "availability": "available",
+        "isNew": true,
+        "isComingSoon": false,
+        "isTrending": false
+      },
+
+      "media": {
+        "coverImage": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156572/Mega_Evolution_Logo_pbvmzp.png",
+        "logo": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156572/Mega_Evolution_Logo_pbvmzp.png",
+        "symbol": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156572/Mega_Evolution_Logo_pbvmzp.png",
+        "background": {
+          "type": "artwork",
+          "image": "https://res.cloudinary.com/dco9ajsmv/image/upload/q_auto/f_auto/v1777156572/Mega_Evolution_Logo_pbvmzp.png"
+        }
+      },
+
+      "ui": {
+        "badges": [],
+        "cta": {
+          "label": "View Set",
+          "icon": "chevron_right",
+          "action": "navigate"
+        }
+      },
+
+      "stats": {
+        "totalCards": 188,
+        "secretRares": 56
       },
 
       "meta": {

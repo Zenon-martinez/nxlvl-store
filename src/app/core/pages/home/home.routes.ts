@@ -47,6 +47,16 @@ export const HOME_ROUTES: Routes = [
         (m) => m.POKEMON_TCG_ROUTES,
       ),
   },
+  {
+    path: 'nxl-masters',
+    data: {
+      breadcrumb: 'NXL Masters',
+    },
+    loadChildren: () =>
+      import('../../../features/events-tournaments/tournaments.routes').then(
+        (m) => m.EVENTS_ROUTES,
+      ),
+  },
 
   /* // ===== DETALLE CARTA =====
   {

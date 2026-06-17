@@ -11,6 +11,9 @@ module.exports = {
         error: '#ef4444',
         'error-container': '#991b1b',
         outline: '#334155',
+        'on-tertiary-fixed-variant': '#b45309',
+        'tertiary-container': '#d97706',
+        tertiary: '#f59e0b',
       },
       fontFamily: {
         display: ['Inter', 'sans-serif'],

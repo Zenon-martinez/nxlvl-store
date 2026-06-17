@@ -91,6 +91,13 @@ export class IconService {
       'zoom_in',
       'pokeball',
       'arrow-forward',
+      'stars',
+      'shield',
+      'keyboard_arrow_down',
+      'photo_camera',
+      'inventory_2',
+      'swords',
+      'crown',
     ];
 
     icons.forEach((icon) => {
