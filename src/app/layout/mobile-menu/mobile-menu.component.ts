@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { MobileMenuStore } from '../store/mobile-menu.store';
 import { MatIcon } from '@angular/material/icon';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-mobile-menu',
@@ -11,6 +11,13 @@ import { RouterModule } from '@angular/router';
 })
 export class MobileMenuComponent {
   mobileMenu = inject(MobileMenuStore);
+  private readonly router = inject(Router);
+
+  goToCommunity(event: Event): void {
+    event.preventDefault();
+    this.mobileMenu.close();
+    void this.router.navigate(['/about/community']);
+  }
 
   /* @HostListener('document:keydown.escape')
   esc() {
