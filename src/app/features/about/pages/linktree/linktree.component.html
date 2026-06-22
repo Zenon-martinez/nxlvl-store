@@ -7,7 +7,9 @@
         class="w-24 h-24 bg-gradient-to-br rounded-xl flex items-center justify-center relative z-10 p-0.5"
       >
         <div
-          class="w-full h-full bg-obsidian-surface rounded-[10px] flex items-center justify-center"
+          class="w-full h-full bg-obsidian-surface rounded-[10px] flex items-center justify-center cursor-pointer"
+          role="none"
+          (click)="goToHome()"
         >
           <img
             class="w-24 object-cover rounded-lg"
@@ -362,16 +364,16 @@
   <!-- Social Links -->
   <section class="flex justify-center gap-6 py-stack-md">
     <a
-      class="w-14 h-14 rounded-full glass-card flex items-center justify-center text-neon-purple hover:scale-110 active:scale-95 duration-300"
+      class="w-24 h-24 rounded-full glass-card flex items-center justify-center text-neon-purple hover:scale-110 active:scale-95 duration-300"
       href="https://www.facebook.com/nxlv.vg"
     >
-      <mat-icon svgIcon="facebook" class="text-4xl-icon"></mat-icon>
+      <mat-icon svgIcon="facebook" class="text-8xl-icon"></mat-icon>
     </a>
     <a
-      class="w-14 h-14 rounded-full glass-card flex items-center justify-center text-neon-purple hover:scale-110 active:scale-95 duration-300"
+      class="w-24 h-24 rounded-full glass-card flex items-center justify-center text-neon-purple hover:scale-110 active:scale-95 duration-300"
       href="https://www.instagram.com/nxlv.store"
     >
-      <mat-icon svgIcon="instagram" class="text-4xl-icon"></mat-icon>
+      <mat-icon svgIcon="instagram" class="text-8xl-icon"></mat-icon>
     </a>
     <!-- <a
       class="w-14 h-14 rounded-full glass-card flex items-center justify-center text-neon-purple hover:scale-110 active:scale-95 duration-300"
