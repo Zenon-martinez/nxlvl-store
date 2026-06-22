@@ -57,6 +57,14 @@ export const HOME_ROUTES: Routes = [
         (m) => m.EVENTS_ROUTES,
       ),
   },
+  {
+    path: 'about',
+    data: {
+      breadcrumb: 'Sobre nosotros',
+    },
+    loadChildren: () =>
+      import('../../../features/about/about.routes').then((m) => m.ABOUT_ROUTES),
+  },
 
   /* // ===== DETALLE CARTA =====
   {

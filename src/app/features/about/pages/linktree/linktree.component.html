@@ -1,0 +1,389 @@
+<main class="max-w-[640px] mx-auto px-gutter py-stack-lg flex flex-col gap-stack-lg">
+  <!-- Hero Section -->
+  <section class="text-center flex flex-col gap-stack-md">
+    <div class="relative inline-block mx-auto mb-4">
+      <div class="absolute -inset-4 bg-electric-blue/20 blur-3xl rounded-full"></div>
+      <div
+        class="w-24 h-24 bg-gradient-to-br rounded-xl flex items-center justify-center relative z-10 p-0.5"
+      >
+        <div
+          class="w-full h-full bg-obsidian-surface rounded-[10px] flex items-center justify-center"
+        >
+          <img
+            class="w-24 object-cover rounded-lg"
+            alt="Poster oficial"
+            src="assets/logos/nextlevel.jpg"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col gap-2">
+      <h1
+        class="font-headline-lg-mobile text-headline-lg-mobile text-white tracking-tight"
+      >
+        NEXT LEVEL TCG
+      </h1>
+      <p class="font-label-caps text-label-caps text-electric-blue uppercase">
+        Pokémon • Magic • Juegos de Mesa
+      </p>
+    </div>
+    <div class="mt-2">
+      <p class="font-body-lg text-body-lg text-on-surface">
+        Tu comunidad de TCG en Huajuapan de León
+      </p>
+      <p class="font-body-md text-body-md text-on-surface-variant">
+        Torneos, eventos, preventas y más
+      </p>
+    </div>
+    <!-- Main CTA -->
+    <a
+      class="mt-4 animate-pulse-glow bg-electric-blue text-on-primary-container font-headline-md text-headline-md py-4 px-8 rounded-xl flex items-center justify-center gap-3 transition-transform hover:scale-[1.02] active:scale-95"
+    >
+      <span class="relative flex h-3 w-3">
+        <span
+          class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"
+        ></span>
+        <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+      </span>
+      🟢 Unirme a la comunidad
+    </a>
+  </section>
+  <!-- Link Cards Section -->
+  <section class="flex flex-col gap-stack-md">
+    <!-- Pokémon -->
+    <div class="glass-card rounded-2xl p-6 flex flex-col gap-4 shimmer">
+      <div class="flex justify-between items-start">
+        <div class="flex flex-col">
+          <span class="font-label-caps text-label-caps text-electric-blue mb-1"
+            >POKÉMON TCG</span
+          >
+          <h3 class="font-headline-md text-headline-md text-white">
+            Torneos, ligas y comunidad Pokémon
+          </h3>
+        </div>
+        <mat-icon svgIcon="pokeball" class="text-electric-blue text-3xl"></mat-icon>
+      </div>
+      <a
+        class="w-full py-3 bg-white/5 border border-white/10 hover:bg-white/10 rounded-lg text-center font-bold text-white transition-all"
+        href="#"
+        >Unirme</a
+      >
+    </div>
+    <!-- Magic -->
+    <div class="glass-card rounded-2xl p-6 flex flex-col gap-4 shimmer">
+      <div class="flex justify-between items-start">
+        <div class="flex flex-col">
+          <span class="font-label-caps text-label-caps text-neon-purple mb-1"
+            >MAGIC: THE GATHERING</span
+          >
+          <h3 class="font-headline-md text-headline-md text-white">
+            Commander, Standard y eventos
+          </h3>
+        </div>
+        <mat-icon svgIcon="star_shine" class="text-neon-purple text-3xl"></mat-icon>
+      </div>
+      <a
+        class="w-full py-3 bg-white/5 border border-white/10 hover:bg-white/10 rounded-lg text-center font-bold text-white transition-all"
+        href="#"
+        >Unirme</a
+      >
+    </div>
+    <!-- Board Games -->
+    <div class="glass-card rounded-2xl p-6 flex flex-col gap-4">
+      <div class="flex justify-between items-start">
+        <div class="flex flex-col">
+          <span class="font-label-caps text-label-caps text-on-surface-variant mb-1"
+            >JUEGOS DE MESA</span
+          >
+          <h3 class="font-headline-md text-headline-md text-white">
+            Descubre nuevos juegos y eventos
+          </h3>
+        </div>
+        <mat-icon svgIcon="casino" class="text-on-surface-variant text-3xl"></mat-icon>
+      </div>
+      <a
+        class="w-full py-3 bg-white/5 border border-white/10 hover:bg-white/10 rounded-lg text-center font-bold text-white transition-all"
+        routerLink="/board-games"
+        >Ver más</a
+      >
+    </div>
+    <!-- Catalog -->
+    <div class="neon-border-gradient rounded-2xl p-6 flex flex-col gap-4">
+      <div class="flex justify-between items-start">
+        <div class="flex flex-col">
+          <span class="font-label-caps text-label-caps text-white/60 mb-1"
+            >TIENDA ONLINE</span
+          >
+          <h3 class="font-headline-md text-headline-md text-white">
+            Pokémon, Magic, accesorios y más
+          </h3>
+        </div>
+        <mat-icon svgIcon="shopping_bag" class="text-electric-blue text-3xl"></mat-icon>
+      </div>
+      <a
+        class="w-full py-3 bg-electric-blue/10 border border-electric-blue/30 hover:bg-electric-blue/20 rounded-lg text-center font-bold text-electric-blue transition-all"
+        routerLink="/pokemon-tcg"
+        >Ver catálogo</a
+      >
+    </div>
+    <!-- Events -->
+    <div class="glass-card rounded-2xl p-6 flex flex-col gap-4">
+      <div class="flex justify-between items-start">
+        <div class="flex flex-col">
+          <span class="font-label-caps text-label-caps text-on-surface-variant mb-1"
+            >CALENDARIO</span
+          >
+          <h3 class="font-headline-md text-headline-md text-white">
+            Consulta torneos, ligas y actividades
+          </h3>
+        </div>
+        <mat-icon
+          svgIcon="calendar_month"
+          class="text-on-surface-variant text-3xl"
+        ></mat-icon>
+      </div>
+      <a
+        class="w-full py-3 bg-white/5 border border-white/10 hover:bg-white/10 rounded-lg text-center font-bold text-white transition-all"
+        routerLink="/events"
+        >Ver calendario</a
+      >
+    </div>
+  </section>
+  <!-- Benefits Grid -->
+  <section class="grid grid-cols-5 gap-2 text-center">
+    <div class="flex flex-col items-center gap-1">
+      <div
+        class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center border border-glass-stroke"
+      >
+        <mat-icon
+          svgIcon="workspace_premium"
+          class="text-electric-blue text-xl"
+        ></mat-icon>
+      </div>
+      <span class="text-[10px] font-label-caps uppercase text-on-surface-variant"
+        >Recompensas</span
+      >
+    </div>
+    <div class="flex flex-col items-center gap-1">
+      <div
+        class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center border border-glass-stroke"
+      >
+        <mat-icon svgIcon="trophy" class="text-electric-blue text-xl"></mat-icon>
+      </div>
+      <span class="text-[10px] font-label-caps uppercase text-on-surface-variant"
+        >Torneos</span
+      >
+    </div>
+    <div class="flex flex-col items-center gap-1">
+      <div
+        class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center border border-glass-stroke"
+      >
+        <mat-icon svgIcon="groups" class="text-electric-blue text-xl"></mat-icon>
+      </div>
+      <span class="text-[10px] font-label-caps uppercase text-on-surface-variant"
+        >Comunidad</span
+      >
+    </div>
+    <div class="flex flex-col items-center gap-1">
+      <div
+        class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center border border-glass-stroke"
+      >
+        <mat-icon svgIcon="verified" class="text-electric-blue text-xl"></mat-icon>
+      </div>
+      <span class="text-[10px] font-label-caps uppercase text-on-surface-variant"
+        >Originales</span
+      >
+    </div>
+    <div class="flex flex-col items-center gap-1">
+      <div
+        class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center border border-glass-stroke"
+      >
+        <mat-icon svgIcon="rocket_launch" class="text-electric-blue text-xl"></mat-icon>
+      </div>
+      <span class="text-[10px] font-label-caps uppercase text-on-surface-variant"
+        >Preventas</span
+      >
+    </div>
+  </section>
+  <!-- Rewards Section -->
+  <section
+    class="bg-gradient-to-b from-surface-container to-obsidian-surface rounded-3xl p-6 border border-glass-stroke relative overflow-hidden"
+  >
+    <div class="absolute top-0 right-0 p-4 opacity-10">
+      <mat-icon svgIcon="loyalty" class="text-electric-blue text-8xl-icon"></mat-icon>
+    </div>
+    <div class="relative z-10">
+      <div class="flex items-center gap-2 mb-4">
+        <mat-icon svgIcon="stars" class="text-neon-purple"></mat-icon>
+        <h2 class="font-headline-md text-headline-md text-white">Next Level Rewards</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-stack-md">
+        <div class="flex flex-col gap-2">
+          <p class="font-label-caps text-label-caps text-electric-blue">GANA POR:</p>
+          <ul class="text-sm space-y-1 text-on-surface-variant">
+            <li class="flex items-center gap-2">
+              <span class="w-1 h-1 bg-neon-purple rounded-full"></span> Comprar
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1 h-1 bg-neon-purple rounded-full"></span> Participar
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1 h-1 bg-neon-purple rounded-full"></span> Asistir
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1 h-1 bg-neon-purple rounded-full"></span> Invitar
+            </li>
+          </ul>
+        </div>
+        <div class="flex flex-col gap-2">
+          <p class="font-label-caps text-label-caps text-neon-purple">CANJEA POR:</p>
+          <ul class="text-sm space-y-1 text-on-surface-variant">
+            <li class="flex items-center gap-2">
+              <span class="w-1 h-1 bg-electric-blue rounded-full"></span> Sobres
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1 h-1 bg-electric-blue rounded-full"></span> Protectores
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1 h-1 bg-electric-blue rounded-full"></span> Descuentos
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1 h-1 bg-electric-blue rounded-full"></span> Inscripciones
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Testimonials -->
+  <section class="flex flex-col gap-stack-md">
+    <h2
+      class="font-label-caps text-label-caps text-on-surface-variant tracking-widest text-center"
+    >
+      LO QUE DICEN LOS JUGADORES
+    </h2>
+    <div class="flex gap-4 overflow-x-auto pb-4 scroll-hide">
+      <div class="min-w-[280px] glass-card rounded-2xl p-6 flex flex-col gap-3">
+        <div class="flex items-center gap-3">
+          <div
+            class="w-10 h-10 rounded-full border border-electric-blue bg-surface-container overflow-hidden"
+          >
+            <img
+              class="w-full h-full object-cover"
+              data-alt="A close-up portrait of a professional competitive card gamer with a focused expression, neon blue lighting reflecting on their face, dark background, esports style."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzAl-wGRrdbIAxkv8Cb-jzVy8h3Auof7fVJPQRMfCdEgwj8kxiXDnow8j2LtAWE_6aE7FBj8fmvYyGtLEo2uY-yUMUXEcxQenYBkq88WzqTqx1O2-IwUXIVURaimlI6zY_q7srl7SxtGOBTSJeMXjobWH5kgBdPddSrZF-2Md79PJnEzUUeT9ZV6nvQynCPqqRjHe0N9pn3Gy93I_cGfEr3ADyVT2sSIBUh51wfjMR6c-IS4Da_eYAZQ5GbTMOX88uPEeoYz3BdV4"
+            />
+          </div>
+          <div>
+            <p class="font-bold text-white text-sm">Alex R.</p>
+            <div class="flex text-electric-blue text-[10px]">
+              <mat-icon
+                svgIcon="star"
+                class="text-xs"
+                style="font-variation-settings: 'FILL' 1"
+              ></mat-icon>
+              <mat-icon
+                svgIcon="star"
+                class="text-xs"
+                style="font-variation-settings: 'FILL' 1"
+              ></mat-icon>
+              <mat-icon
+                svgIcon="star"
+                class="text-xs"
+                style="font-variation-settings: 'FILL' 1"
+              ></mat-icon>
+              <mat-icon
+                svgIcon="star"
+                class="text-xs"
+                style="font-variation-settings: 'FILL' 1"
+              ></mat-icon>
+              <mat-icon
+                svgIcon="star"
+                class="text-xs"
+                style="font-variation-settings: 'FILL' 1"
+              ></mat-icon>
+            </div>
+          </div>
+        </div>
+        <p class="text-sm text-on-surface-variant italic">
+          "El mejor lugar para jugar Commander en Huajuapan. El ambiente es increíble y
+          siempre hay alguien dispuesto a jugar."
+        </p>
+      </div>
+      <div class="min-w-[280px] glass-card rounded-2xl p-6 flex flex-col gap-3">
+        <div class="flex items-center gap-3">
+          <div
+            class="w-10 h-10 rounded-full border border-neon-purple bg-surface-container overflow-hidden"
+          >
+            <img
+              class="w-full h-full object-cover"
+              data-alt="A portrait of a young casual tabletop gamer smiling, holding a deck of cards, vibrant neon purple backlighting, dark obsidian surface theme."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6YxA5gBs9XcPkjAGQL8MiefVAc2F5p0y_bkxejnWKaflrBVB54_C9grKB4ruA00-Y12NI3YDAd69hkAPe_1zjAekoENWkqfE6NdMIf5daCs2KUa6YWZz0XeO5PS3DX60mHuFCVconeaaNCoyRZVXDsmbM3txOIXWLHdP_diu2MqH3PeBVw_hXqFIf74Egf2aGQ9joXjn3PAemwvuYi-e3haD_wHKcsT0zl-pTkTIq_x8YA09yMoi4vJc8IZyMeFu-M0cSruF6xkQ"
+            />
+          </div>
+          <div>
+            <p class="font-bold text-white text-sm">Mariana S.</p>
+            <div class="flex text-neon-purple text-[10px]">
+              <mat-icon
+                svgIcon="star"
+                class="text-xs"
+                style="font-variation-settings: 'FILL' 1"
+              ></mat-icon>
+              <mat-icon
+                svgIcon="star"
+                class="text-xs"
+                style="font-variation-settings: 'FILL' 1"
+              ></mat-icon>
+              <mat-icon
+                svgIcon="star"
+                class="text-xs"
+                style="font-variation-settings: 'FILL' 1"
+              ></mat-icon>
+              <mat-icon
+                svgIcon="star"
+                class="text-xs"
+                style="font-variation-settings: 'FILL' 1"
+              ></mat-icon>
+              <mat-icon
+                svgIcon="star"
+                class="text-xs"
+                style="font-variation-settings: 'FILL' 1"
+              ></mat-icon>
+            </div>
+          </div>
+        </div>
+        <p class="text-sm text-on-surface-variant italic">
+          "Gracias a Next Level aprendí a jugar Pokémon TCG. Sus ligas de novatos son lo
+          mejor para empezar."
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Social Links -->
+  <section class="flex justify-center gap-6 py-stack-md">
+    <a
+      class="w-14 h-14 rounded-full glass-card flex items-center justify-center text-neon-purple hover:scale-110 active:scale-95 duration-300"
+      href="https://www.facebook.com/nxlv.vg"
+    >
+      <mat-icon svgIcon="facebook" class="text-4xl-icon"></mat-icon>
+    </a>
+    <a
+      class="w-14 h-14 rounded-full glass-card flex items-center justify-center text-neon-purple hover:scale-110 active:scale-95 duration-300"
+      href="https://www.instagram.com/nxlv.store"
+    >
+      <mat-icon svgIcon="instagram" class="text-4xl-icon"></mat-icon>
+    </a>
+    <!-- <a
+      class="w-14 h-14 rounded-full glass-card flex items-center justify-center text-neon-purple hover:scale-110 active:scale-95 duration-300"
+      href="#"
+    >
+      <mat-icon svgIcon="youtube" class="text-4xl-icon"></mat-icon>
+    </a>
+    <a
+      class="w-14 h-14 rounded-full glass-card flex items-center justify-center text-neon-purple hover:scale-110 active:scale-95 duration-300"
+      href="#"
+    >
+      <mat-icon svgIcon="tiktok" class="text-4xl-icon"></mat-icon>
+    </a> -->
+  </section>
+</main>

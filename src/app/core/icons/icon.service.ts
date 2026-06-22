@@ -98,6 +98,16 @@ export class IconService {
       'inventory_2',
       'swords',
       'crown',
+      'mobile_charge',
+      'shopping_bag',
+      'casino',
+      'rocket_launch',
+      'loyalty',
+      'facebook',
+      'instagram',
+      'youtube',
+      'tiktok',
+      'whatsapp',
     ];
 
     icons.forEach((icon) => {
